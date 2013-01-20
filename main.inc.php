@@ -1,8 +1,8 @@
 <?php 
 /*
-Plugin Name: oauth
+Plugin Name: OAuth
 Version: auto
-Description: This is not a plugin. It's a oauth for future plugins.
+Description: Provides various ways to sign in your gallery (Twitter, Facebook, Google, etc.)
 Plugin URI: auto
 Author: Mistic
 Author URI: http://www.strangeplanet.fr
@@ -40,7 +40,14 @@ if (defined('IN_ADMIN'))
 {
   add_event_handler('get_admin_plugin_menu_links', 'oauth_admin_plugin_menu_links');
   
-  include_once(OAUTH_PATH . 'include/admin_events.inc.php');
+  function oauth_admin_plugin_menu_links($menu) 
+  {
+    array_push($menu, array(
+      'NAME' => l10n('OAuth'),
+      'URL' => OAUTH_ADMIN,
+    ));
+    return $menu;
+  }
 }
 else if (!empty($hybridauth_conf) and function_exists('curl_init'))
 {
@@ -86,7 +93,7 @@ WHERE id = "'. OAUTH_ID .'"';
       
       if (defined('IN_ADMIN'))
       {
-        $_SESSION['page_infos'][] = 'oAuth updated to version '. OAUTH_VERSION;
+        $_SESSION['page_infos'][] = 'OAuth updated to version '. OAUTH_VERSION;
       }
     }
   }
@@ -100,11 +107,11 @@ WHERE id = "'. OAUTH_ID .'"';
   {
     if (empty($hybridauth_conf))
     {
-      array_push($page['errors'], l10n('oAuth: You need to configure the credentials'));
+      array_push($page['errors'], l10n('OAuth: You need to configure the credentials'));
     }
     if (!function_exists('curl_init'))
     {
-      array_push($page['errors'], l10n('oAuth: cURL extension is needed'));
+      array_push($page['errors'], l10n('OAuth: cURL extension is needed'));
     }
   }
 }

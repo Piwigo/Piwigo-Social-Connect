@@ -9,6 +9,7 @@ return array(
     'userguide_section' => 'http://hybridauth.sourceforge.net/userguide/IDProvider_info_Facebook.html',
     'scope'             => 'email',
   ),
+  
   'Google' => array( 
     'label'             => 'Google',
     'provider_name'     => 'Google',
@@ -29,12 +30,6 @@ return array(
     'provider_name'     => 'LinkedIn',
     'new_app_link'      => 'https://www.linkedin.com/secure/developer',
     'userguide_section' => 'http://hybridauth.sourceforge.net/userguide/IDProvider_info_LinkedIn.html',
-  ),
-  'OpenID' => array( 
-    'label'             => 'OpenID',
-    'provider_name'     => 'OpenID',
-    'new_app_link'      => null,
-    'userguide_section' => 'http://hybridauth.sourceforge.net/userguide/IDProvider_info_OpenID.html',
   ),
   'Tumblr' => array(
     'label'             => 'Tumblr',
@@ -60,6 +55,18 @@ return array(
     'provider_name'     => 'Yahoo!',
     'new_app_link'      => 'https://developer.apps.yahoo.com/dashboard/createKey.html',
     'userguide_section' => 'http://hybridauth.sourceforge.net/userguide/IDProvider_info_Yahoo.html',
+  ),
+  'OpenID' => array( 
+    'label'             => 'OpenID',
+    'provider_name'     => 'OpenID',
+    'new_app_link'      => null,
+    'userguide_section' => 'http://hybridauth.sourceforge.net/userguide/IDProvider_info_OpenID.html',
+  ),
+  'Flickr' => array( 
+    'label'             => 'Flickr',
+    'provider_name'     => 'Flickr',
+    'new_app_link'      => null,
+    'userguide_section' => 'http://hybridauth.sourceforge.net/userguide/IDProvider_info_OpenID.html',
   ),
   'Wordpress' => array( 
     'label'             => 'Wordpress',

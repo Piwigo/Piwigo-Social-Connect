@@ -23,7 +23,7 @@
 {if $OAUTH_AVATAR}
   <img src="{$OAUTH_AVATAR}" class="avatar">
 {else}
-  <img src="{$ROOT_URL}{$OAUTH_PATH}template/avatar-default.png" class="avatar">
+  <img src="{$ROOT_URL}{$OAUTH_PATH}template/images/avatar-default.png" class="avatar">
 {/if}
 
   {'Logged with'|@translate} : <b>{$OAUTH_PROVIDER}</b><br>

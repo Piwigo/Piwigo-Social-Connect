@@ -8,28 +8,24 @@ require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
 $provider = @$_GET['provider'];
 
 try {
+  // inputs
   if ( $provider == 'OpenID' and !isset($_GET['openid_identifier']) )
   {
-    throw new Exception('Invalid OpenID!');
+    throw new Exception('Invalid OpenID!', 1003);
   }
   
-  // inputs
   if (
     !array_key_exists($provider, $hybridauth_conf['providers'])
     or !$hybridauth_conf['providers'][$provider]['enabled']
   ) {
-    throw new Exception('Hacking attempt!');
+    throw new Exception('Hacking attempt!', 1002);
   }
-  
-  
   
   $hybridauth = new Hybrid_Auth($hybridauth_conf);
   
   // connected
   if ($hybridauth->isConnectedWith($provider))
   {
-    $template->assign('AUTH_DONE', true);
-    
     $adapter = $hybridauth->getAdapter($provider);
     $remote_user = $adapter->getUserProfile();
     
@@ -68,7 +64,7 @@ SELECT id FROM '.USERS_TABLE.'
   // init connect
   else if (isset($_GET['init_auth']))
   {
-    $params = array('hauth_return_to', get_absolute_root_url().OAUTH_PATH.'auth.php?provider='.$provider.'&amp;auth_done=1');
+    $params = array('hauth_return_to', get_absolute_root_url() . OAUTH_PATH . 'auth.php?provider='.$provider.'&amp;auth_done=1');
     if ($provider == 'OpenID')
     {
       $params['openid_identifier'] = $_GET['openid_identifier'];
@@ -82,9 +78,26 @@ SELECT id FROM '.USERS_TABLE.'
   {
     $template->assign('LOADING', '&openid_identifier='.@$_GET['openid_identifier'].'&init_auth=1');
   }
-} 
-catch( Exception $e ){
-  $template->assign('ERROR', $e->getMessage());
+}
+/*
+ library errors :
+     0 : Unspecified error
+     1 : Hybriauth configuration error
+     2 : Provider not properly configured
+     3 : Unknown or disabled provider
+     4 : Missing provider application credentials
+     5 : Authentication aborded
+ other errors :
+  1002 : Invalid provider
+  1003 : Missing openid_identifier
+*/
+catch (Exception $e) {
+  switch ($e->getCode()) {
+    case 5:
+      $template->assign('ERROR', l10n('Authentication canceled')); break;
+    default:
+      $template->assign('ERROR', sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode()));
+  }
 }
 
 
@@ -95,9 +108,9 @@ $template->assign(array(
   
   'OAUTH_PATH' => OAUTH_PATH,
   'PROVIDER' => $provider,
-  'SELF_URL' => OAUTH_PATH.'auth.php?provider='.$provider,
+  'SELF_URL' => OAUTH_PATH . 'auth.php?provider='.$provider,
   ));
 
-$template->set_filename('index', realpath(OAUTH_PATH.'template/auth.tpl'));
+$template->set_filename('index', realpath(OAUTH_PATH . 'template/auth.tpl'));
 $template->pparse('index');
 ?>

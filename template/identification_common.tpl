@@ -28,7 +28,7 @@ function redirect(type) {ldelim}
   window.location.href = url;
 }
 
-// open authentification popup
+// open authentication popup
 function open_auth(url) {ldelim}
   window.open(
     url+ "&t=" + (new Date()).getTime(), 
@@ -42,10 +42,12 @@ $("a[class^='oauth_']").click(function() {ldelim}
   var idp = $(this).attr('title');
   
   switch(idp) {ldelim}
-    case 'OpenID': case 'Wordpress':
+    case 'OpenID': case 'Wordpress': case 'Flickr':
       switch(idp) {ldelim}
-        case 'OpenID': $("#openid_label").html('{'Please enter your OpenID URL'|@translate}'); break;
-        case 'Wordpress': $("#openid_label").html('{'Please enter your Wordpress username'|@translate}'); break;
+        case 'OpenID':
+          $("#openid_label").html('{'Please enter your OpenID URL'|@translate}'); break;
+        case 'Wordpress': case 'Flickr':
+          $("#openid_label").html('{'Please enter your username'|@translate}'); break;
       }
   
       $("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
@@ -81,6 +83,7 @@ $("#openid_form").submit(function() {ldelim}
   
   switch(idp) {ldelim}
     case 'Wordpress': oi = "http://" + oi + ".wordpress.com"; break;
+    case 'Flickr': oi = "http://www.flickr.com/photos/" + oi + "/"; break;
   }
   
   open_auth("{$OAUTH_URL}OpenID&openid_identifier="+ encode(oi));

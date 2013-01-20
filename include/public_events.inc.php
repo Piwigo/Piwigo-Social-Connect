@@ -6,24 +6,15 @@ defined('OAUTH_PATH') or die('Hacking attempt!');
  */
 function oauth_begin_identification()
 {
-  global $template, $conf, $page, $hybridauth_conf;
-  
-  if (isset($_GET['redirect']))
-  {
-    pwg_set_session_var('oauth_redirect', $_GET['redirect']);
-  }
-  else
-  {
-    pwg_unset_session_var('oauth_redirect');
-  }
+  global $template;
   
   // template icons
   if ($template->get_template_vars('OAUTH_URL') == null)
   {
     $template->assign(array(
-      'OAUTH_URL' => get_root_url().OAUTH_PATH.'auth.php?provider=',
+      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
       'OAUTH_PATH' => OAUTH_PATH,
-      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH).'/',
+      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
       'PROVIDERS' => get_activated_providers(),
     ));
   }
@@ -51,7 +42,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
   {
     list($oauth_id) = pwg_db_fetch_row($result);
     list($provider) = explode('---', $oauth_id);
-    $_SESSION['page_errors'][] = 'You registered with a '.ucfirst($provider).' account, please login with the same account.';
+    $_SESSION['page_errors'][] = sprintf(l10n('You registered with a %s account, please sign in with the same account.'), $provider);
     
     $redirect_to = get_root_url().'identification.php';
     return true;
@@ -67,11 +58,6 @@ SELECT oauth_id FROM '.USERS_TABLE.'
 function oauth_begin_register()
 {
   global $conf, $template, $hybridauth_conf;
-  
-  if (!$conf['oauth']['display_register'])
-  {
-    return;
-  }
   
   // comming from identification page
   if (pwg_get_session_var('oauth_new_user') != null)
@@ -134,19 +120,20 @@ UPDATE '.USERS_TABLE.'
       // template
       $template->set_prefilter('register', 'oauth_remove_password_fields_prefilter');
     }
-    catch( Exception $e ){
-      die($e->getMessage());
+    catch (Exception $e) {
+      array_push($page['errors'], sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode()));
     }
   }
-  else
+  // display login buttons
+  else if ($conf['oauth']['display_register'])
   {
     // template icons
     if ($template->get_template_vars('OAUTH_URL') == null)
     {
       $template->assign(array(
-        'OAUTH_URL' => get_root_url().OAUTH_PATH.'auth.php?provider=',
+        'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
         'OAUTH_PATH' => OAUTH_PATH,
-        'OAUTH_ABS_PATH' => realpath(OAUTH_PATH).'/',
+        'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
         'PROVIDERS' => get_activated_providers(),
         ));
     }
@@ -188,7 +175,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
     $remote_user = $adapter->getUserProfile();
     
     $template->assign(array(
-      'OAUTH_PROVIDER' => ucfirst($provider),
+      'OAUTH_PROVIDER' => $provider,
       'OAUTH_USERNAME' => $remote_user->displayName,
       'OAUTH_URL' => $remote_user->profileURL,
       'OAUTH_AVATAR' => $remote_user->photoURL,
@@ -196,13 +183,11 @@ SELECT oauth_id FROM '.USERS_TABLE.'
       ));
     
     $template->set_prefilter('profile_content', 'oauth_add_profile_prefilter');
+    $template->set_prefilter('profile_content', 'oauth_remove_password_fields_prefilter');
   }
-  catch( Exception $e ){
-    die($e->getMessage());
+  catch (Exception $e) {
+    array_push($page['errors'], sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode()));
   }
-  
-  
-  $template->set_prefilter('profile_content', 'oauth_remove_password_fields_prefilter');
 }
 
 
@@ -235,8 +220,8 @@ SELECT oauth_id FROM '.USERS_TABLE.'
     $adapter = $hybridauth->getAdapter($provider);
     $adapter->logout();
   }
-  catch( Exception $e ){
-    die($e->getMessage());
+  catch (Exception $e) {
+    $_SESSION['page_errors'][] = sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode());
   }
 }
 
@@ -248,14 +233,9 @@ function oauth_blockmanager($menu_ref_arr)
 {
   global $template, $conf;
   
-  if (!$conf['oauth']['display_menubar'])
-  {
-    return;
-  }
-  
   $menu = &$menu_ref_arr[0];  
   
-  if ($menu->get_block('mbIdentification') == null)
+  if ( !$conf['oauth']['display_menubar'] or $menu->get_block('mbIdentification') == null )
   {
     return;
   }
@@ -263,9 +243,9 @@ function oauth_blockmanager($menu_ref_arr)
   if ($template->get_template_vars('OAUTH_URL') == null)
   {
     $template->assign(array(
-      'OAUTH_URL' => get_root_url().OAUTH_PATH.'auth.php?provider=',
+      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
       'OAUTH_PATH' => OAUTH_PATH,
-      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH).'/',
+      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
       'PROVIDERS' => get_activated_providers(),
       ));
   }
@@ -282,7 +262,7 @@ function oauth_blockmanager($menu_ref_arr)
 function oauth_add_buttons_prefilter($content)
 {
   $search = '</form>';
-  $add = file_get_contents(OAUTH_PATH.'template/identification_page.tpl');
+  $add = file_get_contents(OAUTH_PATH . 'template/identification_page.tpl');
   return str_replace($search, $search.$add, $content);
 }
 
@@ -309,7 +289,7 @@ function oauth_add_profile_prefilter($content)
 function oauth_add_menubar_buttons($content)
 {
   $search = '{include file=$block->template|@get_extent:$id }';
-  $add = file_get_contents(OAUTH_PATH.'template/identification_menubar.tpl');
+  $add = file_get_contents(OAUTH_PATH . 'template/identification_menubar.tpl');
   return str_replace($search, $search.$add, $content);
 }
 

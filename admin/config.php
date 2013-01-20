@@ -29,9 +29,9 @@ if (isset($_POST['save_config']))
       unset($data['keys']);
     }
     
-    if ($id == 'Wordpress' and $data['enabled'] and !@$providers['OpenID']['enabled'])
+    if ( ($id=='Wordpress' or $id=='Flickr') and $data['enabled'] and !@$providers['OpenID']['enabled'] )
     {
-      array_push($page['errors'], sprintf(l10n('OpenID must be enabled in order to use %s authentification'), $id));
+      array_push($page['errors'], sprintf(l10n('OpenID must be enabled in order to use %s authentication'), $id));
       $error = true;
     }
     
@@ -54,16 +54,16 @@ if (isset($_POST['save_config']))
     $content.= var_export(array('providers'=>$providers), true);
     $content.= ";\n?>";
     file_put_contents(OAUTH_CONFIG, $content);
-  }
   
-  // plugin config
-  $conf['oauth'] = array(
-    'display_register' => isset($_POST['display_register']),
-    'display_menubar' => isset($_POST['display_menubar']),
-    );
-    
-  conf_update_param('oauth', serialize($conf['oauth']));
-  array_push($page['infos'], l10n('Information data registered in database'));
+    // plugin config
+    $conf['oauth'] = array(
+      'display_register' => isset($_POST['display_register']),
+      'display_menubar' => isset($_POST['display_menubar']),
+      );
+      
+    conf_update_param('oauth', serialize($conf['oauth']));
+    array_push($page['infos'], l10n('Information data registered in database'));
+  }
 }
 
 

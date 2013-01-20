@@ -35,7 +35,7 @@ jQuery(".open-help").click(function() {
 
 
 <div class="titrePage">
-	<h2>oAuth</h2>
+	<h2>OAuth</h2>
 </div>
 
 <form method="post" action="" class="properties">
@@ -124,7 +124,7 @@ jQuery(".open-help").click(function() {
     {if $p=='Live'}
       <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Redirect Domain</b>':$SERVERNAME}</li>
     {elseif $p=='Facebook'}
-      <li>{'Select <em>Website with facebook authentification</em> as application type'|@translate}</li>
+      <li>{'Select <em>Website with facebook authentication</em> as application type'|@translate}</li>
       <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Site Url</b>, <b>App Domains</b>':$SERVERNAME}</li>
     {elseif $p=='LinkedIn'}
       <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Website URL</b>':$SERVERNAME}</li>
