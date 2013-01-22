@@ -80,4 +80,7 @@
 <p style="text-align:left;"><input type="submit" name="save_config" value="{'Save Settings'|@translate}"></p>
 </form>
 
-<p>Icons from http://www.wpzoom.com - Library from http://hybridauth.sourceforge.net/</p>
+<div style="text-align:right;">
+  Icons from : <a href="http://www.wpzoom.com" target="_blank">WPZOOM</a> |
+  Library : <a href="http://hybridauth.sourceforge.net" target="_blank">HybridAuth</a>
+</div>

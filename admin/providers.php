@@ -1,6 +1,8 @@
 <?php
 defined('OAUTH_PATH') or die('Hacking attempt!');
 
+load_language('help.lang', OAUTH_PATH);
+
 $PROVIDERS_CONFIG = include(OAUTH_PATH . 'include/providers_stats.inc.php');
 
 if (isset($_POST['save_config']))

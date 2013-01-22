@@ -88,7 +88,7 @@ jQuery(".open-help").click(function() {
       {if $p=='Google'}
         <li>{'On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'|@translate}</li>
         <li>{'Fill out any required fields such as the application name and description'|@translate}</li>
-        <li>{'On the <b>Create Client ID</b> popup switch to advanced settings by clicking on <b>(more options)</b>'|@translate}</li>
+        <li>{'On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'|@translate}</li>
       {else}
         <li>{'Fill out any required fields such as the application name and description'|@translate}</li>
       {/if}
@@ -134,4 +134,7 @@ jQuery(".open-help").click(function() {
   
 </form>
 
-<p>Icons from http://www.wpzoom.com - Library from http://hybridauth.sourceforge.net/</p>
+<div style="text-align:right;">
+  Icons from : <a href="http://www.wpzoom.com" target="_blank">WPZOOM</a> |
+  Library : <a href="http://hybridauth.sourceforge.net" target="_blank">HybridAuth</a>
+</div>

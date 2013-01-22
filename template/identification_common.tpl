@@ -8,7 +8,7 @@
     vertical-align:middle;
     margin:0;
   }
-  #openid_error {
+  #openid_label.error {
     color:red;
     font-weight:bold;
   }
@@ -45,9 +45,9 @@ $("a.oauth").click(function() {ldelim}
     case 'OpenID': case 'Wordpress': case 'Flickr':
       switch(idp) {ldelim}
         case 'OpenID':
-          $("#openid_label").html('{'Please enter your OpenID URL'|@translate}'); break;
+          $("#openid_label").html('{'Please enter your OpenID URL'|@translate|escape:javascript}'); break;
         case 'Wordpress': case 'Flickr':
-          $("#openid_label").html('{'Please enter your username'|@translate}'); break;
+          $("#openid_label").html('{'Please enter your username'|@translate|escape:javascript}'); break;
       }
   
       $("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
@@ -74,10 +74,9 @@ $("#openid_form").submit(function() {ldelim}
   var idp = $(this).data('idp');
   var oi = $("#openid_form input[name='openid_identifier']").val();
   
-  $("#openid_error").hide();
+  $("#openid_label").removeClass('error');
   if (!oi) {ldelim}
-    $("#openid_error").html("{'Put your username or OpenID on this field'|@translate}").show();
-    $.colorbox.resize()
+    $("#openid_label").addClass('error');
     return false;
   }
   
@@ -92,6 +91,7 @@ $("#openid_form").submit(function() {ldelim}
 });
 
 $("#openid_cancel").click(function() {ldelim}
+  $("#openid_label").removeClass('error');
   $.colorbox.close();
   return false;
 });
@@ -109,7 +109,6 @@ $("#openid_cancel").click(function() {ldelim}
       <br>
       <input type="text" name="openid_identifier" id="openid_identifier" size="50">
     </div>
-    <div id="openid_error" style="display:none;"></div>
     <div>
       <br>
       <input type="submit" name="{'Submit'|@translate}">

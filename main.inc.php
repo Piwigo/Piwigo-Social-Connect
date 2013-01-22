@@ -111,7 +111,7 @@ WHERE id = "'. OAUTH_ID .'"';
     }
     if (!function_exists('curl_init'))
     {
-      array_push($page['errors'], l10n('OAuth: cURL extension is needed'));
+      array_push($page['errors'], l10n('OAuth: PHP Curl extension is needed'));
     }
   }
   
