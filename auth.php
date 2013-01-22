@@ -96,6 +96,8 @@ catch (Exception $e) {
   switch ($e->getCode()) {
     case 5:
       $template->assign('ERROR', l10n('Authentication canceled')); break;
+    case 404:
+      $template->assign('ERROR', l10n('User not found')); break;
     default:
       $template->assign('ERROR', sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode()));
   }

@@ -7,8 +7,6 @@ $PROVIDERS_CONFIG = include(OAUTH_PATH . 'include/providers_stats.inc.php');
 
 if (isset($_POST['save_config']))
 {
-  array_walk_recursive($_POST, 'trim');
-  
   $providers = array();
   foreach ($_POST['providers'] as $id => $data)
   {
@@ -41,20 +39,25 @@ if (isset($_POST['save_config']))
       $data['scope'] = $PROVIDERS_CONFIG[$id]['scope'];
     }
     
-    if (!$error)
+    if (is_array(@$data['keys']))
     {
-      $providers[$id] = $data;
+      $data['keys'] = array_map('trim', $data['keys']);
     }
+    
+    $providers[$id] = $data;
   }
+  
+  $hybridauth_conf['providers'] = $providers;
   
   if (!count($page['errors']))
   {
     // generate config file
-    $hybridauth_conf['providers'] = $providers;
     $content = "<?php\ndefined('PHPWG_ROOT_PATH') or die('Hacking attempt!');\n\nreturn ";
     $content.= var_export(array('providers'=>$providers), true);
     $content.= ";\n?>";
+    
     file_put_contents(OAUTH_CONFIG, $content);
+    array_push($page['infos'], l10n('Information data registered in database'));
   }
 }
 

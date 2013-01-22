@@ -105,7 +105,7 @@ WHERE id = "'. OAUTH_ID .'"';
   // check config
   if (defined('IN_ADMIN'))
   {
-    if (empty($hybridauth_conf))
+    if ( empty($hybridauth_conf) and @$_GET['page'] != 'plugin-'.OAUTH_ID )
     {
       array_push($page['errors'], l10n('OAuth: You need to configure the credentials'));
     }

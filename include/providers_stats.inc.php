@@ -53,7 +53,7 @@ return array(
   'Yahoo' => array( 
     'label'             => 'Yahoo',
     'provider_name'     => 'Yahoo!',
-    'new_app_link'      => 'https://developer.apps.yahoo.com/dashboard/createKey.html',
+    'new_app_link'      => 'https://developer.apps.yahoo.com/projects/',
     'userguide_section' => 'http://hybridauth.sourceforge.net/userguide/IDProvider_info_Yahoo.html',
   ),
   'OpenID' => array( 

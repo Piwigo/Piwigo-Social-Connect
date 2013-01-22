@@ -73,6 +73,7 @@ $("a.oauth").click(function() {ldelim}
 $("#openid_form").submit(function() {ldelim}
   var idp = $(this).data('idp');
   var oi = $("#openid_form input[name='openid_identifier']").val();
+  $("#openid_form input[name='openid_identifier']").val('');
   
   $("#openid_label").removeClass('error');
   if (!oi) {ldelim}
@@ -85,7 +86,7 @@ $("#openid_form").submit(function() {ldelim}
     case 'Flickr': oi = "http://www.flickr.com/photos/" + oi + "/"; break;
   }
   
-  open_auth("{$OAUTH_URL}OpenID&openid_identifier="+ encode(oi));
+  open_auth("{$OAUTH_URL}OpenID&openid_identifier="+ encodeURI(oi));
   $.colorbox.close();
   return false;
 });
