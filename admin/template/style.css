@@ -50,6 +50,12 @@ div.help {
     margin:2px 0 4px 2px;
     border-radius:2px;
   }
+  .provider img {
+    margin:5px;
+  }
+.Wordpress, .OpenID, .Flickr {
+  display:inline-block;
+}
   
 #help_container {
   position:fixed;

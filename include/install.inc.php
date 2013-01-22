@@ -10,6 +10,8 @@ function oauth_install()
     $oauth_default_config = serialize(array(
       'display_menubar' => true,
       'display_register' => true,
+      'identification_icon' => '38px',
+      'menubar_icon' => '26px',
       ));
   
     conf_update_param('oauth', $oauth_default_config);

@@ -10,13 +10,14 @@ if (!$conf['allow_user_registration'])
 
 
 // get current tab
-$page['tab'] = (isset($_GET['tab'])) ? $_GET['tab'] : $page['tab'] = 'config';
+$page['tab'] = (isset($_GET['tab'])) ? $_GET['tab'] : $page['tab'] = 'providers';
 
 // tabsheet
 include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');
 $tabsheet = new tabsheet();
 $tabsheet->set_id('oauth');
 
+$tabsheet->add('providers', l10n('Providers'), OAUTH_ADMIN . '-providers');
 $tabsheet->add('config', l10n('Configuration'), OAUTH_ADMIN . '-config');
 $tabsheet->select($page['tab']);
 $tabsheet->assign();

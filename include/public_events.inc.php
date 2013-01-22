@@ -6,19 +6,9 @@ defined('OAUTH_PATH') or die('Hacking attempt!');
  */
 function oauth_begin_identification()
 {
-  global $template;
+  global $template, $conf;
   
-  // template icons
-  if ($template->get_template_vars('OAUTH_URL') == null)
-  {
-    $template->assign(array(
-      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
-      'OAUTH_PATH' => OAUTH_PATH,
-      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
-      'PROVIDERS' => get_activated_providers(),
-    ));
-  }
-  
+  oauth_assign_template_vars();
   $template->assign('REDIRECT_TO', !empty($_GET['redirect']) ? urldecode($_GET['redirect']) : get_gallery_home_url());
   
   $template->set_prefilter('identification', 'oauth_add_buttons_prefilter');
@@ -57,7 +47,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
  */
 function oauth_begin_register()
 {
-  global $conf, $template, $hybridauth_conf;
+  global $conf, $template, $hybridauth_conf, $page;
   
   // comming from identification page
   if (pwg_get_session_var('oauth_new_user') != null)
@@ -70,6 +60,16 @@ function oauth_begin_register()
       $hybridauth = new Hybrid_Auth($hybridauth_conf);
       $adapter = $hybridauth->authenticate($provider);
       $remote_user = $adapter->getUserProfile();
+    
+      $template->assign(array(
+        'OAUTH_PROVIDER' => $provider,
+        'OAUTH_USERNAME' => $remote_user->displayName,
+        'OAUTH_PROFILE_URL' => $remote_user->profileURL,
+        'OAUTH_AVATAR' => $remote_user->photoURL,
+        'OAUTH_PATH' => OAUTH_PATH,
+        ));
+        
+      array_push($page['infos'], l10n('Your registration is almost done, please complete the registration form.'));
       
       $oauth_id = $provider.'---'.$remote_user->identifier;
       
@@ -118,6 +118,7 @@ UPDATE '.USERS_TABLE.'
       }
       
       // template
+      $template->set_prefilter('register', 'oauth_add_profile_prefilter');
       $template->set_prefilter('register', 'oauth_remove_password_fields_prefilter');
     }
     catch (Exception $e) {
@@ -127,17 +128,7 @@ UPDATE '.USERS_TABLE.'
   // display login buttons
   else if ($conf['oauth']['display_register'])
   {
-    // template icons
-    if ($template->get_template_vars('OAUTH_URL') == null)
-    {
-      $template->assign(array(
-        'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
-        'OAUTH_PATH' => OAUTH_PATH,
-        'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
-        'PROVIDERS' => get_activated_providers(),
-        ));
-    }
-    
+    oauth_assign_template_vars();
     $template->assign('REDIRECT_TO', get_gallery_home_url());
     
     $template->set_prefilter('register', 'oauth_add_buttons_prefilter');
@@ -177,7 +168,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
     $template->assign(array(
       'OAUTH_PROVIDER' => $provider,
       'OAUTH_USERNAME' => $remote_user->displayName,
-      'OAUTH_URL' => $remote_user->profileURL,
+      'OAUTH_PROFILE_URL' => $remote_user->profileURL,
       'OAUTH_AVATAR' => $remote_user->photoURL,
       'OAUTH_PATH' => OAUTH_PATH,
       ));
@@ -240,16 +231,7 @@ function oauth_blockmanager($menu_ref_arr)
     return;
   }
   
-  if ($template->get_template_vars('OAUTH_URL') == null)
-  {
-    $template->assign(array(
-      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
-      'OAUTH_PATH' => OAUTH_PATH,
-      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
-      'PROVIDERS' => get_activated_providers(),
-      ));
-  }
-  
+  oauth_assign_template_vars();
   $template->assign('REDIRECT_TO', get_gallery_home_url());
   
   $template->set_prefilter('menubar', 'oauth_add_menubar_buttons');
@@ -281,9 +263,9 @@ jQuery("input[type=\'password\'], input[name=\'send_password_by_mail\']").parent
 
 function oauth_add_profile_prefilter($content)
 {
-  $search = '<legend>{\'Registration\'|@translate}</legend>';
+  $search = '#</legend>#';
   $add = file_get_contents(OAUTH_PATH . 'template/profile.tpl');
-  return str_replace($search, $search.$add, $content);
+  return preg_replace($search, '</legend> '.$add, $content, 1);
 }
 
 function oauth_add_menubar_buttons($content)
@@ -293,4 +275,21 @@ function oauth_add_menubar_buttons($content)
   return str_replace($search, $search.$add, $content);
 }
 
+
+function oauth_assign_template_vars()
+{
+  global $template, $conf;
+  
+  if ($template->get_template_vars('OAUTH_URL') == null)
+  {
+    $template->assign(array(
+      'oauth' => $conf['oauth'],
+      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
+      'OAUTH_PATH' => OAUTH_PATH,
+      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
+      'PROVIDERS' => get_activated_providers(),
+      'ABS_ROOT_URL' => get_gallery_home_url(),
+      ));
+  }
+}
 ?>

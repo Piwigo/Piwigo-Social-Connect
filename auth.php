@@ -87,6 +87,7 @@ SELECT id FROM '.USERS_TABLE.'
      3 : Unknown or disabled provider
      4 : Missing provider application credentials
      5 : Authentication aborded
+     6 : User profile request failed
  other errors :
   1002 : Invalid provider
   1003 : Missing openid_identifier

@@ -114,6 +114,12 @@ WHERE id = "'. OAUTH_ID .'"';
       array_push($page['errors'], l10n('OAuth: cURL extension is needed'));
     }
   }
+  
+  // in case of registration aborded
+  if (script_basename() != 'register')
+  {
+    pwg_unset_session_var('oauth_new_user');
+  }
 }
 
 ?>

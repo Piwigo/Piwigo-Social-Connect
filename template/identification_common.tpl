@@ -23,7 +23,7 @@
 function redirect(type) {ldelim}
   url = "{$REDIRECT_TO}";
   if (typeof type != 'undefined' && type != 'default') {ldelim}
-    url = "{$ROOT_URL}"+ type +".php";
+    url = "{$ABS_ROOT_URL}"+ type +".php";
   }
   window.location.href = url;
 }
@@ -33,12 +33,12 @@ function open_auth(url) {ldelim}
   window.open(
     url+ "&t=" + (new Date()).getTime(), 
     "hybridauth_social_sing_on", 
-    "location=0,status=0,scrollbars=0,width=600,height=350"
+    "location=0,status=0,scrollbars=0,width=800,height=500"
   );  
 }
 
 // click on a button
-$("a[class^='oauth_']").click(function() {ldelim}
+$("a.oauth").click(function() {ldelim}
   var idp = $(this).attr('title');
   
   switch(idp) {ldelim}
@@ -51,7 +51,7 @@ $("a[class^='oauth_']").click(function() {ldelim}
       }
   
       $("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
-      $("#openid_form img").attr('src', '{$ROOT_URL}{$OAUTH_PATH}template/icons/'+ idp.toLowerCase() +'_big.png');
+      $("#openid_form img").attr('src', '{$ROOT_URL}{$OAUTH_PATH}template/icons/38px/'+ idp.toLowerCase() +'.png');
       $("#openid_form h3").html(idp);
       $("#openid_form").data('idp', idp);
       
@@ -104,6 +104,7 @@ $("#openid_cancel").click(function() {ldelim}
       <h3>OpendID</h3>
     </div>
     <div>
+      <br>
       <label id="openid_label" for="openid_identifier">Open ID URL</label>
       <br>
       <input type="text" name="openid_identifier" id="openid_identifier" size="50">
