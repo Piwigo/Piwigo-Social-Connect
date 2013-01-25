@@ -22,6 +22,8 @@ return array(
   'Instagram' => array(
     'label'             => 'Instagram',
     'provider_name'     => 'Instagram',
+    'callback'          => true,
+    'require_client_id' => true,
     'new_app_link'      => 'http://instagram.com/developer/clients/manage',
     'userguide_section' => null,
   ),

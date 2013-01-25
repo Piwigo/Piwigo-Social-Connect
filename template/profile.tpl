@@ -28,5 +28,5 @@
 
   {'Logged with'|@translate} : <b>{$OAUTH_PROVIDER}</b><br>
   <b>{'Username'|@translate}</b> : {$OAUTH_USERNAME}<br>
-  <b>{'Profile URL'|@translate}</b> : <a href="{$OAUTH_PROFILE_URL}">{$OAUTH_PROFILE_URL|truncate:40:' ... ':true:true}</a>
+  {if $OAUTH_PROFILE_URL}<b>{'Profile URL'|@translate}</b> : <a href="{$OAUTH_PROFILE_URL}">{$OAUTH_PROFILE_URL|truncate:40:' ... ':true:true}</a>{/if}
 </div>

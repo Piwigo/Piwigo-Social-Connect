@@ -64,7 +64,6 @@ SELECT id FROM '.USERS_TABLE.'
   // init connect
   else if (isset($_GET['init_auth']))
   {
-    $params = array('hauth_return_to', get_absolute_root_url() . OAUTH_PATH . 'auth.php?provider='.$provider.'&amp;auth_done=1');
     if ($provider == 'OpenID')
     {
       $params['openid_identifier'] = $_GET['openid_identifier'];

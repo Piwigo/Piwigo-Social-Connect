@@ -114,9 +114,11 @@ jQuery(".open-help").click(function() {
         <li>{'Set the <b>Access Scopes</b> to <em>This app will only access public...</em>'|@translate}</li> 
       {elseif $p=='Twitter'}
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Application Website</b>, <b>Application Callback URL</b>':$SERVERNAME}</li>
-        <li>{'Set the <b>Default Access Type</b> to <em>Read only</em>'|@translate}</li> 
+        <li>{'Set the <b>Default Access Type</b> to <em>Read only</em>'|@translate}</li>
       {elseif $p=='Tumblr'}
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Application Website</b>, <b>Default Callback URL</b>':$SERVERNAME}</li>
+      {elseif $p=='Instagram'}
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Website</b>':$SERVERNAME}</li>
       {/if}
       
         <li>{'Once you have registered, copy and past the created application credentials into this setup page'|@translate}</li>  
