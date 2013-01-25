@@ -1,6 +1,6 @@
 <?php
 
-$lang['Go to <a href="%s" target="_blank">%s</a> and <b>create a new application</b>'] = 'Go to <a href="%s" target="_blank">%s</a> and <b>create a new application</b>';
+$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Go to <a href="%s" target="_blank">%s</a> and create a new application';
 $lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>';
 $lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = 'On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>';
 $lang['Fill out any required fields such as the application name and description'] = 'Fill out any required fields such as the application name and description';

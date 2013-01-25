@@ -83,7 +83,7 @@ jQuery(".open-help").click(function() {
     <div class="help">
     {if $provider.new_app_link}
       <ol>
-        <li>{'Go to <a href="%s" target="_blank">%s</a> and <b>create a new application</b>'|@translate|sprintf:$provider.new_app_link:$provider.new_app_link}</li>
+        <li>{'Go to <a href="%s" target="_blank">%s</a> and create a new application'|@translate|sprintf:$provider.new_app_link:$provider.new_app_link}</li>
         
       {if $p=='Google'}
         <li>{'On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'|@translate}</li>
