@@ -3,16 +3,14 @@
     {assign var=OAUTH_JS_LOADED value=true}
     {include file=$OAUTH_ABS_PATH|@cat:'template/identification_common.tpl'}
   {/if}
-  {html_head}{literal}
-  <style type="text/css">
+  {html_style}{literal}
     dl#mbIdentification dd:first-of-type {
       padding-bottom:0 !important;
     }
     #mbIdentification .oauth {
       margin:0 1px;
     }
-  </style>
-  {/literal}{/html_head}
+  {/literal}{/html_style}
   
   <dd>
     <form id="quickconnect">

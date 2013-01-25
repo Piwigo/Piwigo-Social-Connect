@@ -1,5 +1,4 @@
-{html_head}{literal}
-<style type="text/css">
+{html_style}{literal}
   #openid_form {
     padding:20px;
   }
@@ -12,24 +11,25 @@
     color:red;
     font-weight:bold;
   }
-</style>
-{/literal}{/html_head}
+{/literal}{/html_style}
 
 {combine_script id='jquery.colorbox' load='footer' require='jquery' path='themes/default/js/plugins/jquery.colorbox.min.js'}
 {combine_css path="themes/default/js/plugins/colorbox/style2/colorbox.css"}
 
-{footer_script}
+{footer_script}{literal}
 // redirect, called from the popup
-function redirect(type) {ldelim}
+function redirect(type) {
+{/literal}
   url = "{$REDIRECT_TO}";
   if (typeof type != 'undefined' && type != 'default') {ldelim}
     url = "{$ABS_ROOT_URL}"+ type +".php";
   }
+{literal}
   window.location.href = url;
 }
 
 // open authentication popup
-function open_auth(url) {ldelim}
+function open_auth(url) {
   window.open(
     url+ "&t=" + (new Date()).getTime(), 
     "hybridauth_social_sing_on", 
@@ -38,70 +38,75 @@ function open_auth(url) {ldelim}
 }
 
 // click on a button
-$("a.oauth").click(function() {ldelim}
+$("a.oauth").click(function() {
   var idp = $(this).attr('title');
   
-  switch(idp) {ldelim}
+  switch(idp) {
     case 'OpenID': case 'Wordpress': case 'Flickr':
-      switch(idp) {ldelim}
+      switch(idp) {
+{/literal}
         case 'OpenID':
           $("#openid_label").html('{'Please enter your OpenID URL'|@translate|escape:javascript}'); break;
         case 'Wordpress': case 'Flickr':
           $("#openid_label").html('{'Please enter your username'|@translate|escape:javascript}'); break;
       }
-  
+      
       $("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
       $("#openid_form img").attr('src', '{$ROOT_URL}{$OAUTH_PATH}template/icons/38px/'+ idp.toLowerCase() +'.png');
       $("#openid_form h3").html(idp);
       $("#openid_form").data('idp', idp);
-      
-      $.colorbox({ldelim}
+{literal}  
+      $.colorbox({
         inline:true,
         href:"#openid_form",
         initialWidth:0,
-        initialHeight:0
+        initialHeight:0,
+        onComplete:function(){ $.colorbox.resize({speed:0}) } // prevent misalignement when icon not loaded
       })
       break;
       
     default:
+{/literal}
       open_auth("{$OAUTH_URL}"+ idp);
+{literal}
   }
   
   return false;
 });
 
-$("#openid_form").submit(function() {ldelim}
+$("#openid_form").submit(function() {
   var idp = $(this).data('idp');
   var oi = $("#openid_form input[name='openid_identifier']").val();
   $("#openid_form input[name='openid_identifier']").val('');
   
   $("#openid_label").removeClass('error');
-  if (!oi) {ldelim}
+  if (!oi) {
     $("#openid_label").addClass('error');
     return false;
   }
   
-  switch(idp) {ldelim}
+  switch(idp) {
     case 'Wordpress': oi = "http://" + oi + ".wordpress.com"; break;
     case 'Flickr': oi = "http://www.flickr.com/photos/" + oi + "/"; break;
   }
-  
+{/literal}  
   open_auth("{$OAUTH_URL}OpenID&openid_identifier="+ encodeURI(oi));
+{literal}
   $.colorbox.close();
   return false;
 });
 
-$("#openid_cancel").click(function() {ldelim}
+$("#openid_cancel").click(function() {
   $("#openid_label").removeClass('error');
   $.colorbox.close();
   return false;
 });
-{/footer_script}
+{/literal}{/footer_script}
 
 <div style="display:none;">
   <form id="openid_form" action="">
     <div>
-      <img src="{$ROOT_URL}{$OAUTH_PATH}template/icons/openid_big.png">
+      <img src="{$ROOT_URL}{$OAUTH_PATH}template/icons/openid_big.png" style="width:38px:height:38px;">
       <h3>OpendID</h3>
     </div>
     <div>
