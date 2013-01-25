@@ -46,7 +46,7 @@ jQuery(".open-help").click(function() {
 
 <form method="post" action="" class="properties">
 <fieldset id="commentsConf">
-  
+
 {foreach from=$PROVIDERS item=provider key=p}
   <div data-p="{$p}" class="provider {$p} {if $CONFIG[$p].enabled}enabled{else}disabled{/if}">
     <h4>{$provider.provider_name}</h4>
@@ -99,7 +99,7 @@ jQuery(".open-help").click(function() {
           {'Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'|@translate|sprintf:$callback}
         </li>
       {/if}
-
+      
       {if $p=='Live'}
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Redirect Domain</b>':$SERVERNAME}</li>
       {elseif $p=='Facebook'}
@@ -107,11 +107,12 @@ jQuery(".open-help").click(function() {
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Site Url</b>, <b>App Domains</b>':$SERVERNAME}</li>
       {elseif $p=='LinkedIn'}
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Website URL</b>':$SERVERNAME}</li>
-        <li>{'Set the <b>Application Type</b> to <em>Web Application</em>'|@translate}</li> 
+        <li>{'Set the <b>Application Type</b> to <em>Web Application</em>'|@translate}</li>
       {elseif $p=='Yahoo'}
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Application URL</b>, <b>Application Domain</b>':$SERVERNAME}</li>
-        <li>{'Set the <b>Kind of Application</b> to <em>Web-based</em>'|@translate}</li> 
-        <li>{'Set the <b>Access Scopes</b> to <em>This app will only access public...</em>'|@translate}</li> 
+        <li>{'Set the <b>Kind of Application</b> to <em>Web-based</em>'|@translate}</li>
+        <li>{'Set the <b>Access Scopes</b> to <em>This app will only access public...</em>'|@translate}</li>
+        <li>{'Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'|@translate}</li>
       {elseif $p=='Twitter'}
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Application Website</b>, <b>Application Callback URL</b>':$SERVERNAME}</li>
         <li>{'Set the <b>Default Access Type</b> to <em>Read only</em>'|@translate}</li>
@@ -121,7 +122,7 @@ jQuery(".open-help").click(function() {
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|@translate|sprintf:'<b>Website</b>':$SERVERNAME}</li>
       {/if}
       
-        <li>{'Once you have registered, copy and past the created application credentials into this setup page'|@translate}</li>  
+        <li>{'Once you have registered, copy and past the created application credentials into this setup page'|@translate}</li>
       </ol>
     {else}
       <p>{'No registration required for OpenID based providers'|@translate}</p> 

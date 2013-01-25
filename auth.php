@@ -98,7 +98,7 @@ catch (Exception $e) {
     case 404:
       $template->assign('ERROR', l10n('User not found')); break;
     default:
-      $template->assign('ERROR', sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode()));
+      $template->assign('ERROR', sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), '<span title="'.$e->getMessage().'">'.$e->getCode().'</span>'));
   }
 }
 

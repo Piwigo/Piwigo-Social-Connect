@@ -13,5 +13,6 @@ $lang['Set the <b>Access Scopes</b> to <em>This app will only access public...</
 $lang['Set the <b>Default Access Type</b> to <em>Read only</em>'] = 'Sélectionnez <em>Read only</em> pour <b>Default Access Type</b>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Quand votre application est enregistrée, copiez-collez les clefs d\'authentification sur cette page';
 $lang['No registration required for OpenID based providers'] = 'Pas d\'inscription nécessaire pour les authentifications type OpenID';
+$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Quand l\'application est enregistrée, éditez les permissions : sélectionnez <em>Read</em> pour <b>Contacts</b> et <em>Read Public</em> pour <b>Social Directory</b>';
 
 ?>
