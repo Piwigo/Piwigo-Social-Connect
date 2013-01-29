@@ -33,4 +33,17 @@ $lang['Contacting <b>%s</b>. Please wait.'] = 'Επικοινωνία με <b>%s
 $lang['Authentication canceled'] = 'Η Ταυτοποίηση ακυρώθηκε';
 $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'Παρουσιάστηκε σφάλμα, παρακαλούμε επικοινωνήστε με τον ιδιοκτήτη της γκαλερί. <i>Κωδικός σφάλματος: %s</i>';
 $lang['%s: invalid keys'] = '%s: μη έγκυρα κλειδιά';
+$lang['Your registration is almost done, please complete the registration form.'] = 'Η εγγραφή σας έχει σχεδόν τελειώσει, παρακαλούμε συμπληρώστε τη φόρμα εγγραφής.';
+$lang['You registered with a %s account, please sign in with the same account.'] = 'Μπορείτε εγγραφείτε στο λογαριασμό %s, παρακαλώ συνδεθείτε με τον ίδιο λογαριασμό.';
+$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Οι χρήστες δεν επιτρέπεται να εγγραφούν στην γκαλερί σας. OAuth δεν θα λειτουργήσει σωστά.';
+$lang['Sorry, new registrations are blocked on this gallery.'] = 'Συγνώμη, οι νέες εγγραφές έχουν αποκλειστεί σε αυτό το λεύκωμα.';
+$lang['Sign in with %s'] = 'Σύνδεση με %s';
+$lang['Providers'] = 'Προμηθευτές';
+$lang['Profile URL'] = 'URL Προφίλ';
+$lang['Please enter your username'] = 'Παρακαλώ εισάγετε το όνομα χρήστη σας';
+$lang['Please enter your OpenID URL'] = 'Παρακαλώ εισάγετε το OpenID URL σας';
+$lang['Or sign in with'] = 'Ή συνδεθείτε με';
+$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID πρέπει να είναι ενεργοποιημένo για να μπορέσετε να χρησιμοποιήσετε %s έλεγχο ταυτότητας';
+$lang['OAuth: You need to configure the credentials'] = 'OAuth: Θα πρέπει να ρυθμίσετε τα πιστοποιητικά';
+$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: H επέκταση PHP Curl είναι αναγκαία';
 ?>
