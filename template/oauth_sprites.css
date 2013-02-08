@@ -1,0 +1,53 @@
+.oauth_16px {
+  display:inline-block;
+  background:url('images/icons_16px.png') 16px 0 no-repeat;
+  width:16px;
+  height:16px;
+}
+.oauth_16px.facebook { background-position: 0px 0px; }
+.oauth_16px.flickr { background-position: -16px 0px; }
+.oauth_16px.google { background-position: -32px 0px; }
+.oauth_16px.instagram { background-position: -48px 0px; }
+.oauth_16px.linkedin { background-position: -64px 0px; }
+.oauth_16px.live { background-position: -80px 0px; }
+.oauth_16px.openid { background-position: -96px 0px; }
+.oauth_16px.tumblr { background-position: -112px 0px; }
+.oauth_16px.twitter { background-position: -128px 0px; }
+.oauth_16px.wordpress { background-position: -144px 0px; }
+.oauth_16px.yahoo { background-position: -160px 0px; }
+
+.oauth_26px {
+  display:inline-block;
+  background:url('images/icons_26px.png') 26px 0 no-repeat;
+  width:26px;
+  height:26px;
+}
+.oauth_26px.facebook { background-position: 0px 0px; }
+.oauth_26px.flickr { background-position: -26px 0px; }
+.oauth_26px.google { background-position: -52px 0px; }
+.oauth_26px.instagram { background-position: -78px 0px; }
+.oauth_26px.linkedin { background-position: -104px 0px; }
+.oauth_26px.live { background-position: -130px 0px; }
+.oauth_26px.openid { background-position: -156px 0px; }
+.oauth_26px.tumblr { background-position: -182px 0px; }
+.oauth_26px.twitter { background-position: -208px 0px; }
+.oauth_26px.wordpress { background-position: -234px 0px; }
+.oauth_26px.yahoo { background-position: -260px 0px; }
+
+.oauth_38px {
+  display:inline-block;
+  background:url('images/icons_38px.png') 38px 0 no-repeat;
+  width:38px;
+  height:38px;
+}
+.oauth_38px.facebook { background-position: 0px 0px; }
+.oauth_38px.flickr { background-position: -38px 0px; }
+.oauth_38px.google { background-position: -76px 0px; }
+.oauth_38px.instagram { background-position: -114px 0px; }
+.oauth_38px.linkedin { background-position: -152px 0px; }
+.oauth_38px.live { background-position: -190px 0px; }
+.oauth_38px.openid { background-position: -228px 0px; }
+.oauth_38px.tumblr { background-position: -266px 0px; }
+.oauth_38px.twitter { background-position: -304px 0px; }
+.oauth_38px.wordpress { background-position: -342px 0px; }
+.oauth_38px.yahoo { background-position: -380px 0px; }

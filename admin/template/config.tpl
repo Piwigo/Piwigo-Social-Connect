@@ -1,4 +1,5 @@
-{combine_css path=$OAUTH_PATH|@cat:"admin/template/style.css"}
+{combine_css path=$OAUTH_PATH|cat:"admin/template/style.css"}
+{combine_css path=$OAUTH_PATH|cat:'template/oauth_sprites.css'}
 
 <div class="titrePage">
 	<h2>OAuth</h2>
@@ -30,23 +31,23 @@
       <label>
         <input type="radio" name="identification_icon" value="16px" {if $identification_icon=='16px'}checked="checked"{/if}>
         16px
-        <img src="{$OAUTH_PATH}template/icons/16px/facebook.png">
-        <img src="{$OAUTH_PATH}template/icons/16px/google.png">
-        <img src="{$OAUTH_PATH}template/icons/16px/twitter.png">
+        <span class="oauth_16px facebook"></span>
+        <span class="oauth_16px google"></span>
+        <span class="oauth_16px twitter"></span>
       </label>
       <label>
         <input type="radio" name="identification_icon" value="26px" {if $identification_icon=='26px'}checked="checked"{/if}>
         26px
-        <img src="{$OAUTH_PATH}template/icons/26px/facebook.png">
-        <img src="{$OAUTH_PATH}template/icons/26px/google.png">
-        <img src="{$OAUTH_PATH}template/icons/26px/twitter.png">
+        <span class="oauth_26px facebook"></span>
+        <span class="oauth_26px google"></span>
+        <span class="oauth_26px twitter"></span>
       </label>
       <label>
         <input type="radio" name="identification_icon" value="38px" {if $identification_icon=='38px'}checked="checked"{/if}>
         38px
-        <img src="{$OAUTH_PATH}template/icons/38px/facebook.png">
-        <img src="{$OAUTH_PATH}template/icons/38px/google.png">
-        <img src="{$OAUTH_PATH}template/icons/38px/twitter.png">
+        <span class="oauth_38px facebook"></span>
+        <span class="oauth_38px google"></span>
+        <span class="oauth_38px twitter"></span>
       </label>
     </li>
     
@@ -55,23 +56,23 @@
       <label>
         <input type="radio" name="menubar_icon" value="16px" {if $menubar_icon=='16px'}checked="checked"{/if}>
         16px
-        <img src="{$OAUTH_PATH}template/icons/16px/facebook.png">
-        <img src="{$OAUTH_PATH}template/icons/16px/google.png">
-        <img src="{$OAUTH_PATH}template/icons/16px/twitter.png">
+        <span class="oauth_16px facebook"></span>
+        <span class="oauth_16px google"></span>
+        <span class="oauth_16px twitter"></span>
       </label>
       <label>
         <input type="radio" name="menubar_icon" value="26px" {if $menubar_icon=='26px'}checked="checked"{/if}>
         26px
-        <img src="{$OAUTH_PATH}template/icons/26px/facebook.png">
-        <img src="{$OAUTH_PATH}template/icons/26px/google.png">
-        <img src="{$OAUTH_PATH}template/icons/26px/twitter.png">
+        <span class="oauth_26px facebook"></span>
+        <span class="oauth_26px google"></span>
+        <span class="oauth_26px twitter"></span>
       </label>
       <label>
         <input type="radio" name="menubar_icon" value="38px" {if $menubar_icon=='38px'}checked="checked"{/if}>
         38px
-        <img src="{$OAUTH_PATH}template/icons/38px/facebook.png">
-        <img src="{$OAUTH_PATH}template/icons/38px/google.png">
-        <img src="{$OAUTH_PATH}template/icons/38px/twitter.png">
+        <span class="oauth_38px facebook"></span>
+        <span class="oauth_38px google"></span>
+        <span class="oauth_38px twitter"></span>
       </label>
     </li>
   </ul>

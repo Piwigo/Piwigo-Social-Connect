@@ -1,6 +1,6 @@
 {if not $OAUTH_JS_LOADED}
   {assign var=OAUTH_JS_LOADED value=true}
-  {include file=$OAUTH_ABS_PATH|@cat:'template/identification_common.tpl'}
+  {include file=$OAUTH_ABS_PATH|cat:'template/identification_common.tpl'}
 {/if}
 {html_style}{literal}
   #oauth_wrap .oauth {
@@ -12,6 +12,6 @@
   <legend>{'Or sign in with'|@translate}</legend>
   
 {foreach from=$PROVIDERS item=provider key=p}{strip}
-  <a href="#" class="oauth" title="{$p}"><img src="{$ROOT_URL}{$OAUTH_PATH}template/icons/{$oauth.identification_icon}/{$p|strtolower}.png"></a>
+  <a href="#" class="oauth oauth_{$oauth.identification_icon} {$p|strtolower}" data-idp="{$p}" title="{$provider.name}"></a>
 {/strip}{/foreach}
 </fieldset>

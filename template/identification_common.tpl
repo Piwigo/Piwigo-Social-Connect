@@ -1,8 +1,10 @@
+{combine_css path=$OAUTH_PATH|cat:'template/oauth_sprites.css'}
+
 {html_style}{literal}
   #openid_form {
     padding:20px;
   }
-  #openid_form h3, #openid_form img {
+  #openid_form h3, #openid_form .oauth_38px {
     display:inline-block;
     vertical-align:middle;
     margin:0;
@@ -39,7 +41,7 @@ function open_auth(url) {
 
 // click on a button
 $("a.oauth").click(function() {
-  var idp = $(this).attr('title');
+  var idp = $(this).data('idp');
   
   switch(idp) {
     case 'OpenID': case 'Wordpress': case 'Flickr':
@@ -52,7 +54,7 @@ $("a.oauth").click(function() {
       }
       
       $("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
-      $("#openid_form img").attr('src', '{$ROOT_URL}{$OAUTH_PATH}template/icons/38px/'+ idp.toLowerCase() +'.png');
+      $("#openid_form .oauth_38px").removeClass().addClass("oauth_38px " + idp.toLowerCase());
       $("#openid_form h3").html(idp);
       $("#openid_form").data('idp', idp);
 {literal}  
@@ -106,7 +108,7 @@ $("#openid_cancel").click(function() {
 <div style="display:none;">
   <form id="openid_form" action="">
     <div>
-      <img src="{$ROOT_URL}{$OAUTH_PATH}template/icons/openid_big.png" style="width:38px:height:38px;">
+      <span class="oauth_38px"></span>
       <h3>OpendID</h3>
     </div>
     <div>

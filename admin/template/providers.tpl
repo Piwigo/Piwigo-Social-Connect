@@ -1,4 +1,5 @@
-{combine_css path=$OAUTH_PATH|@cat:"admin/template/style.css"}
+{combine_css path=$OAUTH_PATH|cat:"admin/template/style.css"}
+{combine_css path=$OAUTH_PATH|cat:'template/oauth_sprites.css'}
 
 {footer_script}{literal}
 jQuery("select.enable").change(function() {
@@ -53,7 +54,7 @@ jQuery(".open-help").click(function() {
     
     <table><tr>
       <td>
-        <img src="{$OAUTH_PATH}template/icons/38px/{$p|strtolower}.png">
+        <span class="oauth_38px {$p|strtolower}"></span>
       </td>
       
       <td>

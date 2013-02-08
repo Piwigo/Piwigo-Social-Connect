@@ -44,6 +44,7 @@ if (isset($_POST['save_config']))
       $data['keys'] = array_map('trim', $data['keys']);
     }
     
+    $data['name'] = $PROVIDERS_CONFIG[$id]['provider_name'];
     $providers[$id] = $data;
   }
   
