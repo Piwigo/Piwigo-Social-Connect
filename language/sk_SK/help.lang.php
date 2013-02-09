@@ -20,11 +20,7 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Set the <b>Kind of Application</b> to <em>Web-based</em>'] = 'Nastaviť <b>Kind of Application</b> do <em>Web-based</em>';
-$lang['Set the <b>Default Access Type</b> to <em>Read only</em>'] = 'Nastaviť <b>Default Access Type</b> na <em>Read only</em>';
-$lang['Set the <b>Application Type</b> to <em>Web Application</em>'] = 'Nastaviť <b>Application Type</b> do <em>Web aplikácie</em>';
-$lang['Set the <b>Access Scopes</b> to <em>This app will only access public...</em>'] = 'Nastaviť <b>Access Scopes</b> do <em>tejto app bude len verejne prístupná...</em>';
-$lang['Select <em>Website with facebook authentication</em> as application type'] = 'Označiť <em>Website with facebook authentication</em> ako typ aplikácie';
+$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Nastaviť <b>%s</b> do <em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Dať Vašu doménu webstránky do poľa %s';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Poskytnutie tejto URL ako Callback/Redirect URL pre Vašu aplikáciu: <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Akonáhle ste registrovaný, prekopírujte vytvorenú aplikáciu poverení na stránku inštalácie';

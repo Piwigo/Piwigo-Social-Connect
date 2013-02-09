@@ -22,11 +22,7 @@
 // +-----------------------------------------------------------------------+
 $lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = '<b>OAuth 2.0 Client ID</b> sini <b>API Access</b> bölümünden oluşturun';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Web site adresinizi %s yazınız. Geçerli alan adı ile eşleşmesi gerekir. <em>%s</em>';
-$lang['Set the <b>Kind of Application</b> to <em>Web-based</em>'] = '<b>Uygulama çeşidi<b> olarak <em>Web Tabanlı</em> seçiniz.';
-$lang['Set the <b>Access Scopes</b> to <em>This app will only access public...</em>'] = '<b> Erişim Kapsamı</b> olarak <em> Bu uygulama sadece hakla açık ...</em> seçiniz.';
-$lang['Set the <b>Application Type</b> to <em>Web Application</em>'] = '<b>Uygulama Tipi</b> olarak <em>Web Uygulaması</em> seçiniz.';
-$lang['Set the <b>Default Access Type</b> to <em>Read only</em>'] = '<b>Varsayılan Erişim Türü</b> olarak <em>Salt Okunur</em> ayarlayın';
-$lang['Select <em>Website with facebook authentication</em> as application type'] = 'Uygulama türü olarak <em> Facebook Kimlik Doğrulama</em> \'yı seçin';
+$lang['Set the <b>%s</b> to <em>%s</em>'] = '<b>%s</b> olarak <em>%s</em> seçiniz';
 $lang['No registration required for OpenID based providers'] = 'OpenID tabanlı sağlayıcılar için kayıt olmaya gerek yok';
 $lang['Fill out any required fields such as the application name and description'] = 'Uygulama adı ve açıklaması için tüm gerekli alanları doldurun';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Yeni uygulama oluşturmak için <a href="%s" target="_blank">%s</a> tıklayın';

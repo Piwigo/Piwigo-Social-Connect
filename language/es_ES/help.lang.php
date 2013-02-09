@@ -25,11 +25,7 @@ $lang['Once the application is registered update the permissions : set <b>Contac
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Cuando su solicitud sea registrada, copie y pegue las claves de autentificación en esta página';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Dar esta URL como  Callback/Redirect URL para su aplicación';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Ponga su nombre de dominio en los campos %s. Debe corresponder a <em>%s</em>';
-$lang['Select <em>Website with facebook authentication</em> as application type'] = 'Elige <em>Sitio web con autenticación facebook </em> como tipo de aplicación';
-$lang['Set the <b>Access Scopes</b> to <em>This app will only access public...</em>'] = 'Seleccionar <em>This app will only access public...</em> para <b>Access Scopes</b>';
-$lang['Set the <b>Application Type</b> to <em>Web Application</em>'] = 'Seleccionar <em>Web Application</em> para <b>Application Type</b>';
-$lang['Set the <b>Default Access Type</b> to <em>Read only</em>'] = 'Seleccionar <em>Read only</em> para <b>Default Access Type</b>';
-$lang['Set the <b>Kind of Application</b> to <em>Web-based</em>'] = 'Seleccionar <em>Web-based</em> para <b>Kind of Application</b>';
+$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Seleccionar <b>%s</b> para <em>%s</em>';
 $lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'En la pestaña <b>API Access</b>, hagan clic en <b>create an OAuth 2.0 Client ID</b>';
 $lang['No registration required for OpenID based providers'] = 'No es necesario registrarse para tipos de autenticación OpenID';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Vallan a <a href="%s" target="_blank">%s</a> y crean una nueva aplicación';

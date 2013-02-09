@@ -23,11 +23,7 @@
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Sobald die Registrierung erfolgt ist, kopiere und füge die erstellten Anmeldedaten der Applikation in diese Einstellungs-Seite';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Verwende diese URL als Callback/Redirect URL deiner Applikation <em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Setze deine Webseiten-Domain in die %s Felder. Diese sollte identisch sein mit dem Hostnamen:  <em>%s</em>';
-$lang['Select <em>Website with facebook authentication</em> as application type'] = 'Wähle <em>Website with facebook authentication</em> ale Applikations-Typ';
-$lang['Set the <b>Access Scopes</b> to <em>This app will only access public...</em>'] = 'Setze die <b>Access Scopes</b> auf <em>This app will only access public...</em>';
-$lang['Set the <b>Application Type</b> to <em>Web Application</em>'] = 'Setze den <b>Application Type</b> auf <em>Web Application</em>';
-$lang['Set the <b>Default Access Type</b> to <em>Read only</em>'] = 'Setze den <b>Default Access Type</b> auf <em>Read only</em>';
-$lang['Set the <b>Kind of Application</b> to <em>Web-based</em>'] = 'Setze <b>Kind of Application</b> auf <em>Web-based</em>';
+$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Setze den <b>%s</b> auf <em>%s</em>';
 $lang['Fill out any required fields such as the application name and description'] = 'Fülle alle notwendigen Felder wie den Applikations-Namen und Beschreibung aus.';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Gehe zu <a href="%s" target="_blank">%s</a> und erstelle eine neue Applikation';
 $lang['No registration required for OpenID based providers'] = 'Keine Anmeldung notwendig für OpenID basierte Anbieter';
