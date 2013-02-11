@@ -1,0 +1,1 @@
+Umożliwia zalogowanie się do Twojej galerii przy pomocy Twittera, Facebooka, Google, itd.
