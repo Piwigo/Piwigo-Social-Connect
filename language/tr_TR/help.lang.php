@@ -26,4 +26,5 @@ $lang['Set the <b>%s</b> to <em>%s</em>'] = '<b>%s</b> olarak <em>%s</em> seçin
 $lang['No registration required for OpenID based providers'] = 'OpenID tabanlı sağlayıcılar için kayıt olmaya gerek yok';
 $lang['Fill out any required fields such as the application name and description'] = 'Uygulama adı ve açıklaması için tüm gerekli alanları doldurun';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Yeni uygulama oluşturmak için <a href="%s" target="_blank">%s</a> tıklayın';
+$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Bu URL adresini uygulamanıza Geri çağırma/Yönlendirme URL adresi olarak tanıtın: <em>%s</em>';
 ?>
