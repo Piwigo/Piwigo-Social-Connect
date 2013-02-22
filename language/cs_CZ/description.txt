@@ -1,0 +1,1 @@
+Umožňuje různé způsoby přihlášení do galerie (Twitter, Facebook, Google, apod.)
