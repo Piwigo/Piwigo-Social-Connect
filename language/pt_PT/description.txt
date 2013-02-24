@@ -1,0 +1,1 @@
+Fornece várias formas de se ligar à sua galeria (Twitter, Facebook, Google, etc.)
