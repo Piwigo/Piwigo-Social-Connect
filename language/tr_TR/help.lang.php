@@ -27,4 +27,7 @@ $lang['No registration required for OpenID based providers'] = 'OpenID tabanlı 
 $lang['Fill out any required fields such as the application name and description'] = 'Uygulama adı ve açıklaması için tüm gerekli alanları doldurun';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Yeni uygulama oluşturmak için <a href="%s" target="_blank">%s</a> tıklayın';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Bu URL adresini uygulamanıza Geri çağırma/Yönlendirme URL adresi olarak tanıtın: <em>%s</em>';
+$lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = ' <b>Kullanıcı ID Oluştur</b> popup, Gelişmiş ayarlara ulaşmak için <b>(diger ayarlar)</b> Tıklayınız.';
+$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Bir kez Uygulama izinlerini güncelleştirmelisiniz : Ayar <b>Kişiler</b> ,<em>Oku</em> ,<b>Sosyal Dizin</b> ve <em>Herkese açık oku</em>';
+$lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Bir kere kayıt olduktan sonra bu kayır sayfasında oluştuurlan kimlik bilgilerini kopyalayıp yapıştırın.';
 ?>
