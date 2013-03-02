@@ -1,0 +1,1 @@
+Többféle bejelentkezési lehetőség biztosítása a galériába (Twitter, Facebook, Google, etc.)
