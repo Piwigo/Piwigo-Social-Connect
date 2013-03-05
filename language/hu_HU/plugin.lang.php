@@ -44,4 +44,6 @@ $lang['Enabled'] = 'Bekapcsolva';
 $lang['Error...'] = 'Hiba...';
 $lang['Loading...'] = 'Betöltés...';
 $lang['Profile URL'] = 'Profil URL';
+$lang['Logged with'] = 'Bejelentkezve';
+$lang['Sign in with %s'] = 'Jelentkezzen be %s';
 ?>

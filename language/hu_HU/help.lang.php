@@ -21,4 +21,7 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Fill out any required fields such as the application name and description'] = 'Töltse ki a szükséges mezőket, mint például az alkalmazás nevét és leírását';
+$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Ugrás ide <a href="%s" target="_blank">%s</a> és új alkalmasás létrehozása';
+$lang['No registration required for OpenID based providers'] = 'OpenId alapú szolgáltatók esetén nem kell regisztráció';
+$lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'Az <b>API hozzáférés</b> lapon, <b>hozzon létre egy OAuth 2.0 Client ID-t (ügyfélazonosítót)</b>';
 ?>
