@@ -64,6 +64,7 @@ SELECT id FROM '.USERS_TABLE.'
   // init connect
   else if (isset($_GET['init_auth']))
   {
+    $params = array();
     if ($provider == 'OpenID')
     {
       $params['openid_identifier'] = $_GET['openid_identifier'];
