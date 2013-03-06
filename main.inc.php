@@ -105,13 +105,13 @@ WHERE id = "'. OAUTH_ID .'"';
   // check config
   if (defined('IN_ADMIN'))
   {
-    if ( empty($hybridauth_conf) and @$_GET['page'] != 'plugin-'.OAUTH_ID )
+    if ( empty($hybridauth_conf) and strpos(@$_GET['page'],'plugin-'.OAUTH_ID)===false )
     {
-      array_push($page['errors'], l10n('OAuth: You need to configure the credentials'));
+      array_push($page['warnings'], l10n('OAuth: You need to configure the credentials'));
     }
     if (!function_exists('curl_init'))
     {
-      array_push($page['errors'], l10n('OAuth: PHP Curl extension is needed'));
+      array_push($page['warnings'], l10n('OAuth: PHP Curl extension is needed'));
     }
   }
   
