@@ -288,7 +288,7 @@ function oauth_assign_template_vars()
       'OAUTH_PATH' => OAUTH_PATH,
       'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
       'PROVIDERS' => get_activated_providers(),
-      'ABS_ROOT_URL' => get_gallery_home_url(),
+      'ABS_ROOT_URL' => rtrim(get_gallery_home_url(), '/') . '/',
       ));
   }
 }
