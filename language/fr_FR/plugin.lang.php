@@ -12,7 +12,7 @@ $lang['Your registration is almost done, please complete the registration form.'
 $lang['OAuth: You need to configure the credentials'] = 'OAuth: Vous devez définir vos clef d\'authentification';
 $lang['OAuth: PHP Curl extension is needed'] = 'OAuth: l\'extension PHP Curl est nécessaire';
 $lang['Display sign in buttons in the menubar'] = 'Afficher les boutons de connexion dans le menu';
-$lang['Display sign in buttons on the register page'] = 'Afficher les boutons de connecion sur la page d\'enregistrement';
+$lang['Display sign in buttons on the register page'] = 'Afficher les boutons de connexion sur la page d\'enregistrement';
 $lang['Icon size on the identification page'] = 'Taille des icônes sur la page d\'identification';
 $lang['Icon size in the menubar'] = 'Taille des icônes dans le menu';
 $lang['Enabled'] = 'Activé';
