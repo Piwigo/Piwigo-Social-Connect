@@ -1,4 +1,4 @@
-{if $id == "mbIdentification" and isset($U_LOGIN)}
+{if $id == "mbIdentification" and isset($U_LOGIN) and count($PROVIDERS)}
   {if not $OAUTH_JS_LOADED}
     {assign var=OAUTH_JS_LOADED value=true}
     {include file=$OAUTH_ABS_PATH|cat:'template/identification_common.tpl'}

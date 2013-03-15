@@ -10,7 +10,6 @@ if (isset($_POST['save_config']))
   $providers = array();
   foreach ($_POST['providers'] as $id => $data)
   {
-    $error = false;
     $data['enabled'] = $data['enabled']=='true';
     
     if ($PROVIDERS_CONFIG[$id]['new_app_link'] and $data['enabled'])
@@ -20,18 +19,12 @@ if (isset($_POST['save_config']))
         (!@$PROVIDERS_CONFIG[$id]['require_client_id'] and empty($data['keys']['key']))
       ) {
         array_push($page['errors'], sprintf(l10n('%s: invalid keys'), $PROVIDERS_CONFIG[$id]['provider_name']));
-        $error = true;
       }
     }
-    else
-    {
-      unset($data['keys']);
-    }
     
-    if ( ($id=='Wordpress' or $id=='Flickr') and $data['enabled'] and !@$providers['OpenID']['enabled'] )
+    if ( ($id=='Wordpress' or $id=='Flickr') and $data['enabled'] and !@$providers['OpenID']['enabled'] ) // in the template, OpenID must be before other OpenID based providers
     {
       array_push($page['errors'], sprintf(l10n('OpenID must be enabled in order to use %s authentication'), $id));
-      $error = true;
     }
     
     if (isset($PROVIDERS_CONFIG[$id]['scope']))

@@ -60,6 +60,13 @@ function oauth_begin_register()
       $hybridauth = new Hybrid_Auth($hybridauth_conf);
       $adapter = $hybridauth->authenticate($provider);
       $remote_user = $adapter->getUserProfile();
+      
+      // security, check remote identifier
+      if ($remote_user->identifier != $user_identifier)
+      {
+        pwg_unset_session_var('oauth_new_user');
+        throw new Exception('Hacking attempt!');
+      }
     
       $template->assign(array(
         'OAUTH_PROVIDER' => $provider,
@@ -72,13 +79,6 @@ function oauth_begin_register()
       array_push($page['infos'], l10n('Your registration is almost done, please complete the registration form.'));
       
       $oauth_id = $provider.'---'.$remote_user->identifier;
-      
-      // security, check remote identifier
-      if ($remote_user->identifier != $user_identifier)
-      {
-        pwg_unset_session_var('oauth_new_user');
-        throw new Exception('Hacking attempt!');
-      }
       
       // form submited
       if (isset($_POST['submit']))
@@ -95,7 +95,7 @@ function oauth_begin_register()
           pwg_unset_session_var('oauth_new_user');
           $user_id = get_userid($_POST['login']);
           
-          // udpdate oauth field
+          // update oauth field
           $query = '
 UPDATE '.USERS_TABLE.'
   SET oauth_id = "'.$oauth_id.'"
@@ -234,7 +234,7 @@ function oauth_blockmanager($menu_ref_arr)
   oauth_assign_template_vars();
   $template->assign('REDIRECT_TO', get_gallery_home_url());
   
-  $template->set_prefilter('menubar', 'oauth_add_menubar_buttons');
+  $template->set_prefilter('menubar', 'oauth_add_menubar_buttons_prefilter');
 }
 
 
@@ -253,9 +253,9 @@ function oauth_remove_password_fields_prefilter($content)
   $search = 'type="password" ';
   $add = 'disabled="disabled" ';
   $script = '
-{footer_script}{literal}
+{footer_script}
 jQuery("input[type=\'password\'], input[name=\'send_password_by_mail\']").parent("li").css("display", "none");
-{/literal}{/footer_script}';
+{/footer_script}';
 
   $content = str_replace($search, $search.$add, $content);
   return $content.$script;
@@ -268,7 +268,7 @@ function oauth_add_profile_prefilter($content)
   return preg_replace($search, '</legend> '.$add, $content, 1);
 }
 
-function oauth_add_menubar_buttons($content)
+function oauth_add_menubar_buttons_prefilter($content)
 {
   $search = '{include file=$block->template|@get_extent:$id }';
   $add = file_get_contents(OAUTH_PATH . 'template/identification_menubar.tpl');

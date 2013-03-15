@@ -40,30 +40,30 @@ function open_auth(url) {
 }
 
 // click on a button
-$("a.oauth").click(function() {
-  var idp = $(this).data('idp');
+jQuery("a.oauth").click(function() {
+  var idp = jQuery(this).data('idp');
   
   switch(idp) {
     case 'OpenID': case 'Wordpress': case 'Flickr':
       switch(idp) {
 {/literal}
         case 'OpenID':
-          $("#openid_label").html('{'Please enter your OpenID URL'|@translate|escape:javascript}'); break;
+          jQuery("#openid_label").html('{'Please enter your OpenID URL'|@translate|escape:javascript}'); break;
         case 'Wordpress': case 'Flickr':
-          $("#openid_label").html('{'Please enter your username'|@translate|escape:javascript}'); break;
+          jQuery("#openid_label").html('{'Please enter your username'|@translate|escape:javascript}'); break;
       }
       
-      $("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
-      $("#openid_form .oauth_38px").removeClass().addClass("oauth_38px " + idp.toLowerCase());
-      $("#openid_form h3").html(idp);
-      $("#openid_form").data('idp', idp);
+      jQuery("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
+      jQuery("#openid_form .oauth_38px").removeClass().addClass("oauth_38px " + idp.toLowerCase());
+      jQuery("#openid_form h3").html(idp);
+      jQuery("#openid_form").data('idp', idp);
 {literal}  
-      $.colorbox({
+      jQuery.colorbox({
         inline:true,
         href:"#openid_form",
         initialWidth:0,
         initialHeight:0,
-        onComplete:function(){ $.colorbox.resize({speed:0}) } // prevent misalignement when icon not loaded
+        onComplete:function(){ jQuery.colorbox.resize({speed:0}) } // prevent misalignement when icon not loaded
       })
       break;
       
@@ -76,14 +76,14 @@ $("a.oauth").click(function() {
   return false;
 });
 
-$("#openid_form").submit(function() {
-  var idp = $(this).data('idp');
-  var oi = $("#openid_form input[name='openid_identifier']").val();
-  $("#openid_form input[name='openid_identifier']").val('');
+jQuery("#openid_form").submit(function() {
+  var idp = jQuery(this).data('idp');
+  var oi = jQuery("#openid_form input[name='openid_identifier']").val();
+  jQuery("#openid_form input[name='openid_identifier']").val('');
   
-  $("#openid_label").removeClass('error');
+  jQuery("#openid_label").removeClass('error');
   if (!oi) {
-    $("#openid_label").addClass('error');
+    jQuery("#openid_label").addClass('error');
     return false;
   }
   
@@ -94,13 +94,13 @@ $("#openid_form").submit(function() {
 {/literal}  
   open_auth("{$OAUTH_URL}OpenID&openid_identifier="+ encodeURI(oi));
 {literal}
-  $.colorbox.close();
+  jQuery.colorbox.close();
   return false;
 });
 
-$("#openid_cancel").click(function() {
-  $("#openid_label").removeClass('error');
-  $.colorbox.close();
+jQuery("#openid_cancel").click(function() {
+  jQuery("#openid_label").removeClass('error');
+  jQuery.colorbox.close();
   return false;
 });
 {/literal}{/footer_script}
