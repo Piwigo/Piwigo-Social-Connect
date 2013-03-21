@@ -1,0 +1,1 @@
+提供了各種方法登入到您的畫廊 (Twitter, Facebook, Google, 等等...)
