@@ -1,0 +1,2 @@
+Pakub võimalusi eri moodustega galeriisse sisse logida (Twitter, Facebook, Google, etc.)
+
