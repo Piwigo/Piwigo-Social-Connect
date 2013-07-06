@@ -26,18 +26,24 @@ function get_activated_providers()
 {
   global $hybridauth_conf;
   
-  $out = array();
-  
-  foreach ($hybridauth_conf['providers'] as $id => $data)
-  {
-    if ($data['enabled'])
-    {
-      $out[$id] = $data;
-    }
-  }
-  
-  return $out;
+  return array_filter($hybridauth_conf['providers'], create_function('$p', 'return $p["enabled"];'));
 }
 
+function oauth_assign_template_vars()
+{
+  global $template, $conf;
+  
+  if ($template->get_template_vars('OAUTH_URL') == null)
+  {
+    $template->assign(array(
+      'oauth' => $conf['oauth'],
+      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
+      'OAUTH_PATH' => OAUTH_PATH,
+      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
+      'PROVIDERS' => get_activated_providers(),
+      'ABS_ROOT_URL' => rtrim(get_gallery_home_url(), '/') . '/',
+      ));
+  }
+}
 
 ?>

@@ -107,7 +107,7 @@ WHERE id = "'. OAUTH_ID .'"';
   {
     if ( empty($hybridauth_conf) and strpos(@$_GET['page'],'plugin-'.OAUTH_ID)===false )
     {
-      array_push($page['warnings'], l10n('OAuth: You need to configure the credentials'));
+      array_push($page['warnings'], '<a href="'.OAUTH_ADMIN.'">'.l10n('OAuth: You need to configure the credentials').'</a>');
     }
     if (!function_exists('curl_init'))
     {

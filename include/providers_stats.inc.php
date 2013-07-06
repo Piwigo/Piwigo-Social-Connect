@@ -60,6 +60,11 @@ return array(
     'provider_name'     => 'Flickr',
     'new_app_link'      => null,
   ),
+  'Steam' => array( 
+    'label'             => 'Steam',
+    'provider_name'     => 'Steam',
+    'new_app_link'      => null,
+  ),
   'Wordpress' => array( 
     'label'             => 'Wordpress',
     'provider_name'     => 'Wordpress',

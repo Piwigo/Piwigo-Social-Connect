@@ -44,12 +44,12 @@ jQuery("a.oauth").click(function() {
   var idp = jQuery(this).data('idp');
   
   switch(idp) {
-    case 'OpenID': case 'Wordpress': case 'Flickr':
+    case 'OpenID': case 'Wordpress': case 'Flickr': case 'Steam':
       switch(idp) {
 {/literal}
         case 'OpenID':
           jQuery("#openid_label").html('{'Please enter your OpenID URL'|@translate|escape:javascript}'); break;
-        case 'Wordpress': case 'Flickr':
+        case 'Wordpress': case 'Flickr': case 'Steam':
           jQuery("#openid_label").html('{'Please enter your username'|@translate|escape:javascript}'); break;
       }
       
@@ -90,6 +90,7 @@ jQuery("#openid_form").submit(function() {
   switch(idp) {
     case 'Wordpress': oi = "http://" + oi + ".wordpress.com"; break;
     case 'Flickr': oi = "http://www.flickr.com/photos/" + oi + "/"; break;
+    case 'Steam': oi = "http://steamcommunity.com/openid/" + oi; break;
   }
 {/literal}  
   open_auth("{$OAUTH_URL}OpenID&openid_identifier="+ encodeURI(oi));

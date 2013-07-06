@@ -34,7 +34,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
     list($provider) = explode('---', $oauth_id);
     $_SESSION['page_errors'][] = sprintf(l10n('You registered with a %s account, please sign in with the same account.'), $provider);
     
-    $redirect_to = get_root_url().'identification.php';
+    $redirect_to = get_root_url().'identification.php'; // variable used by identification.php
     return true;
   }
   
@@ -49,7 +49,7 @@ function oauth_begin_register()
 {
   global $conf, $template, $hybridauth_conf, $page;
   
-  // comming from identification page
+  // coming from identification page
   if (pwg_get_session_var('oauth_new_user') != null)
   {
     list($provider, $user_identifier) = pwg_get_session_var('oauth_new_user');
@@ -65,7 +65,7 @@ function oauth_begin_register()
       if ($remote_user->identifier != $user_identifier)
       {
         pwg_unset_session_var('oauth_new_user');
-        throw new Exception('Hacking attempt!');
+        throw new Exception('Hacking attempt!', 403);
       }
     
       $template->assign(array(
@@ -141,7 +141,7 @@ UPDATE '.USERS_TABLE.'
  */
 function oauth_begin_profile()
 {
-  global $template, $user, $conf, $hybridauth_conf;
+  global $template, $user, $conf, $hybridauth_conf, $page;
   
   $query = '
 SELECT oauth_id FROM '.USERS_TABLE.'
@@ -253,8 +253,8 @@ function oauth_remove_password_fields_prefilter($content)
   $search = 'type="password" ';
   $add = 'disabled="disabled" ';
   $script = '
-{footer_script}
-jQuery("input[type=\'password\'], input[name=\'send_password_by_mail\']").parent("li").css("display", "none");
+{footer_script require="jquery"}
+jQuery("input[type=\'password\'], input[name=\'send_password_by_mail\']").parent().css("display", "none");
 {/footer_script}';
 
   $content = str_replace($search, $search.$add, $content);
@@ -275,21 +275,4 @@ function oauth_add_menubar_buttons_prefilter($content)
   return str_replace($search, $search.$add, $content);
 }
 
-
-function oauth_assign_template_vars()
-{
-  global $template, $conf;
-  
-  if ($template->get_template_vars('OAUTH_URL') == null)
-  {
-    $template->assign(array(
-      'oauth' => $conf['oauth'],
-      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
-      'OAUTH_PATH' => OAUTH_PATH,
-      'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
-      'PROVIDERS' => get_activated_providers(),
-      'ABS_ROOT_URL' => rtrim(get_gallery_home_url(), '/') . '/',
-      ));
-  }
-}
 ?>

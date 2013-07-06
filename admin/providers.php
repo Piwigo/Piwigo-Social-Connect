@@ -22,7 +22,7 @@ if (isset($_POST['save_config']))
       }
     }
     
-    if ( ($id=='Wordpress' or $id=='Flickr') and $data['enabled'] and !@$providers['OpenID']['enabled'] ) // in the template, OpenID must be before other OpenID based providers
+    if ( ($id=='Wordpress' or $id=='Flickr' or $id=='Steam') and $data['enabled'] and !@$providers['OpenID']['enabled'] ) // in the template, OpenID must be before other OpenID based providers
     {
       array_push($page['errors'], sprintf(l10n('OpenID must be enabled in order to use %s authentication'), $id));
     }

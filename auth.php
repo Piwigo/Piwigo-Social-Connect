@@ -18,7 +18,7 @@ try {
     !array_key_exists($provider, $hybridauth_conf['providers'])
     or !$hybridauth_conf['providers'][$provider]['enabled']
   ) {
-    throw new Exception('Hacking attempt!', 1002);
+    throw new Exception('Invalid provider!', 1002);
   }
   
   $hybridauth = new Hybrid_Auth($hybridauth_conf);

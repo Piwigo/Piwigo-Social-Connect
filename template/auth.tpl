@@ -24,7 +24,7 @@
   {'Contacting <b>%s</b>. Please wait.'|@translate|sprintf:$PROVIDER}
   
   <script type="text/javascript">
-    setTimeout('window.location.href = "{$SELF_URL}{$LOADING}";', 200);
+    setTimeout('window.location.href = "{$SELF_URL}{$LOADING}";', 500);
   </script>
   
 {elseif $REDIRECT_TO}
