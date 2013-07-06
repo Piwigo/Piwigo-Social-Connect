@@ -86,9 +86,8 @@ function oauth_begin_register()
         $page['errors'] =
           register_user($_POST['login'],
                         hash('sha1', $oauth_id.$conf['secret_key']),
-                        $_POST['mail_address'],
-                        true,
-                        $page['errors']);
+                        $_POST['mail_address']
+                        );
                         
         if (count($page['errors']) == 0)
         {
@@ -114,7 +113,7 @@ UPDATE '.USERS_TABLE.'
       {
         // overwrite fields with remote datas
         $_POST['login'] = $remote_user->displayName;
-        $_POST['mail_adress'] = $remote_user->email;
+        $_POST['mail_address'] = $remote_user->email;
       }
       
       // template

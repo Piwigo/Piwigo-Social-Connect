@@ -116,20 +116,21 @@ WHERE id = "'. OAUTH_ID .'"';
   }
   
   // in case of registration aborded
-  if ( script_basename() != 'register' and ($data=pwg_get_session_var('oauth_new_user')) !== null )
-  {
-    pwg_unset_session_var('oauth_new_user');
+  // DON'T WORK, because potentially executed by sub-scripts like Secureimage for Crypto Captcha
+  // if ( script_basename() != 'register' and ($data=pwg_get_session_var('oauth_new_user')) !== null )
+  // {
+    // pwg_unset_session_var('oauth_new_user');
     
-    require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
+    // require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
     
-    try {
-      $hybridauth = new Hybrid_Auth($hybridauth_conf);
-      $adapter = $hybridauth->getAdapter($data[0]);
-      $adapter->logout();
-    }
-    catch (Exception $e) {
-    }
-  }
+    // try {
+      // $hybridauth = new Hybrid_Auth($hybridauth_conf);
+      // $adapter = $hybridauth->getAdapter($data[0]);
+      // $adapter->logout();
+    // }
+    // catch (Exception $e) {
+    // }
+  // }
 }
 
 ?>
