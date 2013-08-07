@@ -15,8 +15,10 @@
   }
 {/literal}{/html_style}
 
+{if not isset($OAUTH_NO_LIGHTBOX)}
 {combine_script id='jquery.colorbox' load='footer' require='jquery' path='themes/default/js/plugins/jquery.colorbox.min.js'}
 {combine_css path="themes/default/js/plugins/colorbox/style2/colorbox.css"}
+{/if}
 
 {footer_script}{literal}
 // redirect, called from the popup

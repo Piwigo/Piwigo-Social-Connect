@@ -60,6 +60,8 @@ else if (!empty($hybridauth_conf) and function_exists('curl_init'))
   
   add_event_handler('blockmanager_apply', 'oauth_blockmanager');
   
+  add_event_handler('loc_end_index_thumbnails', 'oauth_anti_lightbox', 41);
+  
   include_once(OAUTH_PATH . 'include/public_events.inc.php');
 }
 

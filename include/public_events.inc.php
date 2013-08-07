@@ -1,6 +1,25 @@
 <?php
 defined('OAUTH_PATH') or die('Hacking attempt!');
 
+function oauth_anti_lightbox($tpl_thumbnails_var)
+{
+  global $template, $page;
+  
+  if ($page['section'] == 'collections' && !empty($template->css_by_priority[0]))
+  {
+    foreach ($template->css_by_priority[0] as $file)
+    {
+      if (strpos($file[0], 'colorbox.css') !== false)
+      {
+        $template->assign('OAUTH_NO_LIGHTBOX', true);
+        break;
+      }
+    }
+  }
+  
+  return $tpl_thumbnails_var;
+}
+
 /**
  * identification page
  */
