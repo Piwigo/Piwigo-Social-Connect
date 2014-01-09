@@ -5,7 +5,7 @@ global $template, $page, $conf;
 
 if (!$conf['allow_user_registration'])
 {
-  array_push($page['warnings'], l10n('Users are not allowed to register on your gallery. OAuth will not work correctly.'));
+  $page['warnings'][] = l10n('Users are not allowed to register on your gallery. OAuth will not work correctly.');
 }
 
 
@@ -30,5 +30,3 @@ $template->assign('OAUTH_PATH', get_root_url() . OAUTH_PATH);
   
 // send page content
 $template->assign_var_from_handle('ADMIN_CONTENT', 'oauth_content');
-
-?>

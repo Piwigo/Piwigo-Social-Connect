@@ -18,13 +18,13 @@ if (isset($_POST['save_config']))
         (@$PROVIDERS_CONFIG[$id]['require_client_id'] and empty($data['keys']['id'])) or
         (!@$PROVIDERS_CONFIG[$id]['require_client_id'] and empty($data['keys']['key']))
       ) {
-        array_push($page['errors'], sprintf(l10n('%s: invalid keys'), $PROVIDERS_CONFIG[$id]['provider_name']));
+        $page['errors'][] = l10n('%s: invalid keys', $PROVIDERS_CONFIG[$id]['provider_name']);
       }
     }
     
     if ( ($id=='Wordpress' or $id=='Flickr' or $id=='Steam') and $data['enabled'] and !@$providers['OpenID']['enabled'] ) // in the template, OpenID must be before other OpenID based providers
     {
-      array_push($page['errors'], sprintf(l10n('OpenID must be enabled in order to use %s authentication'), $id));
+      $page['errors'][] = l10n('OpenID must be enabled in order to use %s authentication', $id);
     }
     
     if (isset($PROVIDERS_CONFIG[$id]['scope']))
@@ -51,7 +51,7 @@ if (isset($_POST['save_config']))
     $content.= ";\n?>";
     
     file_put_contents(OAUTH_CONFIG, $content);
-    array_push($page['infos'], l10n('Information data registered in database'));
+    $page['infos'][] = l10n('Information data registered in database');
   }
 }
 
@@ -65,5 +65,3 @@ $template->assign(array(
 
 // define template file
 $template->set_filename('oauth_content', realpath(OAUTH_PATH . 'admin/template/providers.tpl'));
-
-?>

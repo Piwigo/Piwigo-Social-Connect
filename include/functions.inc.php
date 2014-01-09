@@ -45,5 +45,3 @@ function oauth_assign_template_vars()
       ));
   }
 }
-
-?>

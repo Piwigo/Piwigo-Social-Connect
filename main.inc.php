@@ -10,10 +10,8 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-// +-----------------------------------------------------------------------+
-// | Define plugin constants                                               |
-// +-----------------------------------------------------------------------+
-defined('OAUTH_ID') or define('OAUTH_ID', basename(dirname(__FILE__)));
+
+define('OAUTH_ID',      basename(dirname(__FILE__)));
 define('OAUTH_PATH' ,   PHPWG_PLUGINS_PATH . OAUTH_ID . '/');
 define('OAUTH_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . OAUTH_ID);
 define('OAUTH_CONFIG',  PWG_LOCAL_DIR . 'config/hybridauth.inc.php');
@@ -21,33 +19,22 @@ define('OAUTH_PUBLIC',  get_absolute_root_url() . ltrim(OAUTH_PATH,'./') . 'incl
 define('OAUTH_VERSION', 'auto');
 
 
-// +-----------------------------------------------------------------------+
-// | Event handlers                                                        |
-// +-----------------------------------------------------------------------+
-global $conf, $hybridauth_conf;
-
-add_event_handler('init', 'oauth_init');
+// try to load hybridauth config
+global $hybridauth_conf;
 
 include_once(OAUTH_PATH . 'include/functions.inc.php');
 
-// try to load hybridauth config
 if (file_exists(PHPWG_ROOT_PATH.OAUTH_CONFIG))
 {
   load_hybridauth_conf();
 }
 
+
+add_event_handler('init', 'oauth_init');
+
 if (defined('IN_ADMIN'))
 {
   add_event_handler('get_admin_plugin_menu_links', 'oauth_admin_plugin_menu_links');
-  
-  function oauth_admin_plugin_menu_links($menu) 
-  {
-    array_push($menu, array(
-      'NAME' => l10n('OAuth'),
-      'URL' => OAUTH_ADMIN,
-    ));
-    return $menu;
-  }
 }
 else if (!empty($hybridauth_conf) and function_exists('curl_init'))
 {
@@ -60,8 +47,6 @@ else if (!empty($hybridauth_conf) and function_exists('curl_init'))
   
   add_event_handler('blockmanager_apply', 'oauth_blockmanager');
   
-  add_event_handler('loc_end_index_thumbnails', 'oauth_anti_lightbox', 41);
-  
   include_once(OAUTH_PATH . 'include/public_events.inc.php');
 }
 
@@ -71,34 +56,11 @@ else if (!empty($hybridauth_conf) and function_exists('curl_init'))
  */
 function oauth_init()
 {
-  global $conf, $pwg_loaded_plugins, $page, $hybridauth_conf;
+  global $conf, $page, $hybridauth_conf;
   
-  // apply upgrade if needed
-  if (
-    OAUTH_VERSION == 'auto' or
-    $pwg_loaded_plugins[OAUTH_ID]['version'] == 'auto' or
-    version_compare($pwg_loaded_plugins[OAUTH_ID]['version'], OAUTH_VERSION, '<')
-  )
-  {
-    include_once(OAUTH_PATH . 'include/install.inc.php');
-    oauth_install();
-    
-    if ( $pwg_loaded_plugins[OAUTH_ID]['version'] != 'auto' and OAUTH_VERSION != 'auto' )
-    {
-      $query = '
-UPDATE '. PLUGINS_TABLE .'
-SET version = "'. OAUTH_VERSION .'"
-WHERE id = "'. OAUTH_ID .'"';
-      pwg_query($query);
-      
-      $pwg_loaded_plugins[OAUTH_ID]['version'] = OAUTH_VERSION;
-      
-      if (defined('IN_ADMIN'))
-      {
-        $_SESSION['page_infos'][] = 'OAuth updated to version '. OAUTH_VERSION;
-      }
-    }
-  }
+  include_once(OAUTH_PATH . 'maintain.inc.php');
+  $maintain = new oAuth_maintain(OAUTH_ID);
+  $maintain->autoUpdate(OAUTH_VERSION, 'install');
   
   load_language('plugin.lang', OAUTH_PATH);
   
@@ -107,13 +69,13 @@ WHERE id = "'. OAUTH_ID .'"';
   // check config
   if (defined('IN_ADMIN'))
   {
-    if ( empty($hybridauth_conf) and strpos(@$_GET['page'],'plugin-'.OAUTH_ID)===false )
+    if (empty($hybridauth_conf) and strpos(@$_GET['page'],'plugin-'.OAUTH_ID)===false)
     {
-      array_push($page['warnings'], '<a href="'.OAUTH_ADMIN.'">'.l10n('OAuth: You need to configure the credentials').'</a>');
+      $page['warnings'][] = '<a href="'.OAUTH_ADMIN.'">'.l10n('OAuth: You need to configure the credentials').'</a>';
     }
     if (!function_exists('curl_init'))
     {
-      array_push($page['warnings'], l10n('OAuth: PHP Curl extension is needed'));
+      $page['warnings'][] = l10n('OAuth: PHP Curl extension is needed');
     }
   }
   
@@ -135,4 +97,11 @@ WHERE id = "'. OAUTH_ID .'"';
   // }
 }
 
-?>
+function oauth_admin_plugin_menu_links($menu) 
+{
+  $menu[] = array(
+    'NAME' => l10n('OAuth'),
+    'URL' => OAUTH_ADMIN,
+    );
+  return $menu;
+}

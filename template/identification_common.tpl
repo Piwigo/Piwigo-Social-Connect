@@ -1,34 +1,22 @@
 {combine_css path=$OAUTH_PATH|cat:'template/oauth_sprites.css'}
 
-{html_style}{literal}
-  #openid_form {
-    padding:20px;
-  }
-  #openid_form h3, #openid_form .oauth_38px {
-    display:inline-block;
-    vertical-align:middle;
-    margin:0;
-  }
-  #openid_label.error {
-    color:red;
-    font-weight:bold;
-  }
-{/literal}{/html_style}
-
-{if not isset($OAUTH_NO_LIGHTBOX)}
 {combine_script id='jquery.colorbox' load='footer' require='jquery' path='themes/default/js/plugins/jquery.colorbox.min.js'}
-{combine_css path="themes/default/js/plugins/colorbox/style2/colorbox.css"}
-{/if}
+{combine_css id='colorbox' path="themes/default/js/plugins/colorbox/style2/colorbox.css"}
 
-{footer_script}{literal}
+{html_style}
+#openid_form { padding:20px; }
+#openid_form h3, #openid_form .oauth_38px { display:inline-block; vertical-align:middle; margin:0; }
+#openid_label.error { color:red; font-weight:bold; }
+{/html_style}
+
+{footer_script}
 // redirect, called from the popup
 function redirect(type) {
-{/literal}
-  url = "{$REDIRECT_TO}";
-  if (typeof type != 'undefined' && type != 'default') {ldelim}
+  var url = "{$REDIRECT_TO}";
+  if (typeof type != 'undefined' && type != 'default') {
     url = "{$ABS_ROOT_URL}"+ type +".php";
   }
-{literal}
+
   window.location.href = url;
 }
 
@@ -48,31 +36,33 @@ jQuery("a.oauth").click(function() {
   switch(idp) {
     case 'OpenID': case 'Wordpress': case 'Flickr': case 'Steam':
       switch(idp) {
-{/literal}
         case 'OpenID':
-          jQuery("#openid_label").html('{'Please enter your OpenID URL'|@translate|escape:javascript}'); break;
+          jQuery("#openid_label").html('{'Please enter your OpenID URL'|translate|escape:javascript}'); break;
         case 'Wordpress': case 'Flickr': case 'Steam':
-          jQuery("#openid_label").html('{'Please enter your username'|@translate|escape:javascript}'); break;
+          jQuery("#openid_label").html('{'Please enter your username'|translate|escape:javascript}'); break;
       }
       
-      jQuery("#openid_form").css('background-color', $("#the_page #content").css('background-color'));
+      var bg_color = $('#the_page #content').css('background-color');
+      if (!bg_color || bg_color=='transparent') {
+        bg_color = $('body').css('background-color');
+      }
+      jQuery("#openid_form").css('background-color', bg_color);
+
       jQuery("#openid_form .oauth_38px").removeClass().addClass("oauth_38px " + idp.toLowerCase());
       jQuery("#openid_form h3").html(idp);
       jQuery("#openid_form").data('idp', idp);
-{literal}  
+
       jQuery.colorbox({
         inline:true,
         href:"#openid_form",
         initialWidth:0,
         initialHeight:0,
-        onComplete:function(){ jQuery.colorbox.resize({speed:0}) } // prevent misalignement when icon not loaded
+        onComplete: function(){ jQuery.colorbox.resize({ speed:0 }) } // prevent misalignement when icon not loaded
       })
       break;
       
     default:
-{/literal}
       open_auth("{$OAUTH_URL}"+ idp);
-{literal}
   }
   
   return false;
@@ -94,9 +84,9 @@ jQuery("#openid_form").submit(function() {
     case 'Flickr': oi = "http://www.flickr.com/photos/" + oi + "/"; break;
     case 'Steam': oi = "http://steamcommunity.com/openid/" + oi; break;
   }
-{/literal}  
+
   open_auth("{$OAUTH_URL}OpenID&openid_identifier="+ encodeURI(oi));
-{literal}
+
   jQuery.colorbox.close();
   return false;
 });
@@ -106,7 +96,7 @@ jQuery("#openid_cancel").click(function() {
   jQuery.colorbox.close();
   return false;
 });
-{/literal}{/footer_script}
+{/footer_script}
 
 <div style="display:none;">
   <form id="openid_form" action="">
@@ -122,8 +112,8 @@ jQuery("#openid_cancel").click(function() {
     </div>
     <div>
       <br>
-      <input type="submit" name="{'Submit'|@translate}">
-      <a href="#" id="openid_cancel">{'Cancel'|@translate}</a>
+      <input type="submit" name="{'Submit'|translate}">
+      <a href="#" id="openid_cancel">{'Cancel'|translate}</a>
     </div>
   </form>
 </div>

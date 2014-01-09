@@ -1,7 +1,6 @@
 <?php
 defined('OAUTH_PATH') or die('Hacking attempt!');
 
-
 if (isset($_POST['save_config']))
 {
   // plugin config
@@ -13,12 +12,10 @@ if (isset($_POST['save_config']))
     );
     
   conf_update_param('oauth', serialize($conf['oauth']));
-  array_push($page['infos'], l10n('Information data registered in database'));
+  $page['infos'][] = l10n('Information data registered in database');
 }
 
 $template->assign($conf['oauth']);
 
 // define template file
 $template->set_filename('oauth_content', realpath(OAUTH_PATH . 'admin/template/config.tpl'));
-
-?>

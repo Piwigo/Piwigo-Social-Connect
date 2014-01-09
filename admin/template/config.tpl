@@ -1,4 +1,4 @@
-{combine_css path=$OAUTH_PATH|cat:"admin/template/style.css"}
+{combine_css path=$OAUTH_PATH|cat:'admin/template/style.css'}
 {combine_css path=$OAUTH_PATH|cat:'template/oauth_sprites.css'}
 
 <div class="titrePage">
@@ -11,14 +11,14 @@
     <li>
       <label>
         <input type="checkbox" name="display_menubar" {if $display_menubar}checked="checked"{/if}>
-        <b>{'Display sign in buttons in the menubar'|@translate}</b>
+        <b>{'Display sign in buttons in the menubar'|translate}</b>
       </label>
     </li>
 
     <li>
       <label>
         <input type="checkbox" name="display_register" {if $display_register}checked="checked"{/if}>
-        <b>{'Display sign in buttons on the register page'|@translate}</b>
+        <b>{'Display sign in buttons on the register page'|translate}</b>
       </label>
     </li>
   </ul>
@@ -27,7 +27,7 @@
 <fieldset id="commentsConf">
   <ul>
     <li>
-      <b>{'Icon size on the identification page'|@translate} :</b><br>
+      <b>{'Icon size on the identification page'|translate} :</b><br>
       <label>
         <input type="radio" name="identification_icon" value="16px" {if $identification_icon=='16px'}checked="checked"{/if}>
         16px
@@ -52,7 +52,7 @@
     </li>
     
     <li>
-      <b>{'Icon size in the menubar'|@translate} :</b><br>
+      <b>{'Icon size in the menubar'|translate} :</b><br>
       <label>
         <input type="radio" name="menubar_icon" value="16px" {if $menubar_icon=='16px'}checked="checked"{/if}>
         16px
@@ -78,7 +78,7 @@
   </ul>
 </fieldset>
 
-<p style="text-align:left;"><input type="submit" name="save_config" value="{'Save Settings'|@translate}"></p>
+<p style="text-align:left;"><input type="submit" name="save_config" value="{'Save Settings'|translate}"></p>
 </form>
 
 <div style="text-align:right;">

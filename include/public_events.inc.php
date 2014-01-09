@@ -1,25 +1,6 @@
 <?php
 defined('OAUTH_PATH') or die('Hacking attempt!');
 
-function oauth_anti_lightbox($tpl_thumbnails_var)
-{
-  global $template, $page;
-  
-  if ($page['section'] == 'collections' && !empty($template->css_by_priority[0]))
-  {
-    foreach ($template->css_by_priority[0] as $file)
-    {
-      if (strpos($file[0], 'colorbox.css') !== false)
-      {
-        $template->assign('OAUTH_NO_LIGHTBOX', true);
-        break;
-      }
-    }
-  }
-  
-  return $tpl_thumbnails_var;
-}
-
 /**
  * identification page
  */
@@ -51,7 +32,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
   {
     list($oauth_id) = pwg_db_fetch_row($result);
     list($provider) = explode('---', $oauth_id);
-    $_SESSION['page_errors'][] = sprintf(l10n('You registered with a %s account, please sign in with the same account.'), $provider);
+    $_SESSION['page_errors'][] = l10n('You registered with a %s account, please sign in with the same account.', $provider);
     
     $redirect_to = get_root_url().'identification.php'; // variable used by identification.php
     return true;
@@ -95,7 +76,7 @@ function oauth_begin_register()
         'OAUTH_PATH' => OAUTH_PATH,
         ));
         
-      array_push($page['infos'], l10n('Your registration is almost done, please complete the registration form.'));
+      $page['infos'][] = l10n('Your registration is almost done, please complete the registration form.');
       
       $oauth_id = $provider.'---'.$remote_user->identifier;
       
@@ -140,7 +121,7 @@ UPDATE '.USERS_TABLE.'
       $template->set_prefilter('register', 'oauth_remove_password_fields_prefilter');
     }
     catch (Exception $e) {
-      array_push($page['errors'], sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode()));
+      $page['errors'][] = l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>', $e->getCode());
     }
   }
   // display login buttons
@@ -195,7 +176,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
     $template->set_prefilter('profile_content', 'oauth_remove_password_fields_prefilter');
   }
   catch (Exception $e) {
-    array_push($page['errors'], sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode()));
+    $page['errors'][] = l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>', $e->getCode());
   }
 }
 
@@ -230,7 +211,7 @@ SELECT oauth_id FROM '.USERS_TABLE.'
     $adapter->logout();
   }
   catch (Exception $e) {
-    $_SESSION['page_errors'][] = sprintf(l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>'), $e->getCode());
+    $_SESSION['page_errors'][] = l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>', $e->getCode());
   }
 }
 
@@ -244,7 +225,7 @@ function oauth_blockmanager($menu_ref_arr)
   
   $menu = &$menu_ref_arr[0];  
   
-  if ( !$conf['oauth']['display_menubar'] or $menu->get_block('mbIdentification') == null )
+  if (!$conf['oauth']['display_menubar'] or $menu->get_block('mbIdentification') == null)
   {
     return;
   }
@@ -292,5 +273,3 @@ function oauth_add_menubar_buttons_prefilter($content)
   $add = file_get_contents(OAUTH_PATH . 'template/identification_menubar.tpl');
   return str_replace($search, $search.$add, $content);
 }
-
-?>
