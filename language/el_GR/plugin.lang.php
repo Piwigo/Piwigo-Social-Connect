@@ -35,7 +35,7 @@ $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i
 $lang['%s: invalid keys'] = '%s: μη έγκυρα κλειδιά';
 $lang['Your registration is almost done, please complete the registration form.'] = 'Η εγγραφή σας έχει σχεδόν τελειώσει, παρακαλούμε συμπληρώστε τη φόρμα εγγραφής.';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Μπορείτε εγγραφείτε στο λογαριασμό %s, παρακαλώ συνδεθείτε με τον ίδιο λογαριασμό.';
-$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Οι χρήστες δεν επιτρέπεται να εγγραφούν στην γκαλερί σας. OAuth δεν θα λειτουργήσει σωστά.';
+$lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Οι χρήστες δεν επιτρέπεται να εγγραφούν στην γκαλερί σας. Social Connect δεν θα λειτουργήσει σωστά.';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Συγνώμη, οι νέες εγγραφές έχουν αποκλειστεί σε αυτό το λεύκωμα.';
 $lang['Sign in with %s'] = 'Σύνδεση με %s';
 $lang['Providers'] = 'Προμηθευτές';
@@ -44,6 +44,6 @@ $lang['Please enter your username'] = 'Παρακαλώ εισάγετε το ό
 $lang['Please enter your OpenID URL'] = 'Παρακαλώ εισάγετε το OpenID URL σας';
 $lang['Or sign in with'] = 'Ή συνδεθείτε με';
 $lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID πρέπει να είναι ενεργοποιημένo για να μπορέσετε να χρησιμοποιήσετε %s έλεγχο ταυτότητας';
-$lang['OAuth: You need to configure the credentials'] = 'OAuth: Θα πρέπει να ρυθμίσετε τα πιστοποιητικά';
-$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: H επέκταση PHP Curl είναι αναγκαία';
+$lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Θα πρέπει να ρυθμίσετε τα πιστοποιητικά';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: H επέκταση PHP Curl είναι αναγκαία';
 ?>

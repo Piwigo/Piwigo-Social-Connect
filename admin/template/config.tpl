@@ -2,7 +2,7 @@
 {combine_css path=$OAUTH_PATH|cat:'template/oauth_sprites.css'}
 
 <div class="titrePage">
-	<h2>OAuth</h2>
+	<h2>Social Connect</h2>
 </div>
 
 <form method="post" action="" class="properties">

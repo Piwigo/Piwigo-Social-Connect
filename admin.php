@@ -5,7 +5,7 @@ global $template, $page, $conf;
 
 if (!$conf['allow_user_registration'])
 {
-  $page['warnings'][] = l10n('Users are not allowed to register on your gallery. OAuth will not work correctly.');
+  $page['warnings'][] = l10n('Users are not allowed to register on your gallery. Social Connect will not work correctly.');
 }
 
 

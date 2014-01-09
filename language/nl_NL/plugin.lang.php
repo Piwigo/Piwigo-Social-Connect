@@ -24,8 +24,8 @@ $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i
 $lang['%s: invalid keys'] = '%s: ongeldige toetsen';
 $lang['Contacting <b>%s</b>. Please wait.'] = '<b>%s</b> wordt geconnect. Even geduld AUB';
 $lang['Display sign in buttons on the register page'] = 'Toon inlog knoppen op de registratie pagina';
-$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: PHP Curl extensie is nodig';
-$lang['OAuth: You need to configure the credentials'] = 'OAuth: Je moet de aanmeldgegevens configureren';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl extensie is nodig';
+$lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Je moet de aanmeldgegevens configureren';
 $lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID moet geactiveerd zijn om deze vorm van aanmelden te gebruiken';
 $lang['Please enter your OpenID URL'] = 'Vul je OpenID url in';
 $lang['Authentication canceled'] = 'Aanmelden geanuleerd';
@@ -39,7 +39,7 @@ $lang['You registered with a %s account, please sign in with the same account.']
 $lang['Profile URL'] = 'Profiel URL';
 $lang['Sign in with %s'] = 'Log in met %s';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Sorry, nieuwe aanmeldingen zijn geblokkeerd in deze gallerie';
-$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Gebruikers mogen niet registreren in je gallerie, OAuth werkt niet goed.';
+$lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Gebruikers mogen niet registreren in je gallerie, Social Connect werkt niet goed.';
 $lang['Your registration is almost done, please complete the registration form.'] = 'Je registratie is bijna klaar, maak het registratieformulier compleet.';
 $lang['Disabled'] = 'Uitgeschakeld';
 $lang['Enabled'] = 'Ingeschakeld';

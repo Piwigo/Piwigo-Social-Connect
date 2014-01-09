@@ -1,6 +1,6 @@
 <?php 
 /*
-Plugin Name: OAuth
+Plugin Name: Social Connect
 Version: auto
 Description: Provides various ways to sign in your gallery (Twitter, Facebook, Google, etc.)
 Plugin URI: auto
@@ -71,11 +71,11 @@ function oauth_init()
   {
     if (empty($hybridauth_conf) and strpos(@$_GET['page'],'plugin-'.OAUTH_ID)===false)
     {
-      $page['warnings'][] = '<a href="'.OAUTH_ADMIN.'">'.l10n('OAuth: You need to configure the credentials').'</a>';
+      $page['warnings'][] = '<a href="'.OAUTH_ADMIN.'">'.l10n('Social Connect: You need to configure the credentials').'</a>';
     }
     if (!function_exists('curl_init'))
     {
-      $page['warnings'][] = l10n('OAuth: PHP Curl extension is needed');
+      $page['warnings'][] = l10n('Social Connect: PHP Curl extension is needed');
     }
   }
   
@@ -100,7 +100,7 @@ function oauth_init()
 function oauth_admin_plugin_menu_links($menu) 
 {
   $menu[] = array(
-    'NAME' => l10n('OAuth'),
+    'NAME' => 'Social Connect',
     'URL' => OAUTH_ADMIN,
     );
   return $menu;

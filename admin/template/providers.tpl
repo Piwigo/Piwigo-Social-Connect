@@ -36,7 +36,7 @@ jQuery(".open-help").click(function() {
 
 
 <div class="titrePage">
-	<h2>OAuth</h2>
+	<h2>Social Connect</h2>
 </div>
 
 <div id="help_container">

@@ -28,7 +28,7 @@ $lang['Profile URL'] = 'Profiili URL';
 $lang['Providers'] = 'Pakkuja';
 $lang['Sign in with %s'] = 'Logi sisse kasutjaga %';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Vabandust, uusi kasutajaid ei saa siin galeriis lisada';
-$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Kasutjatel pole lubatud sinu galeriis registreerida. OAuth ei tööta korralikult. ';
+$lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Kasutjatel pole lubatud sinu galeriis registreerida. Social Connect ei tööta korralikult. ';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Sa registreerisid %s kasutjaga, palun logi sisse sama infoga';
 $lang['Your registration is almost done, please complete the registration form.'] = 'Registreerimine on peaagu lõpetatud, palun lõpeta registreerimine.';
 $lang['%s: invalid keys'] = '%s: mittesobivad sissekanded';
@@ -44,6 +44,5 @@ $lang['Icon size in the menubar'] = 'Ikooni suurus menüü ribal';
 $lang['Icon size on the identification page'] = 'Ikooni suurus identifitseerimise lehel';
 $lang['Loading...'] = 'Laadimine...';
 $lang['Logged with'] = 'Sisse logitud';
-$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: PHP Curl laiendus on vajalik';
-$lang['OAuth: You need to configure the credentials'] = 'OAuth: ';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl laiendus on vajalik';
 ?>

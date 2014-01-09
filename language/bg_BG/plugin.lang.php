@@ -22,13 +22,13 @@
 // +-----------------------------------------------------------------------+
 $lang['Your registration is almost done, please complete the registration form.'] = 'Вашата регистрация е почти готова, моля попълнете регистрационната форма.';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Вие сте се регистрирали като% S, моля, влезте със същия профил.';
-$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Потребителите не могат да се регистрират в галерията ви. OAuth няма да работи коректно.';
+$lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Потребителите не могат да се регистрират в галерията ви. Social Connect няма да работи коректно.';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'За съжаление, новите регистрации са блокирани на тази галерия.';
 $lang['Sign in with %s'] = 'Влезте с% S';
 $lang['Providers'] = 'Доставчици';
 $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'Възникна грешка, моля свържете се със собственика на галерията. <i>Код на грешка : %s</i>';
-$lang['OAuth: You need to configure the credentials'] = 'OAuth: Трябва да конфигурирате пълномощията';
-$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: PHP Curl е необходимо удължаване';
+$lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Трябва да конфигурирате пълномощията';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl е необходимо удължаване';
 $lang['Authentication canceled'] = 'Идентификацията отменена';
 $lang['Display sign in buttons on the register page'] = 'Покажи знак бутони на страницата регистър';
 $lang['Contacting <b>%s</b>. Please wait.'] = 'Връзка <b>%s</b>. Моля изчакайте.';

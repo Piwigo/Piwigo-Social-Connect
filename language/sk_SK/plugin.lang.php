@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 $lang['Your registration is almost done, please complete the registration form.'] = 'Vaša registrácia bola vykonaná, prosím skompletizujte registračný formulár.';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Boli ste zaregistrovaný s %s kontom, prosím zapíšte sa rovnakým kontom.';
-$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Používatelia nie sú povolení pre registráciu do tejto galérie. OAuth nebude pracovať správne.';
+$lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Používatelia nie sú povolení pre registráciu do tejto galérie. Social Connect nebude pracovať správne.';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Prepáčte, nové registrácie sú zakázané pre túto galériu.';
 $lang['Sign in with %s'] = 'Podpísane s %s';
 $lang['Providers'] = 'Poskytovatelia';
@@ -31,11 +31,11 @@ $lang['Please enter your username'] = 'Prosím vložte Vaše používateľské m
 $lang['Please enter your OpenID URL'] = 'Prosím vložte Vašu OpenID URL';
 $lang['Or sign in with'] = 'Alebo podpíšte s';
 $lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID musí byť povolené v %s autorizácii';
-$lang['OAuth: You need to configure the credentials'] = 'OAuth: Potrebujete nakonfigurovať poverenia';
+$lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Potrebujete nakonfigurovať poverenia';
 $lang['Display sign in buttons on the register page'] = 'Zobraziť podpisovacie tlačidlo na registračnej stránke';
 $lang['Display sign in buttons in the menubar'] = 'Zobraziť podpisovacie tlačidlo v stĺpci menu';
 $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'Nastala chyba, prosím kontaktujte majiteľa galérie. <i>Kód chyby: %s</i>';
-$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: je potrebný doplnok PHP Curl';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: je potrebný doplnok PHP Curl';
 $lang['Logged with'] = 'Spojené s';
 $lang['Loading...'] = 'Nahrávam...';
 $lang['Icon size on the identification page'] = 'Veľkosť ikony na identifikačnej stránke';

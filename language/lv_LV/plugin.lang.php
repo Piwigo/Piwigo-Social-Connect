@@ -23,10 +23,10 @@
 $lang['OpenID must be enabled in order to use %s authentication'] = 'Lai lietotu %s autentifikāciju, jābūt iespējotam OpenID ';
 $lang['Your registration is almost done, please complete the registration form.'] = 'Jūsu reģistrācija ir gabdrīz pabeigta, lūdzu pabeidziet reģistrācijas formu.';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Jūs esat reģistrējies ar %s kontu, lūdzu piesakieties ar šo pašu kontu.';
-$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Lietotājiem nav atļauts reģistrēties jūsu galerijā. OAtuh nedarbosies korekti.';
+$lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Lietotājiem nav atļauts reģistrēties jūsu galerijā. Social Connect nedarbosies korekti.';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Atvainojiet, šai galerijā jauna reģistrēšanās bloķēta';
-$lang['OAuth: You need to configure the credentials'] = 'OAuth: Nepieciešams nokonfigurēt Jūsu akreditēšanās datus';
-$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: nepieciešams PHP Curl paplašinājums';
+$lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Nepieciešams nokonfigurēt Jūsu akreditēšanās datus';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: nepieciešams PHP Curl paplašinājums';
 $lang['Please enter your OpenID URL'] = 'Lūdzu ievadied savu OpenId URL';
 $lang['Please enter your username'] = 'Lūdzu ievadiet savu lietotājvārdu';
 $lang['Sign in with %s'] = 'Piesakies ar %s';

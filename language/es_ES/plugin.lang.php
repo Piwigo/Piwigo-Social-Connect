@@ -25,13 +25,12 @@ $lang['Profile URL'] = 'URL del perfil';
 $lang['Providers'] = 'Proveedores';
 $lang['Sign in with %s'] = 'Conexión con %s';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Lo sentimos, los registros están bloqueados en esta galería.';
-$lang['Users are not allowed to register on your gallery. OAuth will not work correctly.'] = 'Los usuarios no están autorizados a registrarse en esta galería. OAuth no funcionará correctamente.';
-$lang['You registered with a %s account, please sign in with the same account.'] = 'Se ha registrado una cuenta %s. Por favor, inicie sesión con la misma cuenta.
-';
+$lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Los usuarios no están autorizados a registrarse en esta galería. Social Connect no funcionará correctamente.';
+$lang['You registered with a %s account, please sign in with the same account.'] = 'Se ha registrado una cuenta %s. Por favor, inicie sesión con la misma cuenta.';
 $lang['Your registration is almost done, please complete the registration form.'] = 'Su registro está casi completo, gracias por completar el formulario de inscripción.';
 $lang['Logged with'] = 'Conectado con';
-$lang['OAuth: PHP Curl extension is needed'] = 'OAuth: La extensión PHP Curl es necesaria';
-$lang['OAuth: You need to configure the credentials'] = 'OAuth: Debe configurar la clave de autenticación';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: La extensión PHP Curl es necesaria';
+$lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Debe configurar la clave de autenticación';
 $lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID debe estar activada para utilizar la autenticación %s';
 $lang['Or sign in with'] = 'O conectase con';
 $lang['Please enter your OpenID URL'] = 'Por favor, introduzca su URL OpenID';
