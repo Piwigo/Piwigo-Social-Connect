@@ -27,10 +27,10 @@ class Hybrid_Storage
 		$key = strtolower( $key );  
 
 		if( $value ){
-			$_SESSION["HA::CONFIG"][$key] = serialize($value); 
+			$_SESSION["HA::CONFIG"][$key] = serialize( $value ); 
 		}
 		elseif( isset( $_SESSION["HA::CONFIG"][$key] ) ){ 
-			return unserialize($_SESSION["HA::CONFIG"][$key]);  
+			return unserialize( $_SESSION["HA::CONFIG"][$key] );  
 		}
 
 		return NULL; 
@@ -41,7 +41,7 @@ class Hybrid_Storage
 		$key = strtolower( $key );  
 
 		if( isset( $_SESSION["HA::STORE"], $_SESSION["HA::STORE"][$key] ) ){ 
-			return unserialize($_SESSION["HA::STORE"][$key]);  
+			return unserialize( $_SESSION["HA::STORE"][$key] );  
 		}
 
 		return NULL; 
@@ -51,7 +51,7 @@ class Hybrid_Storage
 	{
 		$key = strtolower( $key ); 
 
-		$_SESSION["HA::STORE"][$key] = serialize($value); 
+		$_SESSION["HA::STORE"][$key] = serialize( $value ); 
 	}
 
 	function clear()
@@ -64,7 +64,9 @@ class Hybrid_Storage
 		$key = strtolower( $key );  
 
 		if( isset( $_SESSION["HA::STORE"], $_SESSION["HA::STORE"][$key] ) ){
-			unset( $_SESSION["HA::STORE"][$key] );
+		    $f = $_SESSION['HA::STORE'];
+		    unset($f[$key]);
+		    $_SESSION["HA::STORE"] = $f;
 		} 
 	}
 
@@ -73,18 +75,21 @@ class Hybrid_Storage
 		$key = strtolower( $key ); 
 
 		if( isset( $_SESSION["HA::STORE"] ) && count( $_SESSION["HA::STORE"] ) ) {
-			foreach( $_SESSION["HA::STORE"] as $k => $v ){ 
+		    $f = $_SESSION['HA::STORE'];
+		    foreach( $f as $k => $v ){ 
 				if( strstr( $k, $key ) ){
-					unset( $_SESSION["HA::STORE"][ $k ] ); 
+					unset( $f[ $k ] ); 
 				}
 			}
+			$_SESSION["HA::STORE"] = $f;
+			
 		}
 	}
 
 	function getSessionData()
 	{
 		if( isset( $_SESSION["HA::STORE"] ) ){ 
-			return $_SESSION["HA::STORE"]; 
+			return serialize( $_SESSION["HA::STORE"] ); 
 		}
 
 		return NULL; 
@@ -92,6 +97,6 @@ class Hybrid_Storage
 
 	function restoreSessionData( $sessiondata = NULL )
 	{ 
-		$_SESSION["HA::STORE"] = $sessiondata;
+		$_SESSION["HA::STORE"] = unserialize( $sessiondata );
 	} 
 }

@@ -14,7 +14,7 @@ return array(
     'provider_name'     => 'Google',
     'callback'          => true,
     'require_client_id' => true,
-    'new_app_link'      => 'https://code.google.com/apis/console',
+    'new_app_link'      => 'https://cloud.google.com/console/project',
     'scope'             => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
   ),
   'Instagram' => array(
@@ -43,7 +43,7 @@ return array(
     'label'             => 'Live',
     'provider_name'     => 'Windows Live',
     'require_client_id' => true,
-    'new_app_link'      => 'https://manage.dev.live.com/ApplicationOverview.aspx',
+    'new_app_link'      => 'https://account.live.com/developers/applications/index',
   ),
   'Yahoo' => array( 
     'label'             => 'Yahoo',
