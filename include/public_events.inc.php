@@ -6,11 +6,16 @@ defined('OAUTH_PATH') or die('Hacking attempt!');
  */
 function oauth_begin_identification()
 {
-  global $template, $conf;
+  global $template, $conf, $hybridauth_conf;
   
-  oauth_assign_template_vars();
-  $template->assign('REDIRECT_TO', !empty($_GET['redirect']) ? urldecode($_GET['redirect']) : get_gallery_home_url());
-  
+  if ($hybridauth_conf['enabled'] > 0)
+  {
+    return;
+  }
+
+  $u_redirect = !empty($_GET['redirect']) ? urldecode($_GET['redirect']) : get_gallery_home_url();
+  oauth_assign_template_vars($u_redirect);
+
   $template->set_prefilter('identification', 'oauth_add_buttons_prefilter');
 }
 
@@ -22,8 +27,8 @@ function oauth_try_log_user($success, $username)
   global $conf, $redirect_to;
   
   $query = '
-SELECT oauth_id FROM '.USERS_TABLE.'
-  WHERE '.$conf['user_fields']['username'].' = "'.pwg_db_real_escape_string($username).'"
+SELECT oauth_id FROM ' . USERS_TABLE . '
+  WHERE ' . $conf['user_fields']['username'] . ' = "' . pwg_db_real_escape_string($username) . '"
   AND oauth_id != ""
 ;';
   $result = pwg_query($query);
@@ -49,6 +54,11 @@ function oauth_begin_register()
 {
   global $conf, $template, $hybridauth_conf, $page;
   
+  if ($hybridauth_conf['enabled'] == 0)
+  {
+    return;
+  }
+  
   // coming from identification page
   if (pwg_get_session_var('oauth_new_user') != null)
   {
@@ -68,12 +78,11 @@ function oauth_begin_register()
         throw new Exception('Hacking attempt!', 403);
       }
     
-      $template->assign(array(
-        'OAUTH_PROVIDER' => $provider,
-        'OAUTH_USERNAME' => $remote_user->displayName,
-        'OAUTH_PROFILE_URL' => $remote_user->profileURL,
-        'OAUTH_AVATAR' => $remote_user->photoURL,
-        'OAUTH_PATH' => OAUTH_PATH,
+      $template->assign('OAUTH_USER', array(
+        'provider' => $provider,
+        'username' => $remote_user->displayName,
+        'u_profile' => $remote_user->profileURL,
+        'avatar' => $remote_user->photoURL,
         ));
         
       $page['infos'][] = l10n('Your registration is almost done, please complete the registration form.');
@@ -83,22 +92,24 @@ function oauth_begin_register()
       // form submited
       if (isset($_POST['submit']))
       {
-        $page['errors'] =
-          register_user($_POST['login'],
-                        hash('sha1', $oauth_id.$conf['secret_key']),
-                        $_POST['mail_address']
-                        );
-                        
-        if (count($page['errors']) == 0)
+        $user_id = register_user(
+          $_POST['login'],
+          hash('sha1', $oauth_id.$conf['secret_key']),
+          $_POST['mail_address'],
+          true,
+          $page['errors'],
+          false
+          );
+
+        if ($user_id !== false)
         {
           pwg_unset_session_var('oauth_new_user');
-          $user_id = get_userid($_POST['login']);
           
           // update oauth field
           $query = '
-UPDATE '.USERS_TABLE.'
-  SET oauth_id = "'.$oauth_id.'"
-  WHERE '.$conf['user_fields']['id'].' = '.$user_id.'
+UPDATE ' . USERS_TABLE . '
+  SET oauth_id = "' . $oauth_id . '"
+  WHERE ' . $conf['user_fields']['id'] . ' = ' . $user_id . '
 ;';
           pwg_query($query);
           
@@ -117,6 +128,7 @@ UPDATE '.USERS_TABLE.'
       }
       
       // template
+      $template->assign('OAUTH_PATH', OAUTH_PATH);
       $template->set_prefilter('register', 'oauth_add_profile_prefilter');
       $template->set_prefilter('register', 'oauth_remove_password_fields_prefilter');
     }
@@ -127,8 +139,7 @@ UPDATE '.USERS_TABLE.'
   // display login buttons
   else if ($conf['oauth']['display_register'])
   {
-    oauth_assign_template_vars();
-    $template->assign('REDIRECT_TO', get_gallery_home_url());
+    oauth_assign_template_vars(get_gallery_home_url());
     
     $template->set_prefilter('register', 'oauth_add_buttons_prefilter');
   }
@@ -140,21 +151,15 @@ UPDATE '.USERS_TABLE.'
  */
 function oauth_begin_profile()
 {
-  global $template, $user, $conf, $hybridauth_conf, $page;
+  global $template, $user, $hybridauth_conf, $page;
   
-  $query = '
-SELECT oauth_id FROM '.USERS_TABLE.'
-  WHERE '.$conf['user_fields']['id'].' = '.$user['id'].'
-  AND oauth_id != ""
-;';
-  $result = pwg_query($query);
+  $oauth_id = get_oauth_id($user['id']);
   
-  if (!pwg_db_num_rows($result))
+  if (!isset($oauth_id))
   {
     return;
   }
   
-  list($oauth_id) = pwg_db_fetch_row($result);
   list($provider) = explode('---', $oauth_id);
   
   require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
@@ -164,14 +169,14 @@ SELECT oauth_id FROM '.USERS_TABLE.'
     $adapter = $hybridauth->getAdapter($provider);
     $remote_user = $adapter->getUserProfile();
     
-    $template->assign(array(
-      'OAUTH_PROVIDER' => $provider,
-      'OAUTH_USERNAME' => $remote_user->displayName,
-      'OAUTH_PROFILE_URL' => $remote_user->profileURL,
-      'OAUTH_AVATAR' => $remote_user->photoURL,
-      'OAUTH_PATH' => OAUTH_PATH,
+    $template->assign('OAUTH_USER', array(
+      'provider' => $provider,
+      'username' => $remote_user->displayName,
+      'u_profile' => $remote_user->profileURL,
+      'avatar' => $remote_user->photoURL,
       ));
     
+    $template->assign('OAUTH_PATH', OAUTH_PATH);
     $template->set_prefilter('profile_content', 'oauth_add_profile_prefilter');
     $template->set_prefilter('profile_content', 'oauth_remove_password_fields_prefilter');
   }
@@ -186,21 +191,15 @@ SELECT oauth_id FROM '.USERS_TABLE.'
  */
 function oauth_logout($user_id)
 {
-  global $conf, $hybridauth_conf;
+  global $hybridauth_conf;
   
-  $query = '
-SELECT oauth_id FROM '.USERS_TABLE.'
-  WHERE '.$conf['user_fields']['id'].' = '.$user_id.'
-  AND oauth_id != ""
-;';
-  $result = pwg_query($query);
+  $oauth_id = get_oauth_id($user_id);
   
-  if (!pwg_db_num_rows($result))
+  if (!isset($oauth_id))
   {
     return;
   }
-  
-  list($oauth_id) = pwg_db_fetch_row($result);
+
   list($provider) = explode('---', $oauth_id);
   
   require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
@@ -221,19 +220,32 @@ SELECT oauth_id FROM '.USERS_TABLE.'
  */
 function oauth_blockmanager($menu_ref_arr)
 {
-  global $template, $conf;
+  global $template, $conf, $hybridauth_conf;
   
   $menu = &$menu_ref_arr[0];  
   
-  if (!$conf['oauth']['display_menubar'] or $menu->get_block('mbIdentification') == null)
+  if ($hybridauth_conf['enabled'] == 0 or
+      !$conf['oauth']['display_menubar'] or
+      $menu->get_block('mbIdentification') == null
+    )
   {
     return;
   }
   
-  oauth_assign_template_vars();
-  $template->assign('REDIRECT_TO', get_gallery_home_url());
+  oauth_assign_template_vars(get_gallery_home_url());
   
   $template->set_prefilter('menubar', 'oauth_add_menubar_buttons_prefilter');
+}
+
+function oauth_include_template()
+{
+  global $conf, $template;
+  
+  if (isset($conf['oauth']['include_common_template']))
+  {
+    $template->set_filename('oauth', realpath(OAUTH_PATH . 'template/identification_common.tpl'));
+    $template->parse('oauth');
+  }
 }
 
 
@@ -253,7 +265,7 @@ function oauth_remove_password_fields_prefilter($content)
   $add = 'disabled="disabled" ';
   $script = '
 {footer_script require="jquery"}
-jQuery("input[type=\'password\'], input[name=\'send_password_by_mail\']").parent().css("display", "none");
+jQuery("input[type=password], input[name=send_password_by_mail]").parent().hide();
 {/footer_script}';
 
   $content = str_replace($search, $search.$add, $content);
@@ -262,14 +274,14 @@ jQuery("input[type=\'password\'], input[name=\'send_password_by_mail\']").parent
 
 function oauth_add_profile_prefilter($content)
 {
-  $search = '#</legend>#';
+  $search = '#(</legend>)#';
   $add = file_get_contents(OAUTH_PATH . 'template/profile.tpl');
-  return preg_replace($search, '</legend> '.$add, $content, 1);
+  return preg_replace($search, '$1 '.$add, $content, 1);
 }
 
 function oauth_add_menubar_buttons_prefilter($content)
 {
-  $search = '{include file=$block->template|@get_extent:$id }';
+  $search = '#({include file=\$block->template\|@?get_extent:\$id ?})#';
   $add = file_get_contents(OAUTH_PATH . 'template/identification_menubar.tpl');
-  return str_replace($search, $search.$add, $content);
+  return preg_replace($search, '$1 '.$add, $content);
 }

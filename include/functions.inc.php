@@ -22,26 +22,50 @@ function load_hybridauth_conf()
   }
 }
 
-function get_activated_providers()
+function oauth_assign_template_vars($u_redirect=null)
 {
-  global $hybridauth_conf;
+  global $template, $conf, $hybridauth_conf;
   
-  return array_filter($hybridauth_conf['providers'], create_function('$p', 'return $p["enabled"];'));
-}
-
-function oauth_assign_template_vars()
-{
-  global $template, $conf;
+  $conf['oauth']['include_common_template'] = true;
   
-  if ($template->get_template_vars('OAUTH_URL') == null)
+  if ($template->get_template_vars('OAUTH') == null)
   {
+    $template->assign('OAUTH', array(
+      'conf' => $conf['oauth'],
+      'u_login' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
+      'providers' => $hybridauth_conf['providers'],
+      ));
     $template->assign(array(
-      'oauth' => $conf['oauth'],
-      'OAUTH_URL' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
       'OAUTH_PATH' => OAUTH_PATH,
       'OAUTH_ABS_PATH' => realpath(OAUTH_PATH) . '/',
-      'PROVIDERS' => get_activated_providers(),
       'ABS_ROOT_URL' => rtrim(get_gallery_home_url(), '/') . '/',
       ));
+  }
+  
+  if (isset($u_redirect))
+  {
+    $template->append('OAUTH', compact('u_redirect'), true);
+  }
+}
+
+function get_oauth_id($user_id)
+{
+  global $conf;
+  
+  $query = '
+SELECT oauth_id FROM ' . USERS_TABLE . '
+  WHERE ' . $conf['user_fields']['id'] . ' = ' . $user_id . '
+  AND oauth_id != ""
+;';
+  $result = pwg_query($query);
+  
+  if (!pwg_db_num_rows($result))
+  {
+    return null;
+  }
+  else
+  {
+    list($oauth_id) = pwg_db_fetch_row($result);
+    return $oauth_id;
   }
 }

@@ -29,7 +29,7 @@
   
 {elseif $REDIRECT_TO}
   <script type="text/javascript"> 
-    if (window.opener) window.opener.parent.redirect('{$REDIRECT_TO}');
+    if (window.opener) window.opener.parent.oauth_redirect('{$REDIRECT_TO}');
     window.self.close();
   </script>
 {/if}

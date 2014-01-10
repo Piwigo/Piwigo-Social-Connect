@@ -42,6 +42,8 @@ else if (!empty($hybridauth_conf) and function_exists('curl_init'))
   add_event_handler('loc_begin_register', 'oauth_begin_register');
   add_event_handler('loc_begin_profile', 'oauth_begin_profile');
   
+  add_event_handler('loc_after_page_header', 'oauth_include_template');
+  
   add_event_handler('try_log_user', 'oauth_try_log_user', EVENT_HANDLER_PRIORITY_NEUTRAL-30, 2);
   add_event_handler('user_logout', 'oauth_logout');
   

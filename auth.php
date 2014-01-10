@@ -14,10 +14,13 @@ try {
     throw new Exception('Invalid OpenID!', 1003);
   }
   
-  if (
-    !array_key_exists($provider, $hybridauth_conf['providers'])
-    or !$hybridauth_conf['providers'][$provider]['enabled']
-  ) {
+  // OpenID is always enabled
+  $hybridauth_conf['providers']['OpenID']['enabled'] = true;
+  
+  if (!array_key_exists($provider, $hybridauth_conf['providers'])
+      or !$hybridauth_conf['providers'][$provider]['enabled']
+    )
+  {
     throw new Exception('Invalid provider!', 1002);
   }
   

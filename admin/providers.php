@@ -7,10 +7,11 @@ $PROVIDERS_CONFIG = include(OAUTH_PATH . 'include/providers_stats.inc.php');
 
 if (isset($_POST['save_config']))
 {
-  $providers = array();
+  $providers = array(); $count_enabled = 0;
   foreach ($_POST['providers'] as $id => $data)
   {
     $data['enabled'] = $data['enabled']=='true';
+    if ($data['enabled']) $count_enabled++;
     
     if ($PROVIDERS_CONFIG[$id]['new_app_link'] and $data['enabled'])
     {
@@ -20,11 +21,6 @@ if (isset($_POST['save_config']))
       ) {
         $page['errors'][] = l10n('%s: invalid keys', $PROVIDERS_CONFIG[$id]['provider_name']);
       }
-    }
-    
-    if ( ($id=='Wordpress' or $id=='Flickr' or $id=='Steam') and $data['enabled'] and !@$providers['OpenID']['enabled'] ) // in the template, OpenID must be before other OpenID based providers
-    {
-      $page['errors'][] = l10n('OpenID must be enabled in order to use %s authentication', $id);
     }
     
     if (isset($PROVIDERS_CONFIG[$id]['scope']))
@@ -42,12 +38,14 @@ if (isset($_POST['save_config']))
   }
   
   $hybridauth_conf['providers'] = $providers;
+  $hybridauth_conf['total'] = count($hybridauth_conf['providers']);
+  $hybridauth_conf['enabled'] = $count_enabled;
   
   if (!count($page['errors']))
   {
     // generate config file
     $content = "<?php\ndefined('PHPWG_ROOT_PATH') or die('Hacking attempt!');\n\nreturn ";
-    $content.= var_export(array('providers'=>$providers), true);
+    $content.= var_export(array_intersect_key($hybridauth_conf, array_flip(array('providers','total','enabled'))), true);
     $content.= ";\n?>";
     
     file_put_contents(OAUTH_CONFIG, $content);

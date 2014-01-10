@@ -18,13 +18,13 @@
 {/html_style}
 
 <div id="oauth">
-{if $OAUTH_AVATAR}
-  <img src="{$OAUTH_AVATAR}" class="avatar">
+{if $OAUTH_USER.avatar}
+  <img src="{$OAUTH_USER.avatar}" class="avatar">
 {else}
   <img src="{$ROOT_URL}{$OAUTH_PATH}template/images/avatar-default.png" class="avatar">
 {/if}
 
-  {'Logged with'|translate} : <b>{$OAUTH_PROVIDER}</b><br>
-  <b>{'Username'|translate}</b> : {$OAUTH_USERNAME}<br>
-  {if $OAUTH_PROFILE_URL}<b>{'Profile URL'|translate}</b> : <a href="{$OAUTH_PROFILE_URL}">{$OAUTH_PROFILE_URL|truncate:40:' ... ':true:true}</a>{/if}
+  {'Logged with'|translate} : <b>{$OAUTH_USER.provider}</b><br>
+  <b>{'Username'|translate}</b> : {$OAUTH_USER.username}<br>
+  {if $OAUTH_USER.u_profile}<b>{'Profile URL'|translate}</b> : <a href="{$OAUTH_USER.u_profile}">{$OAUTH_USER.u_profile|truncate:40:' ... ':true:true}</a>{/if}
 </div>
