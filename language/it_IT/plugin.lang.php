@@ -38,7 +38,6 @@ $lang['Please enter your username'] = 'Inserisci il tuo nome utente';
 $lang['Display sign in buttons in the menubar'] = 'Visualizza i pulsanti di accesso nel menu';
 $lang['Display sign in buttons on the register page'] = 'Visualizza i pulsanti di accesso sulla pagina di registrazione';
 $lang['Or sign in with'] = 'O accedi con il';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID deve essere abilitato per poter utilizzare l\'autenticazione %s';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: è necessario configurare le credenziali';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP estensione Curl è necessaria';
 $lang['Logged with'] = 'Registrato con';
@@ -46,4 +45,8 @@ $lang['Loading...'] = 'Caricamento...';
 $lang['Icon size on the identification page'] = 'Dimensioni delle icone nella pagina di identificazione';
 $lang['Icon size in the menubar'] = 'Dimensione delle icone nella barra dei menu';
 $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'Si è verificato un errore, si prega di contattare il proprietario della galleria. <i>Codice errore : %s</i>';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Conseti agli utenti di unire account esistente con la nuova <i>Social Connect</i>';
+$lang['Associate with an existing account'] = 'Associa con un account esistente';
+$lang['Please enter your user ID'] = 'Prego inserisci il tuo ID utente';
+$lang['Cancel'] = 'Cancella';
 ?>

@@ -1,1 +1,1 @@
-Fornisce vari modi per firmare nella tua galleria (Twitter, Facebook, Google, ecc)
+Fornisce vari modi per collegarsi alla tua galleria (Twitter, Facebook, Google, ecc)
