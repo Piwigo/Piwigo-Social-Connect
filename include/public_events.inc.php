@@ -55,7 +55,7 @@ SELECT oauth_id
  */
 function oauth_begin_register()
 {
-  global $conf, $template, $hybridauth_conf, $page;
+  global $conf, $template, $hybridauth_conf, $page, $user;
   
   if ($hybridauth_conf['enabled'] == 0)
   {
@@ -109,7 +109,7 @@ function oauth_begin_register()
       
       $page['infos'][] = l10n('Your registration is almost done, please complete the registration form.');
       
-      // form submited
+      // register form submited
       if (isset($_POST['submit']))
       {
         $user_id = register_user(
@@ -140,6 +140,33 @@ UPDATE ' . USER_INFOS_TABLE . '
       
         unset($_POST['submit']);
       }
+      // login form submited
+      else if (isset($_POST['login']) && $conf['oauth']['allow_merge_accounts'])
+      {
+        if ($conf['insensitive_case_logon'] == true)
+        {
+          $_POST['username'] = search_case_username($_POST['username']);
+        }
+        
+        if ( pwg_login(false, $_POST['username'], $_POST['password'], false) )
+        {
+          pwg_unset_session_var('oauth_new_user');
+          
+          // update oauth field
+          $query = '
+UPDATE ' . USER_INFOS_TABLE . '
+  SET oauth_id = "' . $oauth_id . '"
+  WHERE user_id = ' . $user['id'] . '
+;';
+          pwg_query($query);
+
+          redirect('profile.php');
+        }
+        else
+        {
+          $page['errors'][] = l10n('Invalid password!');
+        }
+      }
       else
       {
         // overwrite fields with remote datas
@@ -157,8 +184,16 @@ UPDATE ' . USER_INFOS_TABLE . '
       
       // template
       $template->assign('OAUTH_PATH', OAUTH_PATH);
-      $template->set_prefilter('register', 'oauth_add_profile_prefilter');
-      $template->set_prefilter('register', 'oauth_remove_password_fields_prefilter');
+      if ($conf['oauth']['allow_merge_accounts'])
+      {
+        $template->assign('OAUTH_LOGIN_IN_REGISTER', true);
+        $template->set_prefilter('register', 'oauth_add_login_in_register');
+      }
+      else
+      {
+        $template->set_prefilter('register', 'oauth_add_profile_prefilter');
+        $template->set_prefilter('register', 'oauth_remove_password_fields_prefilter');
+      }
     }
     catch (Exception $e)
     {
@@ -333,4 +368,15 @@ function oauth_add_menubar_buttons_prefilter($content)
   $search = '#({include file=\$block->template\|@?get_extent:\$id ?})#';
   $add = file_get_contents(OAUTH_PATH . 'template/identification_menubar.tpl');
   return preg_replace($search, '$1 '.$add, $content);
+}
+
+function oauth_add_login_in_register($content)
+{
+  $search[0] = '<form method="post" action="{$F_ACTION}"';
+  $replace[0] = file_get_contents(OAUTH_PATH . 'template/register.tpl') . $search[0];
+  
+  $search[1] = '{\'Enter your personnal informations\'|@translate}';
+  $replace[1] = '{\'Create a new account\'|@translate}';
+  
+  return str_replace($search, $replace, $content);
 }

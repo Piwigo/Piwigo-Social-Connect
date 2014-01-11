@@ -21,6 +21,13 @@
         <b>{'Display sign in buttons on the register page'|translate}</b>
       </label>
     </li>
+
+    <li>
+      <label>
+        <input type="checkbox" name="allow_merge_accounts" {if $allow_merge_accounts}checked="checked"{/if}>
+        <b>{'Allow users to merge existing account with new <i>Social Connect</i> identity'|translate}</b>
+      </label>
+    </li>
   </ul>
 </fieldset>
 

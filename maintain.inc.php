@@ -10,6 +10,7 @@ class oAuth_maintain extends PluginMaintain
     'display_register' => true,
     'identification_icon' => '38px',
     'menubar_icon' => '26px',
+    'allow_merge_accounts' => true,
     );
     
   private $file;
@@ -29,6 +30,18 @@ class oAuth_maintain extends PluginMaintain
     {
       $conf['oauth'] = serialize($this->default_conf);
       conf_update_param('oauth', $conf['oauth']);
+    }
+    else
+    {
+      $old_conf = is_string($conf['oauth']) ? unserialize($conf['oauth']) : $conf['oauth'];
+      
+      if (!isset($old_conf['allow_merge_accounts']))
+      {
+        $old_conf['allow_merge_accounts'] = true;
+        
+        $conf['oauth'] = serialize($old_conf);
+        conf_update_param('oauth', $conf['oauth']);
+      }
     }
     
     $result = pwg_query('SHOW COLUMNS FROM `' . USER_INFOS_TABLE . '` LIKE "oauth_id";');
@@ -54,7 +67,7 @@ UPDATE `' . USER_INFOS_TABLE . '` AS i
       pwg_query('ALTER TABLE `' . USERS_TABLE . '` DROP `oauth_id`;');
     }
     
-    // add fields in hybridauth conf file
+    // add 'total' and 'enabled' fields in hybridauth conf file
     if (file_exists($this->file))
     {
       $hybridauth_conf = include($this->file);

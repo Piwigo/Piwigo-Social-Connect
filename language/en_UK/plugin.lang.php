@@ -27,5 +27,7 @@ $lang['Or sign in with'] = 'Or sign in with';
 $lang['Logged with'] = 'Logged with';
 $lang['Profile URL'] = 'Profile URL';
 $lang['Cancel'] = 'Cancel';
+$lang['Associate with an existing account'] = 'Associate with an existing account';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Allow users to merge existing account with new <i>Social Connect</i> identity';
 
 ?>

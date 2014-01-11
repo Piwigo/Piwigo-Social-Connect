@@ -32,6 +32,7 @@ try {
     if ($response === false || $response['status'] != 'okay')
     {
       header('HTTP/1.1 503 Service Unavailable');
+      echo json_encode($response);
       exit;
     }
     else

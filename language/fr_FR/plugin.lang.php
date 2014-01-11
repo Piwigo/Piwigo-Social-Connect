@@ -25,7 +25,8 @@ $lang['Please enter your username'] = 'Veuillez entrer votre nom d\'utilisateur'
 $lang['Or sign in with'] = 'Ou connectez vous avec';
 $lang['Logged with'] = 'Connecté avec';
 $lang['Profile URL'] = 'URL du profil';
-
+$lang['Associate with an existing account'] = 'Associer à un compte existant';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Autoriser les utilisateur à fusionner un compte existant avec leur identité <i>Social Connect</i>';
 $lang['Cancel'] = 'Annuler';
 $lang['Please enter your user ID'] = 'Veuillez entrer votre ID d\'utilisateur';
 ?>

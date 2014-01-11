@@ -7,6 +7,7 @@ if (isset($_POST['save_config']))
   $conf['oauth'] = array(
     'display_register' => isset($_POST['display_register']),
     'display_menubar' => isset($_POST['display_menubar']),
+    'allow_merge_accounts' => isset($_POST['allow_merge_accounts']),
     'identification_icon' => $_POST['identification_icon'],
     'menubar_icon' => $_POST['menubar_icon'],
     );

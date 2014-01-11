@@ -65,7 +65,7 @@ else if (!empty($hybridauth_conf) and function_exists('curl_init'))
  */
 function oauth_init()
 {
-  global $conf, $page, $hybridauth_conf;
+  global $conf, $page, $hybridauth_conf, $template;
   
   include_once(OAUTH_PATH . 'maintain.inc.php');
   $maintain = new oAuth_maintain(OAUTH_ID);
@@ -89,19 +89,25 @@ function oauth_init()
   }
   
   // in case of registration aborded
-  // DON'T WORK, because potentially executed by sub-scripts like Secureimage for Crypto Captcha
-  // if ( script_basename() != 'register' and ($data=pwg_get_session_var('oauth_new_user')) !== null )
-  // {
-    // pwg_unset_session_var('oauth_new_user');
+  if ( script_basename() == 'index' and ($oauth_id=pwg_get_session_var('oauth_new_user')) !== null )
+  {
+    pwg_unset_session_var('oauth_new_user');
     
-    // require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-    
-    // try {
-      // $hybridauth = new Hybrid_Auth($hybridauth_conf);
-      // $adapter = $hybridauth->getAdapter($data[0]);
-      // $adapter->logout();
-    // }
-    // catch (Exception $e) {
-    // }
-  // }
+    if ($oauth_id[0] == 'Persona')
+    {
+      oauth_assign_template_vars(get_gallery_home_url());
+      $template->block_footer_script(null, 'navigator.id.logout();');
+    }
+    else
+    {
+      require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
+      
+      try {
+        $hybridauth = new Hybrid_Auth($hybridauth_conf);
+        $adapter = $hybridauth->getAdapter($oauth_id[0]);
+        $adapter->logout();
+      }
+      catch (Exception $e) {}
+    }
+  }
 }
