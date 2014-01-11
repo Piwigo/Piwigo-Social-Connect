@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['OpenID must be enabled in order to use %s authentication'] = 'Lai lietotu %s autentifikāciju, jābūt iespējotam OpenID ';
 $lang['Your registration is almost done, please complete the registration form.'] = 'Jūsu reģistrācija ir gabdrīz pabeigta, lūdzu pabeidziet reģistrācijas formu.';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Jūs esat reģistrējies ar %s kontu, lūdzu piesakieties ar šo pašu kontu.';
 $lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Lietotājiem nav atļauts reģistrēties jūsu galerijā. Social Connect nedarbosies korekti.';
@@ -46,4 +45,8 @@ $lang['%s: invalid keys'] = '%s: kļūdainas atslēgas';
 $lang['Error...'] = 'Kļūda...';
 $lang['Enabled'] = 'Iespējots';
 $lang['Disabled'] = 'Atspējots';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Ļauj lietotājiem apvienot esošo kontu ar jaunu <i> Social Connect </i> identitāti';
+$lang['Please enter your user ID'] = 'Lūdzu ievadiet savu lietotāja ID';
+$lang['Associate with an existing account'] = 'Sasaistīt ar eksistējošu kontu';
+$lang['Cancel'] = 'Atcelt';
 ?>

@@ -26,8 +26,9 @@ $lang['Once you have registered, copy and past the created application credentia
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Piestādiet šo URL kā jūsu aplikācijas Atbildes/Pāradresācijas URL: <em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Ievietojiet savu vietnes domēnu %s laukos. Tam jāsakrīt ar esošo hosta nosaukumu: <em>%s</em>';
 $lang['Set <b>%s</b> to <em>%s</em>'] = 'Iestatiet <b>%s</b> stāvoklī <em>%s</em>';
-$lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = '<b>Create Client ID</b> uzlecošā logā, klikšķinot uz <b>(more options)</b>, pārslēdzaties uz papildus iestatījumiem';
-$lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'Ar <b>API Access</b> tabu, <b>izveidojiet OAuth 2.0 Client ID</b>';
-$lang['No registration required for OpenID based providers'] = 'Uz OpenID balstītiem pakalpojuma sniedzējiem nav nepieciešama reģistrācija';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Ejiet uz <a href="%s" target="_blank">%s</a> uz izveidojiet jaunu aplikāciju';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Iet uz <b>Settings->Advanced</b> un aktivizēt <em>Klienta OAuth Login</em>';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Uz <b>APIs & auth -> Kredīt datu</b> cilnes, <b>Izveidot jaunu klienta ID</b>';
+$lang['No registration required'] = 'Nav nepieciešams reģistrēties';
+$lang['Based on OpenID'] = 'Balstīts uz OpenID';
 ?>
