@@ -27,7 +27,10 @@ function oauth_try_log_user($success, $username)
   global $conf, $redirect_to;
   
   $query = '
-SELECT oauth_id FROM ' . USERS_TABLE . '
+SELECT oauth_id
+  FROM ' . USER_INFOS_TABLE . ' AS i
+    INNER JOIN ' . USERS_TABLE . ' AS u
+    ON i.user_id = u.' . $conf['user_fields']['id'] . '
   WHERE ' . $conf['user_fields']['username'] . ' = "' . pwg_db_real_escape_string($username) . '"
   AND oauth_id != ""
 ;';
@@ -124,9 +127,9 @@ function oauth_begin_register()
           
           // update oauth field
           $query = '
-UPDATE ' . USERS_TABLE . '
+UPDATE ' . USER_INFOS_TABLE . '
   SET oauth_id = "' . $oauth_id . '"
-  WHERE ' . $conf['user_fields']['id'] . ' = ' . $user_id . '
+  WHERE user_id = ' . $user_id . '
 ;';
           pwg_query($query);
           

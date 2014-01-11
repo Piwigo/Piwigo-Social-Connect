@@ -29,15 +29,19 @@ if (file_exists(PHPWG_ROOT_PATH.OAUTH_CONFIG))
   load_hybridauth_conf();
 }
 
-// force getuserdata() to retrieve 'oauth_id' field
-$conf['user_fields']['oauth_id'] = 'oauth_id';
-
 
 add_event_handler('init', 'oauth_init');
 
 if (defined('IN_ADMIN'))
 {
   add_event_handler('get_admin_plugin_menu_links', 'oauth_admin_plugin_menu_links');
+  
+  add_event_handler('user_list_columns', 'oauth_user_list_columns');
+  add_event_handler('after_render_user_list', 'oauth_user_list_render');
+  
+  add_event_handler('loc_begin_admin_page', 'oauth_user_list');
+  
+  include_once(OAUTH_PATH . 'include/admin_events.inc.php');
 }
 else if (!empty($hybridauth_conf) and function_exists('curl_init'))
 {
@@ -100,15 +104,4 @@ function oauth_init()
     // catch (Exception $e) {
     // }
   // }
-  
-  // pwg_unset_session_var('persona_logout');
-}
-
-function oauth_admin_plugin_menu_links($menu) 
-{
-  $menu[] = array(
-    'NAME' => 'Social Connect',
-    'URL' => OAUTH_ADMIN,
-    );
-  return $menu;
 }

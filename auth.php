@@ -21,7 +21,7 @@ try {
   
   if ($provider == 'Persona')
   {
-    if (!verify_ephemeral_key(@$_POST['key']) | empty($_POST['assertion']))
+    if (!verify_ephemeral_key(@$_POST['key']) || empty($_POST['assertion']))
     {
       header('HTTP/1.1 403 Forbidden');
       exit;
@@ -62,7 +62,7 @@ try {
   {
     // check is already registered
     $query = '
-SELECT id FROM ' . USERS_TABLE . '
+SELECT user_id FROM ' . USER_INFOS_TABLE . '
   WHERE oauth_id = "' . implode('---', $oauth_id) . '"
 ;';
     $result = pwg_query($query);

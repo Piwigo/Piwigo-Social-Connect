@@ -61,11 +61,9 @@ function oauth_assign_template_vars($u_redirect=null)
 
 function get_oauth_id($user_id)
 {
-  global $conf;
-  
   $query = '
-SELECT oauth_id FROM ' . USERS_TABLE . '
-  WHERE ' . $conf['user_fields']['id'] . ' = ' . $user_id . '
+SELECT oauth_id FROM ' . USER_INFOS_TABLE . '
+  WHERE user_id = ' . $user_id . '
   AND oauth_id != ""
 ;';
   $result = pwg_query($query);

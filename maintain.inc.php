@@ -31,10 +31,27 @@ class oAuth_maintain extends PluginMaintain
       conf_update_param('oauth', $conf['oauth']);
     }
     
-    $result = pwg_query('SHOW COLUMNS FROM `' . USERS_TABLE . '` LIKE "oauth_id";');
+    $result = pwg_query('SHOW COLUMNS FROM `' . USER_INFOS_TABLE . '` LIKE "oauth_id";');
     if (!pwg_db_num_rows($result))
-    {      
-      pwg_query('ALTER TABLE `' . USERS_TABLE . '` ADD `oauth_id` VARCHAR(255) DEFAULT NULL;');
+    {
+      pwg_query('ALTER TABLE `' . USER_INFOS_TABLE . '` ADD `oauth_id` VARCHAR(255) DEFAULT NULL;');
+    }
+    
+    // move field from users table to user_infos
+    $result = pwg_query('SHOW COLUMNS FROM `' . USERS_TABLE . '` LIKE "oauth_id";');
+    if (pwg_db_num_rows($result))
+    {
+      $query = '
+UPDATE `' . USER_INFOS_TABLE . '` AS i
+  SET oauth_id = (
+    SELECT oauth_id
+      FROM `' . USERS_TABLE . '` AS u
+      WHERE u.'.$conf['user_fields']['id'].' = i.user_id
+    )
+;';
+      pwg_query($query);
+      
+      pwg_query('ALTER TABLE `' . USERS_TABLE . '` DROP `oauth_id`;');
     }
     
     // add fields in hybridauth conf file
@@ -75,7 +92,7 @@ class oAuth_maintain extends PluginMaintain
   {
     conf_delete_param('oauth');
 
-    pwg_query('ALTER TABLE `'. USERS_TABLE .'` DROP `oauth_id`;');
+    pwg_query('ALTER TABLE `'. USER_INFOS_TABLE .'` DROP `oauth_id`;');
     
     @unlink($this->file);
   }
