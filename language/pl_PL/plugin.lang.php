@@ -21,7 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Musisz skonfigurować poświadczenia';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'Aby użyć uwierzytelniania %s musi być włączone OpenID';
 $lang['Or sign in with'] = 'Lub zaloguj się przy pomocy';
 $lang['Contacting <b>%s</b>. Please wait.'] = 'Komunikacja z <b>%s</b>. Proszę czekać.';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Zarejestrowałeś się przy pomocy konta %s, proszę się zalogować przy pomocy tego samego konta.';
@@ -46,4 +45,6 @@ $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i
 $lang['Authentication canceled'] = 'Uwierzytelnianie anulowane';
 $lang['Error...'] = 'Błąd...';
 $lang['Loading...'] = 'Wczytywanie...';
+$lang['Cancel'] = 'Anuluj';
+$lang['Please enter your user ID'] = 'Podaj swój identyfikator użytkownika';
 ?>
