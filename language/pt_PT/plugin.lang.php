@@ -41,9 +41,12 @@ $lang['Loading...'] = 'A carregar...';
 $lang['Logged with'] = 'Entrou com';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: Extensão PHP Curl é necessária';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Precisa de configurar as credenciais ';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID deve estar activo de forma a usar %s autenticação';
 $lang['Or sign in with'] = 'Ou entre com';
 $lang['Please enter your OpenID URL'] = 'Por favor insira o seu URL OpenID';
 $lang['Please enter your username'] = 'Por favor insira o seu nome de utilizador';
 $lang['Profile URL'] = 'URL do perfil';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Permitir os utilizadores associem a sua conta com a sua identidade da <i>Ligação social</i> ';
+$lang['Associate with an existing account'] = 'Associar com uma conta existente';
+$lang['Cancel'] = 'Cancelar';
+$lang['Please enter your user ID'] = 'Por favor indique a sua ID de utilizador';
 ?>
