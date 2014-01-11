@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['OpenID must be enabled in order to use %s authentication'] = '%s Kimlik Doğrulamasını kullanmak için OpenID etkin olmalıdır.';
 $lang['Icon size on the identification page'] = 'Tanımlama sayfasında simge boyutu';
 $lang['Icon size in the menubar'] = 'Menüde simge boyutu.';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Kayıt olduğunuz hesap %s , lütfen aynı hesap ile oturum açın.';
@@ -46,4 +45,8 @@ $lang['Please enter your username'] = 'Lütfen Kullanıcı adınızı giriniz.';
 $lang['Profile URL'] = 'Profil URL';
 $lang['Please enter your OpenID URL'] = 'Lütfen OpenID URL nizi giriniz.';
 $lang['Or sign in with'] = 'ile giriş yapın';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Kullanıcılara yeni <i>Social Connect</i> kimliğini mevcut hesaplarıyla birleştirmelerine olanak tanır';
+$lang['Associate with an existing account'] = 'Mevcut hesaba bağla';
+$lang['Cancel'] = 'Vazgeç';
+$lang['Please enter your user ID'] = 'Lütfen kullanıcı kimliğinizi girin';
 ?>
