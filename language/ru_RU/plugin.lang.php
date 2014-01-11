@@ -39,11 +39,12 @@ $lang['Loading...'] = 'Загрузка...';
 $lang['Logged with'] = 'Вход с помощью';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: расширение PHP Curl не установлено';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Необходимо настроить права доступа';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'Необходимо включить OpenID для авторизации с помощью %s';
 $lang['Or sign in with'] = 'Или авторизуйтесь в';
 $lang['Please enter your OpenID URL'] = 'Пожалуйста, введите URL для Вашего OpenID ';
 $lang['Please enter your username'] = 'Пожалуйста, введите имя пользователя';
 $lang['Profile URL'] = 'URL профиля';
 $lang['Providers'] = 'Провайдеры';
 $lang['%s: invalid keys'] = 'неверный ключ: %s';
+$lang['Cancel'] = 'Отмена';
+$lang['Please enter your user ID'] = 'Пожалуйста, укажите Ваш ID пользователя';
 ?>
