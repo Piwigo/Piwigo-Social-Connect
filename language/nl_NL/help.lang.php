@@ -29,5 +29,5 @@ $lang['Fill out any required fields such as the application name and description
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Ga naar <a href="%s" target="_blank">%s</a> en maak een nieuwe applicatie';
 $lang['No registration required for OpenID based providers'] = 'Geen registratie verplicht voor OpenID gebaseerde bronnen';
 $lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'Op de <b>API Access</b> tab, <b>maak een OAuth 2.0 Client ID</b>';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Zet de <b>%s</b> naar <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Zet de <b>%s</b> naar <em>%s</em>';
 ?>

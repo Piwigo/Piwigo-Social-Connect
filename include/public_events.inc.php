@@ -68,7 +68,7 @@ function oauth_begin_register()
       if ($provider == 'Persona')
       {
         $template->assign('OAUTH_USER', array(
-          'provider' => $provider,
+          'provider' => 'Persona',
           'username' => $user_identifier,
           'u_profile' => null,
           'avatar' => null,
@@ -95,7 +95,7 @@ function oauth_begin_register()
         }
       
         $template->assign('OAUTH_USER', array(
-          'provider' => $provider,
+          'provider' => $hybridauth_conf['providers'][$provider]['name'],
           'username' => $remote_user->displayName,
           'u_profile' => $remote_user->profileURL,
           'avatar' => $remote_user->photoURL,
@@ -190,7 +190,7 @@ function oauth_begin_profile()
     if ($provider == 'Persona')
     {
       $template->assign('OAUTH_USER', array(
-        'provider' => $provider,
+        'provider' => 'Persona',
         'username' => $user_identifier,
         'u_profile' => null,
         'avatar' => null,
@@ -205,7 +205,7 @@ function oauth_begin_profile()
       $remote_user = $adapter->getUserProfile();
       
       $template->assign('OAUTH_USER', array(
-        'provider' => $provider,
+        'provider' => $hybridauth_conf['providers'][$provider]['name'],
         'username' => $remote_user->displayName,
         'u_profile' => $remote_user->profileURL,
         'avatar' => $remote_user->photoURL,

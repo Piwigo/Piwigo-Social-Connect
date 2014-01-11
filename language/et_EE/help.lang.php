@@ -20,7 +20,7 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Seadista <b>%s</b> järgmiseks <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Seadista <b>%s</b> järgmiseks <em>%s</em>';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Paku seda URL\'i ümbersuunamiseks sinu aplikatsioonile: <em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Pane oma veebilehe domeen %s väljale. See peab olema sama mis praegune hosti nimi: <em>%s</em>';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Kui aplikatsioon on registreeritud uuenda õigusi : sea <b>Contacts</b> kui <em>Read</em> ja <b>Social Directory</b> kui <em>Read Public</em>';

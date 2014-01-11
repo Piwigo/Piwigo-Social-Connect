@@ -29,5 +29,5 @@ $lang['Once the application is registered update the permissions : set <b>Contac
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'После регистрации скопируйте и вставьте регистрационные данные приложения на странице настроек';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Укажите этот URL как Callback/Redirect URL для Вашего приложения: <em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Введите домен Вашего веб-сайта в поле %s. Он должен совпадать с текущим именем хоста: <em>%s</em>';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Введите в поле <b>%s</b> значение <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Введите в поле <b>%s</b> значение <em>%s</em>';
 ?>

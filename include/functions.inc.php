@@ -44,6 +44,7 @@ function oauth_assign_template_vars($u_redirect=null)
       'u_login' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
       'providers' => $hybridauth_conf['providers'],
       'persona_email' => @$persona_email,
+      'key' => get_ephemeral_key(0),
       ));
     $template->assign(array(
       'OAUTH_PATH' => OAUTH_PATH,
@@ -80,6 +81,23 @@ SELECT oauth_id FROM ' . USERS_TABLE . '
   }
 }
 
+function get_servername($with_port=false)
+{
+  $scheme = 'http';
+  if ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443 )
+  {
+    $scheme = 'https';
+  }
+  
+  $servername = $scheme . '://' . $_SERVER['HTTP_HOST'];
+  if ($with_port)
+  {
+    $servername.= ':' . $_SERVER['SERVER_PORT'];
+  }
+    
+  return $servername;
+}
+
 // http://www.sitepoint.com/authenticate-users-with-mozilla-persona/
 function persona_verify()
 {
@@ -92,19 +110,7 @@ function persona_verify()
     FILTER_FLAG_STRIP_LOW|FILTER_FLAG_STRIP_HIGH
     );
 
-  $scheme = 'http';
-  if ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443 )
-  {
-    $scheme = 'https';
-  }
-  $audience = sprintf(
-    '%s://%s:%s',
-    $scheme,
-    $_SERVER['HTTP_HOST'],
-    $_SERVER['SERVER_PORT']
-    );
-
-  $params = 'assertion=' . urlencode($assert) . '&audience=' . urlencode($audience);
+  $params = 'assertion=' . urlencode($assert) . '&audience=' . urlencode(get_servername(true));
 
   $options = array(
     CURLOPT_URL => $url,

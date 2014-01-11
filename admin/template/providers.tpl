@@ -100,25 +100,25 @@ jQuery(".open-help").click(function() {
       {/if}
       
       {if $p=='Live'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Redirect Domain</b>':$SERVERNAME}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Redirect Domain</b>':$WEBSITE}</li>
       {elseif $p=='Facebook'}
-        <li>{'Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>.'|translate}</li>
+        <li>{'Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'|translate}</li>
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Valid OAuth redirect URIs</b>':$SERVERNAME}</li>
       {elseif $p=='LinkedIn'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website URL</b>':$SERVERNAME}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website URL</b>':$WEBSITE}</li>
         <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Application Type':'Web Application'}</li>
         <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Default Scope':'r_basicprofile & r_emailaddress'}</li>
       {elseif $p=='Yahoo'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Application URL</b>, <b>Application Domain</b>':$SERVERNAME}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Application URL</b>, <b>Application Domain</b>':$WEBSITE}</li>
         <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Kind of Application':'Web-based'}</li>
         <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Access Scopes':'This app will only access public...'}</li>
         <li>{'Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'|translate}</li>
       {elseif $p=='Twitter'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website</b>, <b>Callback URL</b>':$SERVERNAME}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website</b>':$WEBSITE}</li>
       {elseif $p=='Tumblr'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Application Website</b>, <b>Default Callback URL</b>':$SERVERNAME}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Application Website</b>':$WEBSITE}</li>
       {elseif $p=='Instagram'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website</b>':$SERVERNAME}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website</b>':$WEBSITE}</li>
       {elseif $p=='Google'}
         <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Application Type':'Web Application'}</li>
         <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Authorized Javascript origins </b>':$SERVERNAME}</li>
@@ -129,9 +129,9 @@ jQuery(".open-help").click(function() {
     {else}
       <p style="text-align:left;">
       {if $p=='Flickr' or $p=='Steam' or $p=='Wordpress'}
-        {'Based on OpenID.'|translate}</br>
+        {'Based on OpenID'|translate}</br>
       {/if}
-      {'No registration required.'|translate}<br>
+      {'No registration required'|translate}<br>
       <a href="{$provider.about_link}" target="_blank">{'About'|translate}</a>
       </p>
     {/if}

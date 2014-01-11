@@ -3,20 +3,15 @@ define('PHPWG_ROOT_PATH', '../../');
 include_once(PHPWG_ROOT_PATH.'include/common.inc.php');
 
 global $hybridauth_conf;
+
+// OpenID is always enabled
+$hybridauth_conf['providers']['OpenID']['enabled'] = true;
+
 require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
 
 $provider = @$_GET['provider'];
 
 try {
-  // inputs
-  if ($provider == 'OpenID' and !isset($_GET['openid_identifier']))
-  {
-    throw new Exception('Invalid OpenID!', 1003);
-  }
-  
-  // OpenID is always enabled
-  $hybridauth_conf['providers']['OpenID']['enabled'] = true;
-  
   if (!array_key_exists($provider, $hybridauth_conf['providers'])
       or !$hybridauth_conf['providers'][$provider]['enabled']
     )
@@ -26,6 +21,12 @@ try {
   
   if ($provider == 'Persona')
   {
+    if (!verify_ephemeral_key(@$_POST['key']) | empty($_POST['assertion']))
+    {
+      header('HTTP/1.1 403 Forbidden');
+      exit;
+    }
+    
     $response = persona_verify($_POST['assertion']);
     
     if ($response === false || $response['status'] != 'okay')
@@ -40,9 +41,13 @@ try {
   }
   else
   {
+    if ($provider == 'OpenID' and empty($_GET['openid_identifier']))
+    {
+      throw new Exception('Invalid OpenID!', 1003);
+    }
+    
     $hybridauth = new Hybrid_Auth($hybridauth_conf);
     
-    // connected
     if ($hybridauth->isConnectedWith($provider))
     {
       $adapter = $hybridauth->getAdapter($provider);
@@ -52,6 +57,7 @@ try {
     }
   }
   
+  // connected
   if (!empty($oauth_id))
   {
     // check is already registered
@@ -60,6 +66,7 @@ SELECT id FROM ' . USERS_TABLE . '
   WHERE oauth_id = "' . implode('---', $oauth_id) . '"
 ;';
     $result = pwg_query($query);
+
     // registered : log_user and redirect
     if (pwg_db_num_rows($result))
     {
@@ -110,6 +117,11 @@ SELECT id FROM ' . USERS_TABLE . '
   // display loader
   else
   {
+    if (!verify_ephemeral_key(@$_GET['key']))
+    {
+      throw new Exception('Forbidden', 403);
+    }
+    
     $template->assign('LOADING', '&openid_identifier='.@$_GET['openid_identifier'].'&init_auth=1');
   }
 }
@@ -124,6 +136,7 @@ SELECT id FROM ' . USERS_TABLE . '
      6 : User profile request failed
    404 : User not found
  other errors :
+   403 : Invalid ephemeral key
    503 : Persona error
   1002 : Invalid provider
   1003 : Missing openid_identifier
@@ -148,7 +161,7 @@ $template->assign(array(
   'U_HOME' => get_gallery_home_url(),
   
   'OAUTH_PATH' => OAUTH_PATH,
-  'PROVIDER' => $provider,
+  'PROVIDER' => $hybridauth_conf['providers'][$provider]['name'],
   'SELF_URL' => OAUTH_PATH . 'auth.php?provider='.$provider,
   ));
 

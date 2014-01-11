@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 $lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'Sulla scheda <b>API Access</b>, <b>creare un OAuth 2.0 Client ID</b>';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Una volta che l\'applicazione è registrata aggiornare le autorizzazioni: impostare <b>Contacts</b> come <em>Read</em> e <b>Social Directory</b> come <em>Read Public</em>';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Impostare il <b>%s</b> per <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Impostare il <b>%s</b> per <em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Metti il ​​tuo dominio del sito web nei campi del %s. Esso deve corrispondere con l\'attuale hostname: <em>%s</em>';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Fornisci questo URL come Callback/Redirect URL per l\'applicazione:
 <em>%s</em>';

@@ -29,5 +29,5 @@ $lang['Once the application is registered update the permissions : set <b>Contac
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = '完成注册后，复制并粘贴已创建应用的证书到安装页面。';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = '将此链接作为你的应用的反馈/重定向链接：<em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = '将你的网站域名填入%s字段。域名应匹配当前主机名：<em>%s</em>';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = '把<b>%s</b>设为<em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = '把<b>%s</b>设为<em>%s</em>';
 ?>

@@ -26,7 +26,7 @@ $lang['Once the application is registered update the permissions : set <b>Contac
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Depois de ter se registado, copiar e passar as credenciais de aplicativos criados para esta página de configuração';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Fornecer essa URL como URL de retorno/redirecionamento para sua aplicação: <em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Coloque o seu domínio do site nos campos %s. Ele deve combinar com o nome da máquina atual: <em>%s</em>';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Defina o <b>%s</b> para <em>%s</ em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Defina o <b>%s</b> para <em>%s</ em>';
 $lang['Fill out any required fields such as the application name and description'] = 'Preencha todos os campos necessários, tais como o nome do aplicativo e descrição';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Ir para <a href="%s"target="_blank">%s</a> e criar uma nova aplicação';
 $lang['No registration required for OpenID based providers'] = 'Sem necessidade de registro para provedores baseados em OpenID';

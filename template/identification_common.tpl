@@ -27,7 +27,7 @@ function oauth_redirect(type) {
 // open authentication popup
 function open_auth(url) {
   window.open(
-    url + '&t=' + (new Date()).getTime(), 
+    '{$OAUTH.u_login}' + url + '&key={$OAUTH.key}', 
     'hybridauth_social_sign_on', 
     'location=0,status=0,scrollbars=0,width=800,height=500'
   );  
@@ -44,8 +44,10 @@ jQuery('a.oauth:not(.persona)').click(function(e) {
       switch(idp) {
         case 'OpenID':
           jQuery('#openid_label').html('{'Please enter your OpenID URL'|translate|escape:javascript}'); break;
-        case 'Wordpress': case 'Flickr': case 'Steam':
+        case 'Wordpress': case 'Steam':
           jQuery('#openid_label').html('{'Please enter your username'|translate|escape:javascript}'); break;
+        case 'Flickr': 
+          jQuery('#openid_label').html('{'Please enter your user ID'|translate|escape:javascript}'); break;
       }
       
       var bg_color = $('#the_page #content').css('background-color');
@@ -69,7 +71,7 @@ jQuery('a.oauth:not(.persona)').click(function(e) {
       break;
       
     default:
-      open_auth('{$OAUTH.u_login}'+ idp);
+      open_auth(idp);
   }
 });
 
@@ -92,7 +94,7 @@ jQuery('#openid_form').submit(function(e) {
     case 'Steam': oi = 'http://steamcommunity.com/openid/' + oi; break;
   }
 
-  open_auth('{$OAUTH.u_login}OpenID&openid_identifier=' + encodeURI(oi));
+  open_auth('OpenID&openid_identifier=' + encodeURI(oi));
 
   jQuery.colorbox.close();
 });
@@ -110,10 +112,12 @@ jQuery('a.oauth.persona').click(function(e) {
   navigator.id.request();
 });
 
+{if not empty($OAUTH.persona_email)}
 jQuery('a[href$="act=logout"]').click(function(e) {
   e.preventDefault();
   navigator.id.logout();
 });
+{/if}
 
 navigator.id.watch({
   loggedInUser: {if not empty($OAUTH.persona_email)}'{$OAUTH.persona_email}'{else}null{/if},
@@ -123,7 +127,10 @@ navigator.id.watch({
       type: 'POST',
       url: '{$OAUTH.u_login}Persona',
       dataType: 'json',
-      data: { assertion: assertion },
+      data: {
+        assertion: assertion,
+        key: '{$OAUTH.key}'
+      },
       success: function(data) {
         oauth_redirect(data.redirect_to);
       },

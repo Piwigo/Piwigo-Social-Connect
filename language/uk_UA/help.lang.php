@@ -21,5 +21,5 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Fill out any required fields such as the application name and description'] = 'Заповніть всі необхідні поля, такі як ім’я та опис програми';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Встановіть <b>%s</b> з <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Встановіть <b>%s</b> з <em>%s</em>';
 ?>

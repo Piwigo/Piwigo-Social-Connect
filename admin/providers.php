@@ -57,7 +57,8 @@ if (isset($_POST['save_config']))
 $template->assign(array(
   'PROVIDERS' => $PROVIDERS_CONFIG,
   'CONFIG' => $hybridauth_conf['providers'],
-  'SERVERNAME' => get_absolute_root_url(),
+  'SERVERNAME' => get_servername(),
+  'WEBSITE' => get_absolute_root_url(),
   'OAUTH_CALLBACK' => OAUTH_PUBLIC . '?hauth.done=',
   ));
 

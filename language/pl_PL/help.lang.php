@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Wprowadź ten adres jako Callback/Redirect ULR dla swojej aplikacji: <em>%s</em>';
 $lang['No registration required for OpenID based providers'] = 'Dla dostawców wspierających OpenID rejestracja nie jest wymagana';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Ustaw <b>%s</b> do <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Ustaw <b>%s</b> do <em>%s</em>';
 $lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = 'W okienku <b>Stwórz ID klienta</b>/<b>Create Client ID</b> przejdź do ustawień zaawansowanych klikając <b>(więcej opcji)</b>/<b>(more options)</b>';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Gdy aplikacji zostanie zarejestrowana, zaktualizuj zezwolenia: ustaw <b>Kontakty</b>/<b>Contacts</b> na <em>Odczyt</em>/<em>Odczyt</em> i <b>Katalog społecznościowy</b>/<b>Social Directory</b> na <em>Odczyt publiczny</em>/<em>Read Public</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Gdy się już zarejestrujesz, skopiuj i wklej na tej stronie utworzone poświadczenia aplikacji';

@@ -34,5 +34,5 @@ $lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = '�
 $lang['No registration required for OpenID based providers'] = 'Δεν απαιτείται εγγραφή για OpenID με βάση παρόχους';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Μετάβαση στο <a href="%s" target="_blank">%s</a> και δημιουργήστε μια νέα εφαρμογή';
 $lang['Fill out any required fields such as the application name and description'] = 'Συμπληρώστε όλα τα απαιτούμενα πεδία, όπως το όνομα της εφαρμογής και περιγραφή';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Ρυθμίστε το <b>%s</b> σε <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Ρυθμίστε το <b>%s</b> σε <em>%s</em>';
 ?>

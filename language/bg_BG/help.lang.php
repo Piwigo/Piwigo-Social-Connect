@@ -21,7 +21,7 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Сложете си домейна на уебсайта в областите на компетентност на%s. Той трябва да съвпада с името на хоста: <em>%s</em>';
-$lang['Set the <b>%s</b> to <em>%s</em>'] = 'Задайте<b>%s</b>за да<em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Задайте<b>%s</b>за да<em>%s</em>';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Осигуряване на този адрес, като Callback / URL адрес за пренасочване за вашето приложение: <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'След като сте се регистрирали, копирате и поставите създадени пълномощията за кандидатстване в тази настройка страница';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'След като молбата е регистрирано актуализирате разрешенията: набор<b>Контакти</b>като<em>Прочетена</em>и<b>социален Directory</b>като<em>Прочетете обществено</em>';

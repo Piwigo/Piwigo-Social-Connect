@@ -1,7 +1,6 @@
 <?php
 
 $lang['%s: invalid keys'] = '%s: invalid keys';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID must be enabled in order to use %s authentication';
 $lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Users are not allowed to register on your gallery. Social Connect will not work correctly.';
 $lang['Providers'] = 'Providers';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Sorry, new registrations are blocked on this gallery.';
@@ -23,8 +22,10 @@ $lang['Loading...'] = 'Loading...';
 $lang['Contacting <b>%s</b>. Please wait.'] = 'Contacting <b>%s</b>. Please wait.';
 $lang['Please enter your OpenID URL'] = 'Please enter your OpenID URL';
 $lang['Please enter your username'] = 'Please enter your username';
+$lang['Please enter your user ID'] = 'Please enter your user ID';
 $lang['Or sign in with'] = 'Or sign in with';
 $lang['Logged with'] = 'Logged with';
 $lang['Profile URL'] = 'Profile URL';
+$lang['Cancel'] = 'Cancel';
 
 ?>

@@ -32,11 +32,13 @@ return array(
   'Tumblr' => array(
     'label'             => 'Tumblr',
     'provider_name'     => 'Tumblr',
+    'callback'          => true,
     'new_app_link'      => 'http://www.tumblr.com/oauth/apps',
   ),
   'Twitter' => array( 
     'label'             => 'Twitter',
     'provider_name'     => 'Twitter',
+    'callback'          => true,
     'new_app_link'      => 'https://dev.twitter.com/apps',
   ),
   'Live' => array( 
