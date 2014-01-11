@@ -30,7 +30,6 @@ $lang['Profile URL'] = 'Profil URL';
 $lang['Please enter your username'] = 'Prosím vložte Vaše používateľské menu';
 $lang['Please enter your OpenID URL'] = 'Prosím vložte Vašu OpenID URL';
 $lang['Or sign in with'] = 'Alebo podpíšte s';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID musí byť povolené v %s autorizácii';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Potrebujete nakonfigurovať poverenia';
 $lang['Display sign in buttons on the register page'] = 'Zobraziť podpisovacie tlačidlo na registračnej stránke';
 $lang['Display sign in buttons in the menubar'] = 'Zobraziť podpisovacie tlačidlo v stĺpci menu';
@@ -46,4 +45,8 @@ $lang['Disabled'] = 'Zakázané';
 $lang['Contacting <b>%s</b>. Please wait.'] = 'Spájam <b>%s</b>. Prosím čakajte.';
 $lang['Authentication canceled'] = 'Autorizácia zrušená';
 $lang['%s: invalid keys'] = '%s: neplatné kľúče';
+$lang['Please enter your user ID'] = 'Prosím vložte Vaše používateľské ID';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Umožniť používateľom pridanie do existujúceho konta s novou <i>Social Connect</i> identifikácou';
+$lang['Associate with an existing account'] = 'Spojiť s existujúcim kontom';
+$lang['Cancel'] = 'Zrušiť';
 ?>

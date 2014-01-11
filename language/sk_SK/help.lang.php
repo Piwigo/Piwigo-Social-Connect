@@ -25,9 +25,10 @@ $lang['Put your website domain in the %s fields. It should match with the curren
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Poskytnutie tejto URL ako Callback/Redirect URL pre Vašu aplikáciu: <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Akonáhle ste registrovaný, prekopírujte vytvorenú aplikáciu poverení na stránku inštalácie';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Akonáhle aplikácia zaregistruje aktualizáciu prístupov : nastavte <b>Contacts</b> ako <em>Read</em> a <b>Social Directory</b> ako <em>Read Public</em>';
-$lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = 'Na <b>Create Client ID</b>, prepmite na doplňujúce nastavenia kliknutím na <b>(more options)</b>';
-$lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'Na <b>API Access</b> záložke, <b>vytvorenie OAuth 2.0 ID klienta</b>';
-$lang['No registration required for OpenID based providers'] = 'Nie je potrebná registrácia pre OpenID základných poskytovateľov';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Choďte na <a href="%s" target="_blank">%s</a> a vytvorte novú aplikáciu';
 $lang['Fill out any required fields such as the application name and description'] = 'Rozšíriť požadované údaje ako názov aplikácie a popis';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Na <b>APIs & auth -> Credentials</b> tab, <b>Vytvoriť nové ID klienta</b>';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Ísť na <b>Nastavenia->Rozšírené</b> a aktivovať <em>Client OAuth Login</em>';
+$lang['No registration required'] = 'Nie je potrebná registrácia';
+$lang['Based on OpenID'] = 'Na základe Open ID';
 ?>
