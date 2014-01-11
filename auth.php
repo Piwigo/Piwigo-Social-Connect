@@ -9,7 +9,7 @@ $provider = @$_GET['provider'];
 
 try {
   // inputs
-  if ( $provider == 'OpenID' and !isset($_GET['openid_identifier']) )
+  if ($provider == 'OpenID' and !isset($_GET['openid_identifier']))
   {
     throw new Exception('Invalid OpenID!', 1003);
   }
@@ -24,20 +24,40 @@ try {
     throw new Exception('Invalid provider!', 1002);
   }
   
-  $hybridauth = new Hybrid_Auth($hybridauth_conf);
-  
-  // connected
-  if ($hybridauth->isConnectedWith($provider))
+  if ($provider == 'Persona')
   {
-    $adapter = $hybridauth->getAdapter($provider);
-    $remote_user = $adapter->getUserProfile();
+    $response = persona_verify($_POST['assertion']);
     
-    $oauth_id = $provider.'---'.$remote_user->identifier;
+    if ($response === false || $response['status'] != 'okay')
+    {
+      header('HTTP/1.1 503 Service Unavailable');
+      exit;
+    }
+    else
+    {
+      $oauth_id = array($provider, $response['email']);
+    }
+  }
+  else
+  {
+    $hybridauth = new Hybrid_Auth($hybridauth_conf);
     
+    // connected
+    if ($hybridauth->isConnectedWith($provider))
+    {
+      $adapter = $hybridauth->getAdapter($provider);
+      $remote_user = $adapter->getUserProfile();
+      
+      $oauth_id = array($provider, $remote_user->identifier);
+    }
+  }
+  
+  if (!empty($oauth_id))
+  {
     // check is already registered
     $query = '
-SELECT id FROM '.USERS_TABLE.'
-  WHERE oauth_id = "'.$oauth_id.'"
+SELECT id FROM ' . USERS_TABLE . '
+  WHERE oauth_id = "' . implode('---', $oauth_id) . '"
 ;';
     $result = pwg_query($query);
     // registered : log_user and redirect
@@ -46,22 +66,33 @@ SELECT id FROM '.USERS_TABLE.'
       list($user_id) = pwg_db_fetch_row($result);
       log_user($user_id, false);
       
-      $template->assign('REDIRECT_TO', 'default');
+      $redirect_to = 'default';
     }
     // not registered : redirect to register page
     else
     {
       if ($conf['allow_user_registration'])
       {
-        pwg_set_session_var('oauth_new_user', array($provider,$remote_user->identifier));
-        $template->assign('REDIRECT_TO', 'register');
+        pwg_set_session_var('oauth_new_user', $oauth_id);
+        $redirect_to = 'register';
       }
       else
       {
         $_SESSION['page_errors'][] = l10n('Sorry, new registrations are blocked on this gallery.');
-        $adapter->logout();
-        $template->assign('REDIRECT_TO', 'identification');
+        if (isset($adapter)) $adapter->logout();
+        $redirect_to = 'identification';
       }
+    }
+    
+    if ($provider == 'Persona')
+    {
+      echo json_encode(compact('redirect_to'));
+      header('HTTP/1.1 200 OK');
+      exit;
+    }
+    else
+    {
+      $template->assign('REDIRECT_TO', $redirect_to);
     }
   }
   // init connect
@@ -91,12 +122,16 @@ SELECT id FROM '.USERS_TABLE.'
      4 : Missing provider application credentials
      5 : Authentication aborded
      6 : User profile request failed
+   404 : User not found
  other errors :
+   503 : Persona error
   1002 : Invalid provider
   1003 : Missing openid_identifier
 */
-catch (Exception $e) {
-  switch ($e->getCode()) {
+catch (Exception $e)
+{
+  switch ($e->getCode())
+  {
     case 5:
       $template->assign('ERROR', l10n('Authentication canceled')); break;
     case 404:

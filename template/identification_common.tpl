@@ -3,6 +3,10 @@
 {combine_script id='jquery.colorbox' load='footer' require='jquery' path='themes/default/js/plugins/jquery.colorbox.min.js'}
 {combine_css id='colorbox' path="themes/default/js/plugins/colorbox/style2/colorbox.css"}
 
+{if $OAUTH.providers.Persona.enabled}
+  {combine_script id='persona' path='https://login.persona.org/include.js' load='footer'}
+{/if}
+
 {html_style}
 #openid_form { padding:20px; }
 #openid_form h3, #openid_form .oauth_38px { display:inline-block; vertical-align:middle; margin:0; }
@@ -30,7 +34,7 @@ function open_auth(url) {
 }
 
 // click on a button
-jQuery('a.oauth').click(function(e) {
+jQuery('a.oauth:not(.persona)').click(function(e) {
   e.preventDefault();
   
   var idp = jQuery(this).data('idp');
@@ -99,6 +103,41 @@ jQuery('#openid_cancel').click(function(e) {
   jQuery('#openid_label').removeClass('error');
   jQuery.colorbox.close();
 });
+
+{if $OAUTH.providers.Persona.enabled}
+jQuery('a.oauth.persona').click(function(e) {
+  e.preventDefault();
+  navigator.id.request();
+});
+
+jQuery('a[href$="act=logout"]').click(function(e) {
+  e.preventDefault();
+  navigator.id.logout();
+});
+
+navigator.id.watch({
+  loggedInUser: {if not empty($OAUTH.persona_email)}'{$OAUTH.persona_email}'{else}null{/if},
+  
+  onlogin: function(assertion) {
+    jQuery.ajax({
+      type: 'POST',
+      url: '{$OAUTH.u_login}Persona',
+      dataType: 'json',
+      data: { assertion: assertion },
+      success: function(data) {
+        oauth_redirect(data.redirect_to);
+      },
+      error: function() {
+        alert('Unknown error');
+      }
+    });
+  },
+  
+  onlogout: function() {
+    window.location.href = '{$U_LOGOUT}';
+  }
+});
+{/if}
 {/footer_script}
 
 <div style="display:none;">

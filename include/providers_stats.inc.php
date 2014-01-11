@@ -54,20 +54,30 @@ return array(
     'label'             => 'OpenID',
     'provider_name'     => 'OpenID',
     'new_app_link'      => null,
+    'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
   'Flickr' => array( 
     'label'             => 'Flickr',
     'provider_name'     => 'Flickr',
     'new_app_link'      => null,
+    'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
   'Steam' => array( 
     'label'             => 'Steam',
     'provider_name'     => 'Steam',
     'new_app_link'      => null,
+    'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
   'Wordpress' => array( 
     'label'             => 'Wordpress',
     'provider_name'     => 'Wordpress',
     'new_app_link'      => null,
+    'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
+  'Persona' => array(
+    'label'             => 'Persona',
+    'provider_name'     => 'Persona',
+    'new_app_link'      => null,
+    'about_link'        => 'https://login.persona.org/about',
+    ),
 );

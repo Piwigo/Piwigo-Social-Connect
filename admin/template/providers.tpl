@@ -127,7 +127,13 @@ jQuery(".open-help").click(function() {
         <li>{'Once you have registered, copy and past the created application credentials into this setup page'|translate}</li>
       </ol>
     {else}
-      <p>{'No registration required for OpenID based providers'|translate}</p> 
+      <p style="text-align:left;">
+      {if $p=='Flickr' or $p=='Steam' or $p=='Wordpress'}
+        {'Based on OpenID.'|translate}</br>
+      {/if}
+      {'No registration required.'|translate}<br>
+      <a href="{$provider.about_link}" target="_blank">{'About'|translate}</a>
+      </p>
     {/if}
     </div>
   </div>

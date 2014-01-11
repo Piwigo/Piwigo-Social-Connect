@@ -19,15 +19,18 @@ define('OAUTH_PUBLIC',  get_absolute_root_url() . ltrim(OAUTH_PATH,'./') . 'incl
 define('OAUTH_VERSION', 'auto');
 
 
-// try to load hybridauth config
-global $hybridauth_conf;
+global $hybridauth_conf, $conf;
 
+// try to load hybridauth config
 include_once(OAUTH_PATH . 'include/functions.inc.php');
 
 if (file_exists(PHPWG_ROOT_PATH.OAUTH_CONFIG))
 {
   load_hybridauth_conf();
 }
+
+// force getuserdata() to retrieve 'oauth_id' field
+$conf['user_fields']['oauth_id'] = 'oauth_id';
 
 
 add_event_handler('init', 'oauth_init');
@@ -42,7 +45,7 @@ else if (!empty($hybridauth_conf) and function_exists('curl_init'))
   add_event_handler('loc_begin_register', 'oauth_begin_register');
   add_event_handler('loc_begin_profile', 'oauth_begin_profile');
   
-  add_event_handler('loc_after_page_header', 'oauth_include_template');
+  add_event_handler('loc_after_page_header', 'oauth_page_header');
   
   add_event_handler('try_log_user', 'oauth_try_log_user', EVENT_HANDLER_PRIORITY_NEUTRAL-30, 2);
   add_event_handler('user_logout', 'oauth_logout');
@@ -97,6 +100,8 @@ function oauth_init()
     // catch (Exception $e) {
     // }
   // }
+  
+  // pwg_unset_session_var('persona_logout');
 }
 
 function oauth_admin_plugin_menu_links($menu) 

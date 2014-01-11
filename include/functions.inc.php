@@ -24,16 +24,26 @@ function load_hybridauth_conf()
 
 function oauth_assign_template_vars($u_redirect=null)
 {
-  global $template, $conf, $hybridauth_conf;
+  global $template, $conf, $hybridauth_conf, $user;
   
   $conf['oauth']['include_common_template'] = true;
   
   if ($template->get_template_vars('OAUTH') == null)
   {
+    if (!empty($user['oauth_id']))
+    {
+      list($provider, $identifier) = explode('---', $user['oauth_id'], 2);
+      if ($provider == 'Persona')
+      {
+        $persona_email = $identifier;
+      }
+    }
+    
     $template->assign('OAUTH', array(
       'conf' => $conf['oauth'],
       'u_login' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
       'providers' => $hybridauth_conf['providers'],
+      'persona_email' => @$persona_email,
       ));
     $template->assign(array(
       'OAUTH_PATH' => OAUTH_PATH,
@@ -67,5 +77,55 @@ SELECT oauth_id FROM ' . USERS_TABLE . '
   {
     list($oauth_id) = pwg_db_fetch_row($result);
     return $oauth_id;
+  }
+}
+
+// http://www.sitepoint.com/authenticate-users-with-mozilla-persona/
+function persona_verify()
+{
+  $url = 'https://verifier.login.persona.org/verify';
+
+  $assert = filter_input(
+    INPUT_POST,
+    'assertion',
+    FILTER_UNSAFE_RAW,
+    FILTER_FLAG_STRIP_LOW|FILTER_FLAG_STRIP_HIGH
+    );
+
+  $scheme = 'http';
+  if ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443 )
+  {
+    $scheme = 'https';
+  }
+  $audience = sprintf(
+    '%s://%s:%s',
+    $scheme,
+    $_SERVER['HTTP_HOST'],
+    $_SERVER['SERVER_PORT']
+    );
+
+  $params = 'assertion=' . urlencode($assert) . '&audience=' . urlencode($audience);
+
+  $options = array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => $params,
+    CURLOPT_SSL_VERIFYPEER => true,
+    CURLOPT_SSL_VERIFYHOST => 2,
+    );
+
+  $ch = curl_init();
+  curl_setopt_array($ch, $options);
+  $result = curl_exec($ch);
+  curl_close($ch);
+  
+  if ($result === false)
+  {
+    return false;
+  }
+  else
+  {
+    return json_decode($result, true);
   }
 }
