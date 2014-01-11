@@ -1,7 +1,6 @@
 <?php
 
 $lang['%s: invalid keys'] = '%s: clefs invalides';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID doit être activé pour utiliser l\'authentification %s';
 $lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Les utilisateurs ne sont pas autorisés à s\'inscrire sur cette galerie. Social Connect ne fonctionnera pas correctement.';
 $lang['Providers'] = 'Fournisseurs';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Désolé, les inscriptions sont bloquées sur cette galerie.';
@@ -27,4 +26,6 @@ $lang['Or sign in with'] = 'Ou connectez vous avec';
 $lang['Logged with'] = 'Connecté avec';
 $lang['Profile URL'] = 'URL du profil';
 
+$lang['Cancel'] = 'Annuler';
+$lang['Please enter your user ID'] = 'Veuillez entrer votre ID d\'utilisateur';
 ?>
