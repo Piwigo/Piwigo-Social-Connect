@@ -26,7 +26,6 @@ $lang['Contacting <b>%s</b>. Please wait.'] = '<b>%s</b> wordt geconnect. Even g
 $lang['Display sign in buttons on the register page'] = 'Toon inlog knoppen op de registratie pagina';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl extensie is nodig';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Je moet de aanmeldgegevens configureren';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID moet geactiveerd zijn om deze vorm van aanmelden te gebruiken';
 $lang['Please enter your OpenID URL'] = 'Vul je OpenID url in';
 $lang['Authentication canceled'] = 'Aanmelden geanuleerd';
 $lang['Display sign in buttons in the menubar'] = 'Toon login knoppen in de menu balk';
@@ -46,4 +45,8 @@ $lang['Enabled'] = 'Ingeschakeld';
 $lang['Error...'] = 'Fout...';
 $lang['Icon size in the menubar'] = 'Icoon formaat in de menubalk';
 $lang['Loading...'] = 'Laden..';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Sta gebruikers toe om het bestaande account samen te voegen met de nieuwe <i> Social Connect </i> identiteit';
+$lang['Associate with an existing account'] = 'Koppelen aan een bestaand account';
+$lang['Cancel'] = 'Annuleer';
+$lang['Please enter your user ID'] = 'Geef uw gebruikers-ID';
 ?>
