@@ -1,6 +1,6 @@
 <?php 
 /*
-Plugin Name: Social Connect
+Plugin Name: Social Connect (OAuth)
 Version: auto
 Description: Provides various ways to sign in your gallery (Twitter, Facebook, Google, etc.)
 Plugin URI: auto
