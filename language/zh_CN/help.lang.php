@@ -22,12 +22,13 @@
 // +-----------------------------------------------------------------------+
 $lang['Fill out any required fields such as the application name and description'] = '填写例如“应用名称”、“描述”等必填字段';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = '前往<a href="%s" target="_blank">%s</a>创建一个新应用';
-$lang['No registration required for OpenID based providers'] = '支持OpenID的服务提供商无需注册';
-$lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = '在<b>API Access</b>标签上, <b>创建一个OAuth 2.0客户端ID</b>';
-$lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = '在<b>Create Client ID</b>弹出窗口中, 点击<b>(more options)</b>切换到高级设置。';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = '应用已注册和更新权限后，设置<b>Contacts</b>为<em>Read</em>、<b>Social Directory</b>为<em>Read Public</em>。';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = '完成注册后，复制并粘贴已创建应用的证书到安装页面。';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = '将此链接作为你的应用的反馈/重定向链接：<em>%s</em>';
 $lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = '将你的网站域名填入%s字段。域名应匹配当前主机名：<em>%s</em>';
 $lang['Set <b>%s</b> to <em>%s</em>'] = '把<b>%s</b>设为<em>%s</em>';
+$lang['Based on OpenID'] = '基于OpenID';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = '到<b>设置->高级</b>然后激活<em>客户端认证登录</em>';
+$lang['No registration required'] = '没有注册需要';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = '在<b>APIs & 认证->证书</b>标签，<b>创建新的客户端ID</b>';
 ?>
