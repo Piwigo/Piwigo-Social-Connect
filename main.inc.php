@@ -24,10 +24,7 @@ global $hybridauth_conf, $conf;
 // try to load hybridauth config
 include_once(OAUTH_PATH . 'include/functions.inc.php');
 
-if (file_exists(PHPWG_ROOT_PATH.OAUTH_CONFIG))
-{
-  load_hybridauth_conf();
-}
+load_hybridauth_conf();
 
 
 add_event_handler('init', 'oauth_init');

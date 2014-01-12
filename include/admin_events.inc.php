@@ -28,14 +28,10 @@ function oauth_user_list_render($output)
     if (!empty($user[$oauth_col]))
     {
       list($provider) = explode('---', $user[$oauth_col], 2);
-    }
-    else
-    {
-      $provider = '';
+      $user[$username_col] = '<span class="oauth_16px '.strtolower($provider).'" title="'. $hybridauth_conf['providers'][$provider]['name'] .'"></span> 
+' . $user[$username_col];
     }
     
-    $user[$username_col] = '<span class="oauth_16px '.strtolower($provider).'" title="'. @$hybridauth_conf['providers'][$provider]['name'] .'"></span> 
-' . $user[$username_col];
     unset($user[$oauth_col]);
   }
   unset($user);
