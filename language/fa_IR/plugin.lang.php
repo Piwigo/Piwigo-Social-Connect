@@ -51,4 +51,7 @@ $lang['Please enter your user ID'] = 'لطفا شناسه کاربر خود را
 $lang['Providers'] = '
 سرویس دهنده';
 $lang['Sign in with %s'] = '%sورود با';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'کاربران اجازه می دهد به ادغام حساب کنونی با جدید <i>اتصال به شبکه های اجتماعی</i>';
+$lang['Associate with an existing account'] = '
+مرتبط با حساب کنونی:';
 ?>
