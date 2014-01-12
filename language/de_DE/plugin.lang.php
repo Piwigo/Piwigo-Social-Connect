@@ -34,7 +34,6 @@ $lang['Loading...'] = 'Lade...';
 $lang['Logged with'] = 'Angemeldet mit';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl Erweiterung benötigt';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Anmeldedaten müssen konfiguriert sein';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID muss freigegeben sein um sich mit %s anmelden zu können';
 $lang['Or sign in with'] = 'Oder melde dich an mit';
 $lang['Please enter your OpenID URL'] = 'Bitte gib deine OpenID URL an';
 $lang['Please enter your username'] = 'Bitte gib deinen Benutzernamen an';
@@ -46,4 +45,6 @@ $lang['Disabled'] = 'gesperrt';
 $lang['%s: invalid keys'] = '%s: ungültiger Schlüssel';
 $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'Es ist ein Fehler aufgetreten, bitte kontaktiere den Galerie-Besitzer. <i>Error code : %s</i>';
 $lang['Authentication canceled'] = 'Authentifizierung zurückgezogen';
+$lang['Please enter your user ID'] = 'Bitte geben Sie ihre User-ID ein';
+$lang['Cancel'] = 'abbrechen';
 ?>

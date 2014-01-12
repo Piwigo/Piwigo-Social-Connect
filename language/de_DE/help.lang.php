@@ -26,8 +26,8 @@ $lang['Put your website domain in the %s fields. It should match with the curren
 $lang['Set <b>%s</b> to <em>%s</em>'] = 'Setze den <b>%s</b> auf <em>%s</em>';
 $lang['Fill out any required fields such as the application name and description'] = 'Fülle alle notwendigen Felder wie den Applikations-Namen und Beschreibung aus.';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Gehe zu <a href="%s" target="_blank">%s</a> und erstelle eine neue Applikation';
-$lang['No registration required for OpenID based providers'] = 'Keine Anmeldung notwendig für OpenID basierte Anbieter';
-$lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'Erstelle auf dem <b>API Access</b> Reiter, <b>eine OAuth 2.0 Client ID</b>';
-$lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = 'Klicke im <b>Create Client ID</b> Popup-Fenster auf <b>(more options)</b> um die erweiterten Einstellungen einzuschalten';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Sobald die Applikation registriert ist aktualisiere die Berechtigungen: Setze <b>Contacts</b> auf <em>Read</em> und <b>Social Directory</b> auf <em>Read Public</em>';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Gehe zu <b>Settings->Advanced</b> und aktiviere <em>Client OAuth Login</em>';
+$lang['No registration required'] = 'Es wird keine Registrierung benötigt';
+$lang['Based on OpenID'] = 'basierend auf OpenID';
 ?>
