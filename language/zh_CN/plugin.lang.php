@@ -30,7 +30,6 @@ $lang['Loading...'] = '加载中...';
 $lang['Logged with'] = '登录为';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect:需安装 PHP Curl 扩展';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect:你需要配置证书';
-$lang['OpenID must be enabled in order to use %s authentication'] = '必须开启OpenID以使用 %s 认证';
 $lang['Or sign in with'] = '或者登录为';
 $lang['Please enter your OpenID URL'] = '请输入你的 OpenID 地址';
 $lang['Please enter your username'] = '请输入你的用户名';
@@ -46,4 +45,8 @@ $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i
 $lang['Authentication canceled'] = '取消认证';
 $lang['Contacting <b>%s</b>. Please wait.'] = '正在连接<b>%s</b>，请稍候。';
 $lang['Disabled'] = '不可用';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = '允许用户将现有帐号与新的<i>社交连接</i>身份合并';
+$lang['Associate with an existing account'] = '关联一个现有帐号';
+$lang['Cancel'] = '取消';
+$lang['Please enter your user ID'] = '请输入你的用户ID';
 ?>
