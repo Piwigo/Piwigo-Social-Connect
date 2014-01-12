@@ -43,7 +43,10 @@ $lang['Profile URL'] = 'URL Προφίλ';
 $lang['Please enter your username'] = 'Παρακαλώ εισάγετε το όνομα χρήστη σας';
 $lang['Please enter your OpenID URL'] = 'Παρακαλώ εισάγετε το OpenID URL σας';
 $lang['Or sign in with'] = 'Ή συνδεθείτε με';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID πρέπει να είναι ενεργοποιημένo για να μπορέσετε να χρησιμοποιήσετε %s έλεγχο ταυτότητας';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Θα πρέπει να ρυθμίσετε τα πιστοποιητικά';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: H επέκταση PHP Curl είναι αναγκαία';
+$lang['Please enter your user ID'] = 'Παρακαλώ εισάγετε το όνομα χρήστη σας';
+$lang['Cancel'] = 'Ακύρωση';
+$lang['Associate with an existing account'] = 'Συσχέτιση με έναν υπάρχοντα λογαριασμό';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Επιτρέπει στους χρήστες να συγχωνεύσουν υπάρχοντα λογαριασμό <i>Social Connect</i> με νέα ταυτότητα';
 ?>
