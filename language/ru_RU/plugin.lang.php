@@ -47,4 +47,6 @@ $lang['Providers'] = 'Провайдеры';
 $lang['%s: invalid keys'] = 'неверный ключ: %s';
 $lang['Cancel'] = 'Отмена';
 $lang['Please enter your user ID'] = 'Пожалуйста, укажите Ваш ID пользователя';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Разрешить пользователям объединить существующую учетную запись с новыми признаками <i>Social Connect</i>';
+$lang['Associate with an existing account'] = 'Связать с существующей учетной записью';
 ?>
