@@ -47,4 +47,6 @@ $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i
 $lang['Authentication canceled'] = 'Authentifizierung zurückgezogen';
 $lang['Please enter your user ID'] = 'Bitte geben Sie ihre User-ID ein';
 $lang['Cancel'] = 'abbrechen';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Benutzern erlauben, bestehende Konten mit neuen <i>Social Connect</i> Konten zusammenzuführen';
+$lang['Associate with an existing account'] = 'Mit einem bestehenden Konto zusammenführen';
 ?>
