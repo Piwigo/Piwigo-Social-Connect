@@ -41,9 +41,12 @@ $lang['Loading...'] = '載入中...';
 $lang['Logged with'] = '已記錄與';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl 擴展模塊是需要的';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: 您需要設定的憑據';
-$lang['OpenID must be enabled in order to use %s authentication'] = '為了使用OpenID，必須啟用 %s 認證';
 $lang['Or sign in with'] = '或登入以';
 $lang['Please enter your OpenID URL'] = '請輸入您的OpenID URL';
 $lang['Please enter your username'] = '請輸入您的使用者名稱';
 $lang['Profile URL'] = '個人資料的網址';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = '允許用戶合併現有帳戶與新的<i>社交連接</i>身份';
+$lang['Associate with an existing account'] = '與現有帳戶關聯';
+$lang['Cancel'] = '取消';
+$lang['Please enter your user ID'] = '請輸入您的用戶ID';
 ?>
