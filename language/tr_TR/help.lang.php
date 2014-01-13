@@ -29,4 +29,6 @@ $lang['Once the application is registered update the permissions : set <b>Contac
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Bir kere kayıt olduktan sonra bu kayır sayfasında oluştuurlan kimlik bilgilerini kopyalayıp yapıştırın.';
 $lang['Based on OpenID'] = 'OpenID baz alınmıştır';
 $lang['No registration required'] = 'Kayıt gerekmez';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = '<b>Ayarlar->Gelişmiş</b> sekmesine gidin ve <em>İstemci OAuth Girişi</em>ni etkinleştirin';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = '<b>APIs & auth -> Credentials</b> sekmesinde, <b>Yeni bir istemci kimliği yaratın</b>';
 ?>
