@@ -30,7 +30,6 @@ $lang['Icon size in the menubar'] = 'Розмір піктограм у меню
 $lang['Icon size on the identification page'] = 'Розмір піктограм на сторінці ідентифікації';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: Необхідно розширення PHP Curl';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Потрібно налаштувати облікові дані';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID повинен бути включений для того, щоб використовувати аутентифікацію %s';
 $lang['Please enter your OpenID URL'] = 'Будь ласка, введіть ваш URL OpenID';
 $lang['Please enter your username'] = 'Введіть своє ім’я користувача';
 $lang['%s: invalid keys'] = '%s: непрацездатні ключі';
@@ -46,4 +45,8 @@ $lang['Sign in with %s'] = 'Увійдіть через %s';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'На жаль, нові реєстрації блокуються на цій галереї.';
 $lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'Користувачі не можуть зареєструватися у вашій галереї. Social Connect не працюватиме коректно.';
 $lang['Your registration is almost done, please complete the registration form.'] = 'Ваша реєстрація майже закінчена, заповніть реєстраційну форму.';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Дозволити користувачам об’єднати існуючу обліковий запис з новим <i>Social Connect</i>, що ідентифікує користувача';
+$lang['Associate with an existing account'] = 'Пов’язати з існуючого облікового запису';
+$lang['Cancel'] = 'Скасувати';
+$lang['Please enter your user ID'] = 'Будь ласка, введіть свій ідентифікатор користувача (ID)';
 ?>
