@@ -41,9 +41,12 @@ $lang['Icon size on the identification page'] = 'Ikonstørrelse på loginsiden';
 $lang['Loading...'] = 'Indlæser ...';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl-udvidelse er nødvendig';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Du skal opsætte loginoplysninger';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID skal være aktiveret for at kunne benytte %s-autentificering';
 $lang['Or sign in with'] = 'Eller log på med';
 $lang['Please enter your OpenID URL'] = 'Skriv din OpenID-URL';
 $lang['Please enter your username'] = 'Skriv dit brugernavn';
 $lang['Profile URL'] = 'Profil-URL';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Gør det muligt for brugere at sammenlægge en eksisterende konto med en ny <i>Social Connect</i>-identitet';
+$lang['Associate with an existing account'] = 'Knyt til en eksisterende konto';
+$lang['Cancel'] = 'Annuller';
+$lang['Please enter your user ID'] = 'Angiv din bruger-id';
 ?>

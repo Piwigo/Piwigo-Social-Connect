@@ -20,8 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'På fanebladet <b>API Access</b>, <b>create an OAuth 2.0 Client ID</b>';
-$lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = 'På popup\'en <b>Create Client ID</b>, skift til avancerede indstillinger ved at klikke på <b>(more options)</b>';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Når applikationen er registreret, skal tilladelser opdateres: opsæt <b>Contacts</b> som <em>Read</em> og <b>Social Directory</b> som <em>Read Public</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Når du har registreret dig, så kopier de oprettede applikationsloginoplysninger til opsætningssiden';
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Denne URL benyttes som din applikations tilbagekalds-/viderestillings-URL (Callback/Redirect): <em>%s</em>';
@@ -29,5 +27,8 @@ $lang['Put your website domain in the %s fields. It should match with the curren
 $lang['Set <b>%s</b> to <em>%s</em>'] = 'Opsæt <b>%s</b> til <em>%s</em>';
 $lang['Fill out any required fields such as the application name and description'] = 'Udfyld krævede felter så som applikationsnavn og beskrivelse';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Gå til <a href="%s" target="_blank">%s</a> og opret en ny applikation';
-$lang['No registration required for OpenID based providers'] = 'Registrering ikke krævet ved OpenID-baserede leverandører';
+$lang['Based on OpenID'] = 'Baseret på OpenID';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Gå til <b>Settings->Advanced</b> og aktiver <em>Client OAuth Login</em>';
+$lang['No registration required'] = 'Registrering ikke krævet';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'På fanen <b>APIs & auth -> Credentials</b>, <b>Create new client ID</b>';
 ?>
