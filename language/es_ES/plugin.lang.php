@@ -31,7 +31,6 @@ $lang['Your registration is almost done, please complete the registration form.'
 $lang['Logged with'] = 'Conectado con';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: La extensión PHP Curl es necesaria';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: Debe configurar la clave de autenticación';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID debe estar activada para utilizar la autenticación %s';
 $lang['Or sign in with'] = 'O conectase con';
 $lang['Please enter your OpenID URL'] = 'Por favor, introduzca su URL OpenID';
 $lang['%s: invalid keys'] = '%s: Claves inválidas';
@@ -46,4 +45,8 @@ $lang['Error...'] = 'Error...';
 $lang['Icon size in the menubar'] = ' Tamaño de icono en la barra de menú';
 $lang['Loading...'] = 'Cargando...';
 $lang['Icon size on the identification page'] = ' Tamaño de icono en la pagina de identificación';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Permite a los usuarios asociar una cuenta existente con una nueva identidad de <i>Conexión con Redes Sociales</i>';
+$lang['Associate with an existing account'] = 'Asociar con una cuenta existente';
+$lang['Cancel'] = 'Cancelar';
+$lang['Please enter your user ID'] = 'Introduzca su nombre de usuario';
 ?>
