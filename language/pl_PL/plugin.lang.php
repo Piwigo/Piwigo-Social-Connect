@@ -47,4 +47,6 @@ $lang['Error...'] = 'Błąd...';
 $lang['Loading...'] = 'Wczytywanie...';
 $lang['Cancel'] = 'Anuluj';
 $lang['Please enter your user ID'] = 'Podaj swój identyfikator użytkownika';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Pozwól użytkownikom wiązać istniejące konto z nową tożsamością <i>Social Connect</i>';
+$lang['Associate with an existing account'] = 'Powiąż z istniejącym kontem';
 ?>
