@@ -25,9 +25,10 @@ $lang['Set <b>%s</b> to <em>%s</em>'] = 'Задайте<b>%s</b>за да<em>%s<
 $lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Осигуряване на този адрес, като Callback / URL адрес за пренасочване за вашето приложение: <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'След като сте се регистрирали, копирате и поставите създадени пълномощията за кандидатстване в тази настройка страница';
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'След като молбата е регистрирано актуализирате разрешенията: набор<b>Контакти</b>като<em>Прочетена</em>и<b>социален Directory</b>като<em>Прочетете обществено</em>';
-$lang['On the <b>API Access</b> tab, <b>create an OAuth 2.0 Client ID</b>'] = 'На<b>достъп до API<b>раздела,<b>създаде OAuth 2.0 Клиент ID</b>';
-$lang['On the <b>Create Client ID</b> popup, switch to advanced settings by clicking on <b>(more options)</b>'] = 'На<b>Създаване Номер на клиент</b> изскачащ прозорец, преминете към разширени настройки, като кликнете върху<b>(повече опции)</b>';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Отиди на <a href="%s" target="_blank">%s</a> за да се създаде една нова молба';
-$lang['No registration required for OpenID based providers'] = 'Не е необходима регистрация за доставчици, базирани в OpenID';
 $lang['Fill out any required fields such as the application name and description'] = 'Попълнете всички задължителни полета, както и името на приложението и описанието';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Във <b>APIs & auth -> Credentials</b> меню, <b>създайте ново клиентско ID</b>';
+$lang['No registration required'] = 'Не е нужна регистрация';
+$lang['Based on OpenID'] = 'Базирано на OpenID';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Отиди на <b>Настройки->Разширени</b> и активирай <em>Клиент OAuth Login</em>';
 ?>

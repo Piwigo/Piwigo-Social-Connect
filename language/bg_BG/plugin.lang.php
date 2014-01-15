@@ -34,7 +34,6 @@ $lang['Display sign in buttons on the register page'] = 'Покажи знак �
 $lang['Contacting <b>%s</b>. Please wait.'] = 'Връзка <b>%s</b>. Моля изчакайте.';
 $lang['%s: invalid keys'] = '% S: невалидни ключове';
 $lang['Icon size on the identification page'] = 'Размер на икона на идентификацията на страница';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID да бъде включен, за да използвате удостоверяване% S';
 $lang['Or sign in with'] = 'Или влезте с';
 $lang['Please enter your OpenID URL'] = 'Моля, въведете вашето OpenID URL';
 $lang['Profile URL'] = 'URL адрес на потребителския профил';
@@ -46,4 +45,8 @@ $lang['Error...'] = 'Грешка...';
 $lang['Enabled'] = 'Разрешено';
 $lang['Display sign in buttons in the menubar'] = 'Покажи знак бутони в лентата с менюта';
 $lang['Disabled'] = 'Забранен';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Позволи на потребителите да споделят съществуващия акаунт със нова <i>Social Connect</i> идентичност';
+$lang['Associate with an existing account'] = 'Свържете се с съществуващ акаунт';
+$lang['Please enter your user ID'] = 'Въведете вашето потребителско име';
+$lang['Cancel'] = 'Отказ';
 ?>
