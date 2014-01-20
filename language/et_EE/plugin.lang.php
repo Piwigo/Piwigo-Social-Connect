@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID peab olema aktiveeritud, et kasutada %s audentimist';
 $lang['Or sign in with'] = 'Või logi sisse kasutades';
 $lang['Please enter your OpenID URL'] = 'Palun sisesta oma OpenID URL';
 $lang['Please enter your username'] = 'Palun sisesta oma kasutajanimi';
@@ -45,4 +44,9 @@ $lang['Icon size on the identification page'] = 'Ikooni suurus identifitseerimis
 $lang['Loading...'] = 'Laadimine...';
 $lang['Logged with'] = 'Sisse logitud';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl laiendus on vajalik';
+$lang['Social Connect: You need to configure the credentials'] = 'Social Connect: sa pead identiteedi määranguid seadistama';
+$lang['Please enter your user ID'] = 'Palun sisesta oma kasutaja-ID';
+$lang['Cancel'] = 'Katkesta';
+$lang['Associate with an existing account'] = 'Ühenda olemasloleva kontoga';
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Luba kasutajatel liita olemasolev konto uue <i>Social Connect</i> identiteediga  ';
 ?>
