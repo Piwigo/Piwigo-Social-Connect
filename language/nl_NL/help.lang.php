@@ -21,12 +21,14 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Als de applicatie is geregistreerd, vernieuw de rechten : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Geef deze URL als de callback/Redirect URL voor je applicatie: <em>%s</em>';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Vul je website domain in the %s velden. het moet overeenkomne met je huidige hostnaam <em>%s</em>';
+$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Geef deze URL als de callback/Redirect URL voor uw applicatie: <em>%s</em>';
+$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Vul uw website domain in in de %s velden. Deze dient overeen te komen met uw huidige hostnaam <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Na registratie, kopieer en plak de aangemaakte applicatie aanmeldgegevens in deze setup pagina';
-$lang['Fill out any required fields such as the application name and description'] = 'Vul alle verplichte velden in zoals applicatie naam en omschrijving';
+$lang['Fill out any required fields such as the application name and description'] = 'Vul alle verplichte velden in zoals applicatie-naam en omschrijving';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Ga naar <a href="%s" target="_blank">%s</a> en maak een nieuwe applicatie';
-$lang['Set <b>%s</b> to <em>%s</em>'] = 'Zet de <b>%s</b> naar <em>%s</em>';
+$lang['Set <b>%s</b> to <em>%s</em>'] = 'Vul als <b>%s</b> in <em>%s</em>';
 $lang['Based on OpenID'] = 'Gebaseerd op OpenID';
 $lang['No registration required'] = 'Geen registratie vereist';
+$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Ga naar <b>Settings->Advanced</b> en activeer <em>Client OAuth Login</em>';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Op de <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>';
 ?>

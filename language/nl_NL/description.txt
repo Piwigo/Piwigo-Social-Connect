@@ -1,1 +1,1 @@
-Verzorgt verschillende manieren on in te loggen in je gallerie (Twitter, Facebook, Google, etc.)
+Plugin Social Connect biedt verschillende manieren (via Twitter, Facebook, Google, etc.) om in te loggen bij uw galerie.
