@@ -30,4 +30,5 @@ $lang['Once the application is registered update the permissions : set <b>Contac
 $lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Gehe zu <b>Settings->Advanced</b> und aktiviere <em>Client OAuth Login</em>';
 $lang['No registration required'] = 'Es wird keine Registrierung benötigt';
 $lang['Based on OpenID'] = 'basierend auf OpenID';
+$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Geh auf die <b>APIs & auth -> Credentials</b> Tab, und <b>erstelle eine neue Client ID</b>';
 ?>
