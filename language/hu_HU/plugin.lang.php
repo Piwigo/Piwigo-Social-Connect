@@ -21,7 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Contacting <b>%s</b>. Please wait.'] = 'Kapcsolódás <b>%s</b>. Kérjük várjon.';
-$lang['OpenID must be enabled in order to use %s authentication'] = '%S-hitelesítés használatához engedélyezni kell az OpenID-t';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'Regisztrált %s fiókkal, kérjük jelentkezzen be ugyanazzal a fiókkal.';
 $lang['Users are not allowed to register on your gallery. Social Connect will not work correctly.'] = 'A regisztráció le van tiltva a galériában. Az Social Connect nem fog megfelelően működni.';
 $lang['Your registration is almost done, please complete the registration form.'] = 'A regisztráció majdnem kész. Kérjük, töltse ki a teljes regisztrációs űrlapot.';
@@ -46,4 +45,7 @@ $lang['Loading...'] = 'Betöltés...';
 $lang['Profile URL'] = 'Profil URL';
 $lang['Logged with'] = 'Bejelentkezve';
 $lang['Sign in with %s'] = 'Jelentkezzen be %s';
+$lang['Associate with an existing account'] = 'Meglévő fiók társítása';
+$lang['Cancel'] = 'Mégse';
+$lang['Please enter your user ID'] = 'Kérem írja be a felhasználó ID-t';
 ?>
