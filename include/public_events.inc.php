@@ -148,17 +148,26 @@ UPDATE ' . USER_INFOS_TABLE . '
           $_POST['username'] = search_case_username($_POST['username']);
         }
         
-        if ( pwg_login(false, $_POST['username'], $_POST['password'], false) )
+        $user_id = get_userid($_POST['username']);
+        
+        if ($user_id === false)
         {
-          pwg_unset_session_var('oauth_new_user');
-          
+          $page['errors'][] = l10n('Invalid username or email');
+        }
+        else if ($user_id == $conf['webmaster_id'])
+        {
+          $page['errors'][] = l10n('For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.');
+        }
+        else if (pwg_login(false, $_POST['username'], $_POST['password'], false))
+        {
           // update oauth field
-          $query = '
-UPDATE ' . USER_INFOS_TABLE . '
-  SET oauth_id = "' . $oauth_id . '"
-  WHERE user_id = ' . $user['id'] . '
-;';
-          pwg_query($query);
+          single_update(
+            USER_INFOS_TABLE,
+            array('oauth_id', $oauth_id),
+            array('user_id', $user['id'])
+            );
+
+          pwg_unset_session_var('oauth_new_user');
 
           redirect('profile.php');
         }
@@ -167,19 +176,17 @@ UPDATE ' . USER_INFOS_TABLE . '
           $page['errors'][] = l10n('Invalid password!');
         }
       }
+
+      // overwrite fields with remote datas
+      if ($provider == 'Persona')
+      {
+        $_POST['login'] = '';
+        $_POST['mail_address'] = $user_identifier;
+      }
       else
       {
-        // overwrite fields with remote datas
-        if ($provider == 'Persona')
-        {
-          $_POST['login'] = '';
-          $_POST['mail_address'] = $user_identifier;
-        }
-        else
-        {
-          $_POST['login'] = $remote_user->displayName;
-          $_POST['mail_address'] = $remote_user->email;
-        }
+        $_POST['login'] = $remote_user->displayName;
+        $_POST['mail_address'] = $remote_user->email;
       }
       
       // template
