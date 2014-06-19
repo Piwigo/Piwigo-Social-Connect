@@ -49,4 +49,4 @@ $lang['Cancel'] = 'Отмена';
 $lang['Please enter your user ID'] = 'Пожалуйста, укажите Ваш ID пользователя';
 $lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Разрешить пользователям объединить существующую учетную запись с новыми признаками <i>Social Connect</i>';
 $lang['Associate with an existing account'] = 'Связать с существующей учетной записью';
-?>
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'По соображениям безопасности основная учетная запись веб-мастера не может быть объединена с удаленным аккаунтом, но Вы можете использовать другой аккаунт для веб-мастеров.';
