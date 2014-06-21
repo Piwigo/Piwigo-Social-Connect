@@ -49,4 +49,4 @@ $lang['Allow users to merge existing account with new <i>Social Connect</i> iden
 $lang['Associate with an existing account'] = 'Mevcut hesaba bağla';
 $lang['Cancel'] = 'Vazgeç';
 $lang['Please enter your user ID'] = 'Lütfen kullanıcı kimliğinizi girin';
-?>
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Güvenlik nedeniyle, temel yönetici (webmaster) hesabı uzak erişim hesabı ile birleştirilemez fakat farklı bir webmaster hesabı kullanılabilir.';
