@@ -49,4 +49,4 @@ $lang['Allow users to merge existing account with new <i>Social Connect</i> iden
 $lang['Associate with an existing account'] = '关联一个现有帐号';
 $lang['Cancel'] = '取消';
 $lang['Please enter your user ID'] = '请输入你的用户ID';
-?>
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = '基于安全理由，主网站管理员帐号不能与远程帐号合并，但你可以使用其他网站管理员帐号';
