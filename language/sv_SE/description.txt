@@ -1,0 +1,1 @@
+Tillhandahåller olika sätt att logga in till ditt galleri (Twitter, Facebook, Google, etc.)
