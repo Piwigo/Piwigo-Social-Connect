@@ -84,7 +84,7 @@ jQuery(".open-help").click(function() {
     <div class="help">
     {if $provider.new_app_link}
       <ol>
-        <li>{'Go to <a href="%s" target="_blank">%s</a> and create a new application'|translate|sprintf:$provider.new_app_link:$provider.new_app_link}</li>
+        <li>{'Go to <a href="%s" target="_blank">%s</a> and create a new application'|translate:$provider.new_app_link:$provider.new_app_link}</li>
         
       {if $p=='Google'}
         <li>{'On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'|translate}</li>
@@ -92,36 +92,37 @@ jQuery(".open-help").click(function() {
         <li>{'Fill out any required fields such as the application name and description'|translate}</li>
       {/if}
         
-      {if $provider.callback}
+      {if $provider.callback && $p!='Yahoo'}
         <li>
-          {assign var=callback value=$OAUTH_CALLBACK|cat:$p}
-          {'Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'|translate|sprintf:$callback}
+          {'Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'|translate:($OAUTH_CALLBACK|cat:$p)}
         </li>
       {/if}
       
       {if $p=='Live'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Redirect Domain</b>':$WEBSITE}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate:'<b>Redirect Domain</b>':$WEBSITE}</li>
       {elseif $p=='Facebook'}
         <li>{'Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'|translate}</li>
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Valid OAuth redirect URIs</b>':$SERVERNAME}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate:'<b>Valid OAuth redirect URIs</b>':$SERVERNAME}</li>
       {elseif $p=='LinkedIn'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website URL</b>':$WEBSITE}</li>
-        <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Application Type':'Web Application'}</li>
-        <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Default Scope':'r_basicprofile & r_emailaddress'}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate:'<b>Website URL</b>':$WEBSITE}</li>
+        <li>{'Set <b>%s</b> to <em>%s</em>'|translate:'Application Type':'Web Application'}</li>
+        <li>{'Set <b>%s</b> to <em>%s</em>'|translate:'Default Scope':'r_basicprofile & r_emailaddress'}</li>
       {elseif $p=='Yahoo'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Application URL</b>, <b>Application Domain</b>':$WEBSITE}</li>
-        <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Kind of Application':'Web-based'}</li>
-        <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Access Scopes':'This app will only access public...'}</li>
-        <li>{'Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'|translate}</li>
+        <li>{'Set <b>%s</b> to <em>%s</em>'|translate:'Kind of Application':'Web-based'}</li>
+        <li>{'Set <b>%s</b> to <em>%s</em>'|translate:'Access Scopes':'This app requires access to private user data'}</li>
+        <li>{'Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'|translate:($OAUTH_CALLBACK|cat:$p)}</li>
+        <li>{'Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> <em>Read Public</em>'|translate}</li>
       {elseif $p=='Twitter'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website</b>':$WEBSITE}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate:'<b>Website</b>':$WEBSITE}</li>
       {elseif $p=='Tumblr'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Application Website</b>':$WEBSITE}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate:'<b>Application Website</b>':$WEBSITE}</li>
       {elseif $p=='Instagram'}
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Website</b>':$WEBSITE}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate:'<b>Website</b>':$WEBSITE}</li>
       {elseif $p=='Google'}
-        <li>{'Set <b>%s</b> to <em>%s</em>'|translate|sprintf:'Application Type':'Web Application'}</li>
-        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate|sprintf:'<b>Authorized Javascript origins </b>':$SERVERNAME}</li>
+        <li>{'Set <b>%s</b> to <em>%s</em>'|translate:'Application Type':'Web Application'}</li>
+        <li>{'Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'|translate:'<b>Authorized Javascript origins </b>':$SERVERNAME}</li>
+      {elseif $p=='px500'}
+        <li>{'Once the application is created, click <b>See application details</b>'|translate}</li>
       {/if}
       
         <li>{'Once you have registered, copy and past the created application credentials into this setup page'|translate}</li>

@@ -8,7 +8,6 @@ return array(
     'new_app_link'      => 'https://developers.facebook.com/apps',
     'scope'             => 'email',
   ),
-  
   'Google' => array( 
     'label'             => 'Google',
     'provider_name'     => 'Google',
@@ -50,7 +49,14 @@ return array(
   'Yahoo' => array( 
     'label'             => 'Yahoo',
     'provider_name'     => 'Yahoo!',
+    'callback'          => true,
     'new_app_link'      => 'https://developer.apps.yahoo.com/projects/',
+  ),
+  'px500' => array(
+    'label'             => '500px',
+    'provider_name'     => '500px',
+    'callback'          => true,
+    'new_app_link'      => 'http://500px.com/settings/applications',
   ),
   'OpenID' => array( 
     'label'             => 'OpenID',
