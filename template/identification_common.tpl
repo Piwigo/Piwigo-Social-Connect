@@ -135,7 +135,8 @@ navigator.id.watch({
         oauth_redirect(data.redirect_to);
       },
       error: function() {
-        alert('Unknown error');
+        alert('{'Unable to perform login'|translate|escape:'javascript'}');
+        navigator.id.logout();
       }
     });
   },
