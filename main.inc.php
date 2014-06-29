@@ -10,20 +10,17 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
+define('OAUTH_ID',     basename(dirname(__FILE__)));
+define('OAUTH_PATH' ,  PHPWG_PLUGINS_PATH . OAUTH_ID . '/');
+define('OAUTH_ADMIN',  get_root_url() . 'admin.php?page=plugin-' . OAUTH_ID);
+define('OAUTH_CONFIG', PWG_LOCAL_DIR . 'config/hybridauth.inc.php');
+define('OAUTH_PUBLIC', get_absolute_root_url() . ltrim(OAUTH_PATH,'./') . 'include/hybridauth/');
 
-define('OAUTH_ID',      basename(dirname(__FILE__)));
-define('OAUTH_PATH' ,   PHPWG_PLUGINS_PATH . OAUTH_ID . '/');
-define('OAUTH_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . OAUTH_ID);
-define('OAUTH_CONFIG',  PWG_LOCAL_DIR . 'config/hybridauth.inc.php');
-define('OAUTH_PUBLIC',  get_absolute_root_url() . ltrim(OAUTH_PATH,'./') . 'include/hybridauth/');
-define('OAUTH_VERSION', 'auto');
-
-
-global $hybridauth_conf, $conf;
-
-// try to load hybridauth config
 include_once(OAUTH_PATH . 'include/functions.inc.php');
 
+
+// try to load hybridauth config
+global $hybridauth_conf;
 load_hybridauth_conf();
 
 
@@ -64,13 +61,9 @@ function oauth_init()
 {
   global $conf, $page, $hybridauth_conf, $template;
   
-  include_once(OAUTH_PATH . 'maintain.inc.php');
-  $maintain = new oAuth_maintain(OAUTH_ID);
-  $maintain->autoUpdate(OAUTH_VERSION, 'install');
-  
   load_language('plugin.lang', OAUTH_PATH);
   
-  $conf['oauth'] = unserialize($conf['oauth']);
+  $conf['oauth'] = safe_unserialize($conf['oauth']);
   
   // check config
   if (defined('IN_ADMIN'))

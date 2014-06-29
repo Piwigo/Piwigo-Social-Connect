@@ -12,7 +12,7 @@ if (isset($_POST['save_config']))
     'menubar_icon' => $_POST['menubar_icon'],
     );
     
-  conf_update_param('oauth', serialize($conf['oauth']));
+  conf_update_param('oauth', $conf['oauth']);
   $page['infos'][] = l10n('Information data registered in database');
 }
 

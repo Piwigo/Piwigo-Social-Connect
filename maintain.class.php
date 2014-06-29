@@ -3,8 +3,6 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 class oAuth_maintain extends PluginMaintain
 {
-  private $installed = false;
-  
   private $default_conf = array(
     'display_menubar' => true,
     'display_register' => true,
@@ -18,7 +16,6 @@ class oAuth_maintain extends PluginMaintain
   function __construct($plugin_id)
   {
     parent::__construct($plugin_id);
-    
     $this->file = PWG_LOCAL_DIR . 'config/hybridauth.inc.php';
   }
 
@@ -28,18 +25,16 @@ class oAuth_maintain extends PluginMaintain
 
     if (empty($conf['oauth']))
     {
-      $conf['oauth'] = serialize($this->default_conf);
-      conf_update_param('oauth', $conf['oauth']);
+      conf_update_param('oauth', $this->default_conf, true);
     }
     else
     {
-      $old_conf = is_string($conf['oauth']) ? unserialize($conf['oauth']) : $conf['oauth'];
+      $conf['oauth'] = safe_unserialize($conf['oauth']);
       
-      if (!isset($old_conf['allow_merge_accounts']))
+      if (!isset($conf['oauth']['allow_merge_accounts']))
       {
-        $old_conf['allow_merge_accounts'] = true;
+        $conf['oauth']['allow_merge_accounts'] = true;
         
-        $conf['oauth'] = serialize($old_conf);
         conf_update_param('oauth', $conf['oauth']);
       }
     }
@@ -85,20 +80,11 @@ UPDATE `' . USER_INFOS_TABLE . '` AS i
         file_put_contents($this->file, $content);
       }
     }
-
-    $this->installed = true;
   }
 
-  function activate($plugin_version, &$errors=array())
+  function update($old_version, $new_version, &$errors=array())
   {
-    if (!$this->installed)
-    {
-      $this->install($plugin_version, $errors);
-    }
-  }
-
-  function deactivate()
-  {
+    $this->install($new_version, $errors);
   }
 
   function uninstall()
