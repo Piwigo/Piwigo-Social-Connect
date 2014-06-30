@@ -20,15 +20,20 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Når applikationen er registreret, skal tilladelser opdateres: opsæt <b>Contacts</b> som <em>Read</em> og <b>Social Directory</b> som <em>Read Public</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Når du har registreret dig, så kopier de oprettede applikationsloginoplysninger til opsætningssiden';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Denne URL benyttes som din applikations tilbagekalds-/viderestillings-URL (Callback/Redirect): <em>%s</em>';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Skriv din hjemmesides domæne i %s-felterne. Det skal svare til det aktuelle værtsnavn: <em>%s</em>';
-$lang['Set <b>%s</b> to <em>%s</em>'] = 'Opsæt <b>%s</b> til <em>%s</em>';
-$lang['Fill out any required fields such as the application name and description'] = 'Udfyld krævede felter så som applikationsnavn og beskrivelse';
+$lang['Fill out any required fields such as the application name and description'] = 'Udfyld krævede felter, så som applikationsnavn og beskrivelse';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Gå til <a href="%s" target="_blank">%s</a> og opret en ny applikation';
 $lang['Based on OpenID'] = 'Baseret på OpenID';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Gå til <b>Settings->Advanced</b> og aktiver <em>Client OAuth Login</em>';
 $lang['No registration required'] = 'Registrering ikke krævet';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'På fanen <b>APIs & auth -> Credentials</b>, <b>Create new client ID</b>';
-?>
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Klik på <b>Tilføj platform</b>, vælg <b>Websted</b> og angiv <em>%s</em> som <b>Websteds-URL</b>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Gå til <b>API-parametre</b> og angiv <em>%s</em> som <b>Viderestillings-URL</b>';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Gå til <b>Indstillinger -> Advanceret</b> og angiv <em>%s</em> som <b>Gyldige OAuth-viderestillings-URI\'er</b>';
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Gå til <b>Indstillinger -> Grundlæggende</b> og angiv kontaktmailadressen';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Gå til <b>Status & Review</b> og gør app\'en offentlig ved at klikke på den store knap øverst til højre.';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Når applikationen er oprettet, klikkes på <b>Se applikationsoplysninger</b';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Angiv <em>%1s</em> for <b>%2s</b>';
+$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'På fanebladet <b>APIS & AUTH -> Credentials</b>, klikkes på <b>Create new client ID</b>';
+$lang['Once the process is finished, click on the newly created project'] = 'Når processen er afsluttet, klikkes der på det nyligt oprettede projekt';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Angiv dit webmasterdomæne i feltet <b>%1s</b>. Det skal stemme overens med det aktuelle værtsnavn: <em>%2s</em>';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Vælg disse API\'er: <b>Contacts</b> som <em>Read</em> og <b>Social Directory</b> som <em>Read Public</em>';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Angiv <b>%1s</b> som <em>%2s</em>';
