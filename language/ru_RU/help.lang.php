@@ -22,15 +22,9 @@
 // +-----------------------------------------------------------------------+
 $lang['Fill out any required fields such as the application name and description'] = 'Заполните все необходимые поля, включая название приложения и описание ';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Пройдите по ссылке <a href="%s" target="_blank">%s</a> и создайте новое приложение';
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'После регистрации приложения обновите права доступа: установите <b>Contacts</b> - <em>Read</em> и <b>Social Directory</b> - <em>Read Public</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'После регистрации скопируйте и вставьте регистрационные данные приложения на странице настроек';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Укажите этот URL как Callback/Redirect URL для Вашего приложения: <em>%s</em>';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Введите домен Вашего веб-сайта в поле %s. Он должен совпадать с текущим именем хоста: <em>%s</em>';
-$lang['Set <b>%s</b> to <em>%s</em>'] = 'Введите в поле <b>%s</b> значение <em>%s</em>';
 $lang['Based on OpenID'] = 'Основано на OpenID';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Перейдите в <b>Настройки->Расширенные</b> и активируйте <em>Client OAuth Login</em>';
 $lang['No registration required'] = 'Регистрация не требуется';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = '<b>Создать новый ID клиента</b> на вкладке <b>API и аутентификация -> Учетные данные</b> 
 
 ';
-?>
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Установить <b>%1s</b> для <em>%2s</em>';
