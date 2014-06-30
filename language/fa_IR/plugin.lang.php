@@ -20,7 +20,7 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['%s: invalid keys'] = '%s:کلید ها نامعتبر هستند';
+$lang['%s: invalid keys'] = '%s: کلیدهای نامعتبر';
 $lang['Disabled'] = 'غیر فعال';
 $lang['Enabled'] = 'فعال';
 $lang['Error...'] = 'خطا:( ....';
@@ -38,8 +38,8 @@ $lang['Users are not allowed to register on your gallery. Social Connect will no
 $lang['Social Connect: PHP Curl extension is needed'] = 'اتصال های اجتماعی: گسترش PHP کرل مورد نیاز است';
 $lang['Social Connect: You need to configure the credentials'] = 'اتصال های اجتماعی: شما نیاز برای پیکربندی استوارنامه';
 $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'خطا رخ داده است، لطفا تماس بگیرید صاحب گالری. <i> نوع خطا:%s </i>';
-$lang['Authentication canceled'] = 'تأیید هویت لغو شده';
-$lang['Cancel'] = 'لغوشد ';
+$lang['Authentication canceled'] = 'تایید هویت لغو شد';
+$lang['Cancel'] = 'لغو';
 $lang['Contacting <b>%s</b>. Please wait.'] = 'تماس  <b>%s</b> .لصفا صبرکنید :)';
 $lang['Display sign in buttons in the menubar'] = 'نمایش فرم ورود در منو بار';
 $lang['Display sign in buttons on the register page'] = 'نمایش  فرم ورود در صفحه ثبت نام';
@@ -48,10 +48,10 @@ $lang['Icon size on the identification page'] = '
 اندازه آیکون های روی صفحه شناسایی شد';
 $lang['Logged with'] = 'سیستم وارد شده با';
 $lang['Please enter your user ID'] = 'لطفا شناسه کاربر خود را وارد کنید';
-$lang['Providers'] = '
-سرویس دهنده';
-$lang['Sign in with %s'] = '%sورود با';
+$lang['Providers'] = 'سرویس دهنده‌ها';
+$lang['Sign in with %s'] = 'ورود با %s';
 $lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'کاربران اجازه می دهد به ادغام حساب کنونی با جدید <i>اتصال به شبکه های اجتماعی</i>';
 $lang['Associate with an existing account'] = '
 مرتبط با حساب کنونی:';
-?>
+$lang['User not found'] = 'کاربر پیدا نشد';
+$lang['Close'] = 'بستن';
