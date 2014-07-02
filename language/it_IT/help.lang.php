@@ -20,16 +20,14 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Una volta che l\'applicazione è registrata aggiornare le autorizzazioni: impostare <b>Contacts</b> come <em>Read</em> e <b>Social Directory</b> come <em>Read Public</em>';
-$lang['Set <b>%s</b> to <em>%s</em>'] = 'Impostare il <b>%s</b> per <em>%s</em>';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Metti il ​​tuo dominio del sito web nei campi del %s. Esso deve corrispondere con l\'attuale hostname: <em>%s</em>';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Fornisci questo URL come Callback/Redirect URL per l\'applicazione:
 <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Una volta registrato, copiare e incollare le credenziali delle applicazioni create in questa pagina di configurazione';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Vai a <a href="%s" target="_blank">%s</a> e crea una nuova applicazione';
 $lang['Fill out any required fields such as the application name and description'] = 'Riempire tutti i campi obbligatori, quali il nome e la descrizione';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Vai a <b>Impostazioni->Avanzate</b> e attiva <em>Client OAuth Login</em>';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Sulla <b>APIs & auth -> Credenziali</b> tab, <b>Crea nuovo client ID</b>';
 $lang['No registration required'] = 'Nessuna registrazione richiesta';
 $lang['Based on OpenID'] = 'Basato su OpenID';
-?>
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Vai a <b>Impostazioni -> Base</b> ed inserisci il contatto email';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Vai a <b>Impostazioni -> Avanzate</b> e imposta un <b>Valido OAuth redirect URIs</b> a <em>%s</em>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Vai ai <b>Parametri delle API</b> e imposta <em>%s</em> per <b>Redirect URL</b>';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Inserisci <em>%1s</em> per <b>%2s</b>';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Clicca su <b>Aggiungi Piattaforma</b>, scegli <b>Sito web</b> e imposta la <b>URL del sito</b> per <em>%s</em>';

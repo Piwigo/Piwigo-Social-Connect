@@ -50,3 +50,6 @@ $lang['Associate with an existing account'] = 'Associa con un account esistente'
 $lang['Please enter your user ID'] = 'Prego inserisci il tuo ID utente';
 $lang['Cancel'] = 'Cancella';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Per motivi di sicurezza, l\'account webmaster principale non può essere unito con un account remoto, ma puoi utilizzare un altro account webmaster.';
+$lang['Close'] = 'Chiuso';
+$lang['Unable to perform login'] = 'Impossibile eseguire il login';
+$lang['User not found'] = 'Utente non trovato';
