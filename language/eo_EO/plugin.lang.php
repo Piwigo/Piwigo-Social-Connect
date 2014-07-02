@@ -49,4 +49,7 @@ $lang['Disabled'] = 'Malaktivigita';
 $lang['Loading...'] = 'Ŝutanta...';
 $lang['Providers'] = 'Provizantoj';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Bedaŭrinde, novaj registradoj estas blokitaj sur tiu galerio.';
-?>
+$lang['Close'] = 'Fermi';
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Pro sekurecaj kialoj, la ĉefa konto de la retestro ne povas esti kunfandi kun fora konto, sed vi povas uzi alian konton de la retestro.';
+$lang['Unable to perform login'] = 'Ne eblas ensaluti.';
+$lang['User not found'] = 'Uzanto ne trovita.';

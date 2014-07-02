@@ -22,13 +22,12 @@
 // +-----------------------------------------------------------------------+
 $lang['Based on OpenID'] = 'Bazita sur OpenID';
 $lang['No registration required'] = 'Necesas neniu registrado';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Provizi tiun retadreson kiel la Revoka/Alidirekta retadreso por via aplikaĵo: <em>%s</em>';
-$lang['Set <b>%s</b> to <em>%s</em>'] = 'Ŝalti <b>%s</b> al <em>%s</em>';
 $lang['Fill out any required fields such as the application name and description'] = 'Plenigu ĉiuj necesaj tajpujoj kiel la nomo kaj la priskribo de la aplikaĵo';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Iri al <a href="%s" target="_blank">%s</a> kaj krei novan aplikaĵon';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Iri al <b>Agordoj->Detalaj</b> kaj aktivigi <em>Clien OAuth Login</em>';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Sur la langeto <b>APIs & aŭtentigo -> Akreditaĵo</b>, <b>Krei novan klientan identecon</b>';
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Post kiam la aplikaĵo registriĝis, ĝisdatigu la permesojn: ŝaltu <b>Kontaktoj</b> al <em>Legi</em> kaj <b>Socia Dosierujo</b> al <em>Legi Publikon</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Post kiam vi registriĝis, kopiu kaj algluu la kreitan aplikaĵan akreditaĵon en tiun agordan paĝon';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Entajpu vian retajan domajnon en la %s entajpujon. Ĝi kongruu kun la kuranta nomo de gastiga komputilo: <em>%s</em>';
-?>
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Ŝaltu <b>%1s</b> al <em>%2s</em>';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Iru al <b>Agordoj -> Detala</b> kaj ŝaltu <b>Valid OAuth redirect URIs</b> al <em>%s</em>';
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Iru al <b>Agordoj -> Baza</b> kaj entajpu la kontaktan retadreson.';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Iru al <b>Stato kaj Recenzo</b> kaj ŝaltu la aplikaĵo al publika per klako al la granda butono ĉe la dekstra supro';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Entajpu <em>%1s</em> por <b>%2s</b>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Iru al <b>API-parametroj</b> kaj agordu <em>%s</em> por <b>alidirekti retadreson</b>';
