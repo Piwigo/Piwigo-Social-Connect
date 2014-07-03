@@ -50,3 +50,6 @@ $lang['Cancel'] = 'Ακύρωση';
 $lang['Associate with an existing account'] = 'Συσχέτιση με έναν υπάρχοντα λογαριασμό';
 $lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Επιτρέπει στους χρήστες να συγχωνεύσουν υπάρχοντα λογαριασμό <i>Social Connect</i> με νέα ταυτότητα';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Για λόγους ασφαλείας, ο κύριος λογαριασμός webmaster δεν μπορεί να συγχωνευθεί με έναν απομακρυσμένο λογαριασμό, αλλά μπορείτε να χρησιμοποιήσετε έναν άλλο λογαριασμό webmaster.';
+$lang['User not found'] = 'Ο χρήστης δεν βρέθηκε ';
+$lang['Unable to perform login'] = 'Δεν είναι δυνατή η είσοδος';
+$lang['Close'] = 'Κλείσιμο ';
