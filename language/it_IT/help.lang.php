@@ -23,11 +23,14 @@
 <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Una volta registrato, copiare e incollare le credenziali delle applicazioni create in questa pagina di configurazione';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Vai a <a href="%s" target="_blank">%s</a> e crea una nuova applicazione';
-$lang['Fill out any required fields such as the application name and description'] = 'Riempire tutti i campi obbligatori, quali il nome e la descrizione';
+$lang['Fill out any required fields such as the application name and description'] = 'Compila tutti i campi obbligatori, quali il nome dell\'applicazione e la descrizione';
 $lang['No registration required'] = 'Nessuna registrazione richiesta';
 $lang['Based on OpenID'] = 'Basato su OpenID';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Vai a <b>Impostazioni -> Base</b> ed inserisci il contatto email';
-$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Vai a <b>Impostazioni -> Avanzate</b> e imposta un <b>Valido OAuth redirect URIs</b> a <em>%s</em>';
-$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Vai ai <b>Parametri delle API</b> e imposta <em>%s</em> per <b>Redirect URL</b>';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Vai a <b>Impostazioni -> Avanzate</b> e imposta <b>Valido OAuth redirect URI</b> per <em>%s</em>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Vai a <b>parametri API</b> e imposta <em>%s</em> per <b>URL Redirect</b>';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Inserisci <em>%1s</em> per <b>%2s</b>';
-$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Clicca su <b>Aggiungi Piattaforma</b>, scegli <b>Sito web</b> e imposta la <b>URL del sito</b> per <em>%s</em>';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Clicca su <b>Aggiungi piattaforma</b>, scegli <b>Sito web</b> e imposta l\'<b>URL del sito</b> per <em>%s</em>';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Vai a <b>Status & Review</b> e imposta app pubblica cliccando sul grande pulsante in alto a destra';
+$lang['Once the process is finished, click on the newly created project'] = 'Una volta che il processo è terminato, clicca sul progetto appena creato';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Una volta creata l\'applicazione, clica su <b>Vedi dettagli dell\'applicazione</b>';
