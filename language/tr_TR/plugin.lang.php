@@ -50,3 +50,6 @@ $lang['Associate with an existing account'] = 'Mevcut hesaba bağla';
 $lang['Cancel'] = 'Vazgeç';
 $lang['Please enter your user ID'] = 'Lütfen kullanıcı kimliğinizi girin';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Güvenlik nedeniyle, temel yönetici (webmaster) hesabı uzak erişim hesabı ile birleştirilemez fakat farklı bir webmaster hesabı kullanılabilir.';
+$lang['Close'] = 'Kapat';
+$lang['Unable to perform login'] = 'Oturum açılamadı';
+$lang['User not found'] = 'Kullanıcı bulunamadı';
