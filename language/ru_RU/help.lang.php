@@ -29,7 +29,7 @@ $lang['No registration required'] = 'Регистрация не требует�
 ';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Установить <b>%1s</b> в <em>%2s</em>';
 $lang['Once the process is finished, click on the newly created project'] = 'После завершения процесса нажмите на вновь созданный проект';
-$lang['Once the application is created, click <b>See application details</b>'] = 'После создания приложения, нажмите кнопку <b>Смотреть детали </b>';
+$lang['Once the application is created, click <b>See application details</b>'] = 'После создания приложения нажмите кнопку <b>Детали приложения</b>';
 $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Перейти в <b>Установки -> Расширенные</b> и установить <b>проверку идентификации перенаправления URIs</b> для <em>%s</em>';
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Перейти в <b>Параметры API</b> и установить <em>%s</em> для <b>Перенаправления URL</b>';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Перейдите <b>Установки -> Основные</b> и укажите контактный email';
