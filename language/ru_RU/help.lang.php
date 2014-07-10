@@ -23,7 +23,7 @@
 $lang['Fill out any required fields such as the application name and description'] = 'Заполните все необходимые поля, например, имя приложения и описание';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Перейдите <a href="%s" target="_blank">%s</a> и создайте новое приложение';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'После того как Вы зарегистрировались, скопируйте и вставьте установки созданного приложения на этой странице';
-$lang['Based on OpenID'] = 'Основано на OpenID';
+$lang['Based on OpenID'] = 'Based on OpenID';
 $lang['No registration required'] = 'Регистрация не требуется';
 
 ';
