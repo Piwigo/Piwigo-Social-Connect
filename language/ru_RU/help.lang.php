@@ -20,17 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Fill out any required fields such as the application name and description'] = 'Заполните все необходимые поля, например - имя приложения и описание';
-$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Пройдите по ссылке <a href="%s" target="_blank">%s</a> и создайте новое приложение';
-$lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'После регистрации скопируйте и вставьте регистрационные данные приложения на странице настроек';
+$lang['Fill out any required fields such as the application name and description'] = 'Заполните все необходимые поля, например, имя приложения и описание';
+$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Перейдите <a href="%s" target="_blank">%s</a> и создайте новое приложение';
+$lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'После того как Вы зарегистрировались, скопируйте и вставьте установки созданного приложения на этой странице';
 $lang['Based on OpenID'] = 'Основано на OpenID';
 $lang['No registration required'] = 'Регистрация не требуется';
 
 ';
-$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Установить <b>%1s</b> в <em>%2s</em>';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Установить <b>%1s</b> для <em>%2s</em>';
 $lang['Once the process is finished, click on the newly created project'] = 'После завершения процесса нажмите на вновь созданный проект';
 $lang['Once the application is created, click <b>See application details</b>'] = 'После создания приложения нажмите кнопку <b>Детали приложения</b>';
-$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Перейти в <b>Установки -> Расширенные</b> и установить <b>проверку идентификации перенаправления URIs</b> для <em>%s</em>';
-$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Перейти в <b>Параметры API</b> и установить <em>%s</em> для <b>Перенаправления URL</b>';
-$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Перейдите <b>Установки -> Основные</b> и укажите контактный email';
-$lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Ввод <em>%1s</em> для <b>%2s</b>';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Перейдите в <b>Параметры -> Дополнительно</b> и установите <b>действительный OAuth перенаправляет URIs<\/b> для <em>%s</em>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Перейдите в <b>Параметры API</b> и установите <em>%s</em> для <b> URL перенаправления</b>';
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Перейдите в <b>Параметры -> Основные</b> и заполните контактный адрес электронной почты';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Ввести <em>%1s</em> для <b>%2s</b>';
+$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'На вкладке <b>API и идентификация -> Учетные данные</b> нажмите кнопку <b>Создать новый ID клиента</b>';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Выберите эти параметры API: <b>Контакты</b> в режиме <em>Читать</em> и <b>Социальный каталог</b> в качестве <em>Читать всем</em>';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Перейдите <b>Status & Review</b> и установите общее приложение, нажав на большую кнопку в правом верхнем углу';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Укажите домен Вашего веб-сайта в поле <b>%1s</b>. Он должен совпадать с текущим узлом: <em>%2s</em>';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Кликните <b>Добавить платформу</b>, выберите <b>Вебсайт</b> и установить <b>URL сайта</b> для <em>%s</em>';
