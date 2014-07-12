@@ -25,8 +25,6 @@ $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] 
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'После регистрации скопируйте и вставьте учетные данные созданных приложений на эту страницу настроек';
 $lang['Based on OpenID'] = 'Основано на OpenID';
 $lang['No registration required'] = 'Регистрация не требуется';
-
-';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Установка <b>%1s</b> в <em>%2s</em>';
 $lang['Once the process is finished, click on the newly created project'] = 'После завершения процесса нажмите на вновь созданный проект';
 $lang['Once the application is created, click <b>See application details</b>'] = 'После создания приложения нажмите кнопку <b>Детали приложения</b>';
