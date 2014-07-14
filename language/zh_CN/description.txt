@@ -1,1 +1,1 @@
-应用授权
+提供多种登录图库的方式（Twitter, Facebook, Google 等）

@@ -21,14 +21,19 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Fill out any required fields such as the application name and description'] = '填写例如“应用名称”、“描述”等必填字段';
-$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = '前往<a href="%s" target="_blank">%s</a>创建一个新应用';
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = '应用已注册和更新权限后，设置<b>Contacts</b>为<em>Read</em>、<b>Social Directory</b>为<em>Read Public</em>。';
-$lang['Once you have registered, copy and past the created application credentials into this setup page'] = '完成注册后，复制并粘贴已创建应用的证书到安装页面。';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = '将此链接作为你的应用的反馈/重定向链接：<em>%s</em>';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = '将你的网站域名填入%s字段。域名应匹配当前主机名：<em>%s</em>';
-$lang['Set <b>%s</b> to <em>%s</em>'] = '把<b>%s</b>设为<em>%s</em>';
+$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = '前往 <a href="%s" target="_blank">%s</a> 创建一个新应用';
+$lang['Once you have registered, copy and past the created application credentials into this setup page'] = '完成注册后，复制并粘贴已创建应用的证书到此设置页面';
 $lang['Based on OpenID'] = '基于OpenID';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = '到<b>设置->高级</b>然后激活<em>客户端认证登录</em>';
-$lang['No registration required'] = '没有注册需要';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = '在<b>APIs & 认证->证书</b>标签，<b>创建新的客户端ID</b>';
-?>
+$lang['No registration required'] = '无需注册';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = '点击 <b>Add Platform</b>，选择 <b>Website</b> 并将 <b>Site URL</b> 设置为 <em>%s</em>';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = '输入 <em>%1s</em> for <b>%2s</b>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = '前往 <b>API Parameters</b> 并将 <em>%s</em> 设为 <b>Redirect URL</b>';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = '前往 <b>Settings -> Advanced</b> 并将 <b>Valid OAuth redirect URIs</b> 设为 <em>%s</em>';
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = '前往 <b>Settings -> Basic</b> 并填写联络 email';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = '前往 <b>Status & Review</b> 并点击右上方的大按钮设定app public';
+$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = '在 <b>APIS & AUTH -> Credentials</b> 标签页，点击 <b>Create new client ID</b>';
+$lang['Once the application is created, click <b>See application details</b>'] = '应用创建后，点击  <b>See application details</b>';
+$lang['Once the process is finished, click on the newly created project'] = '进程完成后，点击新创建的项目';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = '将您网站的域名填入 <b>%1s</b> 区域。它必须与当前主机名（hostname）匹配：<em>%2s</em>';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = '选择这些 APIs：<b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = '将 <b>%1s</b> 设置为 <em>%2s</em>';
