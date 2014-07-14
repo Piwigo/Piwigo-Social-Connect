@@ -50,3 +50,6 @@ $lang['Please enter your user ID'] = 'Lūdzu ievadiet savu lietotāja ID';
 $lang['Associate with an existing account'] = 'Sasaistīt ar eksistējošu kontu';
 $lang['Cancel'] = 'Atcelt';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Drošības apsvērumu dēļ, galvenais webmaster kontu nevar apvienot ar tālvadības kontu, bet jūs varat izmantot citu webmaster kontu.';
+$lang['Close'] = 'Aizvērts';
+$lang['Unable to perform login'] = 'Nav iespējams veikt ielogošanos';
+$lang['User not found'] = 'Lietotājs nav atrasts';
