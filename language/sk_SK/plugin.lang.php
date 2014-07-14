@@ -50,3 +50,6 @@ $lang['Allow users to merge existing account with new <i>Social Connect</i> iden
 $lang['Associate with an existing account'] = 'Spojiť s existujúcim kontom';
 $lang['Cancel'] = 'Zrušiť';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Z bezpečnostných dôvodov hlavný webmaster účet nemôže byť zlúčený s diaľkovým účtom, ale môžete použiť iný webmaster účet';
+$lang['Unable to perform login'] = 'Nemožno sa prihlásiť';
+$lang['User not found'] = 'Používateľ neexistuje';
+$lang['Close'] = 'Zatvoriť';
