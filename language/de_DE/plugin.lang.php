@@ -49,4 +49,7 @@ $lang['Please enter your user ID'] = 'Bitte geben Sie ihre User-ID ein';
 $lang['Cancel'] = 'abbrechen';
 $lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Benutzern erlauben, bestehende Konten mit neuen <i>Social Connect</i> Konten zusammenzuführen';
 $lang['Associate with an existing account'] = 'Mit einem bestehenden Konto zusammenführen';
-?>
+$lang['Close'] = 'Schließen';
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Aus Sicherheitsgründen kann das Haupt-Webmaster Konto nicht mit einem Fernwartungskonto verschmolzen werden. Es kann allerdings ein anderes Webmasterkonto genutzt werden.';
+$lang['Unable to perform login'] = 'Login kann nicht ausgeführt werden.';
+$lang['User not found'] = 'Benutzer nicht gefunden.';
