@@ -18,6 +18,7 @@
 .oauth_16px.steam { background-position: -176px 0px; }
 .oauth_16px.persona { background-position: -192px 0px; }
 .oauth_16px.px500 { background-position: -208px 0px; }
+.oauth_16px.vkontakte { background-position: -224px 0px; }
 
 .oauth_26px {
   display:inline-block;
@@ -39,6 +40,7 @@
 .oauth_26px.steam { background-position: -286px 0px; }
 .oauth_26px.persona { background-position: -312px 0px; }
 .oauth_26px.px500 { background-position: -338px 0px; }
+.oauth_26px.vkontakte { background-position: -364px 0px; }
 
 .oauth_38px {
   display:inline-block;
@@ -60,3 +62,4 @@
 .oauth_38px.steam { background-position: -418px 0px; }
 .oauth_38px.persona { background-position: -456px 0px; }
 .oauth_38px.px500 { background-position: -494px 0px; }
+.oauth_38px.vkontakte { background-position: -532px 0px; }

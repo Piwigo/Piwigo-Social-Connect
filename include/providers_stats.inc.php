@@ -1,90 +1,75 @@
 <?php
 
 return array(
-  'Facebook' => array( 
-    'label'             => 'Facebook',
-    'provider_name'     => 'Facebook',
+  'Facebook' => array(
+    'name'              => 'Facebook',
     'require_client_id' => true,
     'new_app_link'      => 'https://developers.facebook.com/apps',
     'scope'             => 'email',
   ),
-  'Google' => array( 
-    'label'             => 'Google',
-    'provider_name'     => 'Google',
-    'callback'          => true,
+  'Google' => array(
+    'name'              => 'Google',
     'require_client_id' => true,
     'new_app_link'      => 'https://cloud.google.com/console/project',
     'scope'             => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
   ),
   'Instagram' => array(
-    'label'             => 'Instagram',
-    'provider_name'     => 'Instagram',
-    'callback'          => true,
+    'name'              => 'Instagram',
     'require_client_id' => true,
     'new_app_link'      => 'http://instagram.com/developer/clients/manage',
   ),
   'LinkedIn' => array( 
-    'label'             => 'LinkedIn',
-    'provider_name'     => 'LinkedIn',
+    'name'              => 'LinkedIn',
     'new_app_link'      => 'https://www.linkedin.com/secure/developer',
   ),
   'Tumblr' => array(
-    'label'             => 'Tumblr',
-    'provider_name'     => 'Tumblr',
-    'callback'          => true,
+    'name'              => 'Tumblr',
     'new_app_link'      => 'http://www.tumblr.com/oauth/apps',
   ),
-  'Twitter' => array( 
-    'label'             => 'Twitter',
-    'provider_name'     => 'Twitter',
-    'callback'          => true,
+  'Twitter' => array(
+    'name'              => 'Twitter',
     'new_app_link'      => 'https://dev.twitter.com/apps',
   ),
-  'Live' => array( 
-    'label'             => 'Live',
-    'provider_name'     => 'Windows Live',
+  'Live' => array(
+    'name'              => 'Windows Live',
     'require_client_id' => true,
     'new_app_link'      => 'https://account.live.com/developers/applications/index',
   ),
-  'Yahoo' => array( 
-    'label'             => 'Yahoo',
-    'provider_name'     => 'Yahoo!',
-    'callback'          => true,
+  'Vkontakte' => array(
+    'name'              => 'Vkontakte',
+    'require_client_id' => true,
+    'new_app_link'      => 'http://vk.com/dev',
+  ),
+  'Yahoo' => array(
+    'name'              => 'Yahoo!',
     'new_app_link'      => 'https://developer.apps.yahoo.com/projects/',
   ),
   'px500' => array(
-    'label'             => '500px',
-    'provider_name'     => '500px',
-    'callback'          => true,
+    'name'              => '500px',
     'new_app_link'      => 'http://500px.com/settings/applications',
   ),
-  'OpenID' => array( 
-    'label'             => 'OpenID',
-    'provider_name'     => 'OpenID',
+  'OpenID' => array(
+    'name'              => 'OpenID',
     'new_app_link'      => null,
     'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
-  'Flickr' => array( 
-    'label'             => 'Flickr',
-    'provider_name'     => 'Flickr',
+  'Flickr' => array(
+    'name'              => 'Flickr',
     'new_app_link'      => null,
     'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
-  'Steam' => array( 
-    'label'             => 'Steam',
-    'provider_name'     => 'Steam',
+  'Steam' => array(
+    'name'              => 'Steam',
     'new_app_link'      => null,
     'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
-  'Wordpress' => array( 
-    'label'             => 'Wordpress',
-    'provider_name'     => 'Wordpress',
+  'Wordpress' => array(
+    'name'              => 'Wordpress',
     'new_app_link'      => null,
     'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
   'Persona' => array(
-    'label'             => 'Persona',
-    'provider_name'     => 'Persona',
+    'name'              => 'Persona',
     'new_app_link'      => null,
     'about_link'        => 'https://login.persona.org/about',
     ),

@@ -19,7 +19,7 @@ if (isset($_POST['save_config']))
         (@$PROVIDERS_CONFIG[$id]['require_client_id'] and empty($data['keys']['id'])) or
         (!@$PROVIDERS_CONFIG[$id]['require_client_id'] and empty($data['keys']['key']))
       ) {
-        $page['errors'][] = l10n('%s: invalid keys', $PROVIDERS_CONFIG[$id]['provider_name']);
+        $page['errors'][] = l10n('%s: invalid keys', $PROVIDERS_CONFIG[$id]['name']);
       }
     }
     
@@ -33,7 +33,7 @@ if (isset($_POST['save_config']))
       $data['keys'] = array_map('trim', $data['keys']);
     }
     
-    $data['name'] = $PROVIDERS_CONFIG[$id]['provider_name'];
+    $data['name'] = $PROVIDERS_CONFIG[$id]['name'];
     $providers[$id] = $data;
   }
   

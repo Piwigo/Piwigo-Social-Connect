@@ -50,7 +50,7 @@ jQuery(".open-help").click(function() {
 
 {foreach from=$PROVIDERS item=provider key=p}
   <div data-p="{$p}" class="provider {$p} {if $CONFIG[$p].enabled}enabled{else}disabled{/if}">
-    <h4>{$provider.provider_name}</h4>
+    <h4>{$provider.name}</h4>
     
     <table><tr>
       <td>
@@ -121,6 +121,12 @@ jQuery(".open-help").click(function() {
       
       {elseif $p=='Live'}
         <li>{'Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'|translate:$WEBSITE}
+        
+      {elseif $p=='Vkontakte'}
+        <li>{'Set <b>%1s</b> to <em>%2s</em>'|translate:'Category':'Website'}</li>
+        <li>{'Set <b>%1s</b> to <em>%2s</em>'|translate:'Site address':$WEBSITE}</li>
+        <li>{'Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'|translate:'<b>Base domain</b>':$SERVERNAME}</li>
+        <li>{'Go to the <b>Settings</b> tab after creating the app'|translate}</li>
       
       {elseif $p=='Yahoo'}
         <li>{'Set <b>%1s</b> to <em>%2s</em>'|translate:'Kind of Application':'Web-based'}</li>
