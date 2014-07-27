@@ -31,4 +31,6 @@ $lang['Cancel'] = 'Annuler';
 $lang['Please enter your user ID'] = 'Veuillez entrer votre ID d\'utilisateur';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Pour des raisons de sécurité, le compte webmaster principal ne peut être associé avec un compte distant, mais vous pouvez utiliser un autre compte webmaster.';
 
-?>
+$lang['Close'] = 'Fermer';
+$lang['Unable to perform login'] = 'Connexion impossible';
+$lang['User not found'] = 'Utilisateur non trouvé';
