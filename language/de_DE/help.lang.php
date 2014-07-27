@@ -37,3 +37,4 @@ $lang['Once the process is finished, click on the newly created project'] = 'Sob
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Gib deine Webseitendomäne in das Feld <b>%1s</b> ein. Diese muss mit dem derzeitigen Hostname: <em>%2s</em> übereinstimmen.';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Wähle diese APIs: <b>Contacts</b> als <em>Read</em> und <b>Social Directory</b> als <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Setze <b>%1s</b> auf <em>%2s</em>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Besuche die <b>Einstellungen</b> nach der Apperstellung';
