@@ -37,3 +37,4 @@ $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directo
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Перейдите <b>Status & Review</b> и установите общее приложение, нажав на большую кнопку в правом верхнем углу';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Укажите домен Вашего веб-сайта в поле <b>%1s</b>. Он должен совпадать с текущим узлом: <em>%2s</em>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Кликните <b>Добавить платформу</b>, выберите <b>Вебсайт</b> и установить <b>URL сайта</b> для <em>%s</em>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Перейдите на вкладку <b>Установки</b> после создания приложения';
