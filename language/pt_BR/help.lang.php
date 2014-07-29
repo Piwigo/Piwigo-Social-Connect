@@ -37,3 +37,4 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Ir para <b>Parametros API</b> e configure <em>%s</em> para <b>Redirecionar URL</b>';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Entre <em>%1s</em> para <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Clique em <b>Adicionar plataforma</b>, escolha <b>o Website </b> e defina a <b>URL do Website </b> para <em>%s</em>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Vá para aba <b>Configurações</b> depois de criar o aplicativo';
