@@ -37,3 +37,4 @@ $lang['Once the process is finished, click on the newly created project'] = 'Nå
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Angiv dit webmasterdomæne i feltet <b>%1s</b>. Det skal stemme overens med det aktuelle værtsnavn: <em>%2s</em>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Vælg disse API\'er: <b>Contacts</b> som <em>Read</em> og <b>Social Directory</b> som <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Angiv <b>%1s</b> som <em>%2s</em>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Gå til fanebladet <b>Indstillinger</b> efter at have oprettet app\'en';
