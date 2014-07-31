@@ -31,3 +31,4 @@ $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Πηγαί
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Πηγαίνετε στο <b>API Parameters</b> και ρυθμίστε <em>%s</em> για το <b>Redirect URL</b>';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Εισάγετε  <em>%1s</em> για το <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Κάντε κλικ στο <b>Προσθήκη Πλατφόρμας</b>, επιλέξτε <b>Website</b>  και ρυθμίστε τη <b>Site URL</b> για το <em>%s</em>';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Πηγαίνετε στο <b>Κατάσταση και Αξιολόγηση</b> και ρυθμίστε την app για κοινή χρήση κάνοντας κλικ στο μεγάλο κουμπί πάνω δεξιά';
