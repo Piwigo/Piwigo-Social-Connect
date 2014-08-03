@@ -20,15 +20,15 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Ja aplikācija ir reģistrēta atjauniniet atļaujas: iestatiet <b>Contacts</b> kā <em>Read</em> un <b>Social Directory</b> kā <em>Read Public</em>';
 $lang['Fill out any required fields such as the application name and description'] = 'Aizpildiet visus pieprasītos laukus, kā aplikācijas nosaukums un apraksts';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Ja reiz esat piereģistrēti, nokopējiet un ielīmējiet izveidotās aplikācijas reģistrācijas datus šajā uzstādīšanas (setup) lapā';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Piestādiet šo URL kā jūsu aplikācijas Atbildes/Pāradresācijas URL: <em>%s</em>';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Ievietojiet savu vietnes domēnu %s laukos. Tam jāsakrīt ar esošo hosta nosaukumu: <em>%s</em>';
-$lang['Set <b>%s</b> to <em>%s</em>'] = 'Iestatiet <b>%s</b> stāvoklī <em>%s</em>';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Ejiet uz <a href="%s" target="_blank">%s</a> uz izveidojiet jaunu aplikāciju';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Iet uz <b>Settings->Advanced</b> un aktivizēt <em>Klienta OAuth Login</em>';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Uz <b>APIs & auth -> Kredīt datu</b> cilnes, <b>Izveidot jaunu klienta ID</b>';
 $lang['No registration required'] = 'Nav nepieciešams reģistrēties';
 $lang['Based on OpenID'] = 'Balstīts uz OpenID';
-?>
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Ejiet uz <b>API Parameters</b> un iestatiet <em>%s</em> priekš <b>Redirect URL</b>';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Ievadiet <em>%1s</em> priekš <b>%2s</b>';
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Ejiet uz <b>Settings -> Basic</b> un aizpildiet kontakt e-pastu';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Pēc aplikācijas izveidošanas ejiet uz <b>Settings</b cilni';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Iestatīt <b>%1s</b> uz <em>%2s</em>';
+$lang['Once the process is finished, click on the newly created project'] = 'Kad process ir pabeigts, klikšķināt uz no jauna izveidotā projekta';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Kad aplikācija izveidota,klikšķiniet <b>Skatīt aplikācijas detaļas</b>';
