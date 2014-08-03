@@ -37,3 +37,4 @@ $lang['Put your website domain in the <b>%1s</b> field. It must match with the c
 $lang['Once the process is finished, click on the newly created project'] = 'Una vez el proceso terminado, haga clic en el recién creado proyecto';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Ponga <em>%1s</em> para <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'hacer clic en <b>Add Platform</b>, eligir <b>Website</b> y ponga el <b>Site URL</b> en <em>%s</em>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Ir a <b> Configuración </b> después de la creación de la aplicación';
