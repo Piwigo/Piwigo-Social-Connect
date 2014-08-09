@@ -49,4 +49,7 @@ $lang['Allow users to merge existing account with new <i>Social Connect</i> iden
 $lang['Associate with an existing account'] = 'Свържете се с съществуващ акаунт';
 $lang['Please enter your user ID'] = 'Въведете вашето потребителско име';
 $lang['Cancel'] = 'Отказ';
-?>
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'От съображение за сигурност, основният webmaster акаунт не може да бъде обединен с отдалечен акаунт, но може да ползване друг webmaster акаунт.';
+$lang['User not found'] = 'Потребителят не е намерен';
+$lang['Unable to perform login'] = 'Навъзможен опит за логване';
+$lang['Close'] = 'Затваряне';
