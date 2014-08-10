@@ -32,3 +32,9 @@ $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>']
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Εισάγετε  <em>%1s</em> για το <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Κάντε κλικ στο <b>Προσθήκη Πλατφόρμας</b>, επιλέξτε <b>Website</b>  και ρυθμίστε τη <b>Site URL</b> για το <em>%s</em>';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Πηγαίνετε στο <b>Κατάσταση και Αξιολόγηση</b> και ρυθμίστε την app για κοινή χρήση κάνοντας κλικ στο μεγάλο κουμπί πάνω δεξιά';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Ορίστε <b>%1s</b> ως <em>%2s</em>';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Επιλέξτε αυτά τα API: <b>Επαφές</b> ως <em>Ανάγνωση</em> και <b>Κοινωνικό Ευρετήριο</b> ως <em>Δημόσια Ανάγνωση</em>';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Βάλτε τον domain της ιστοσελίδας σας στο πεδίο <b>%1s</b>. Θα πρέπει να ταιριάζει με το τρέχον όνομα: <em>%2s</em>';
+$lang['Once the process is finished, click on the newly created project'] = 'Μόλις ολοκληρωθεί η διαδικασία, κάντε κλικ στο νεοσύστατο έργου';
+$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Στη καρτέλα <b>APIS & AUTH -> Credentials</b> κάντε κλικ στο <b>Δημιουργία νέου ID πελάτη</b>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Πηγαίνετε στη καρτέλα <b>Ρυθμίσεις</b> μετά τη δημιουργία του app';
