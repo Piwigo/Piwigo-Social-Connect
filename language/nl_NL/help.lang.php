@@ -20,15 +20,21 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Als de applicatie is geregistreerd, vernieuw de rechten : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Geef deze URL als de callback/Redirect URL voor uw applicatie: <em>%s</em>';
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Vul uw website domain in in de %s velden. Deze dient overeen te komen met uw huidige hostnaam <em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Na registratie, kopieer en plak de aangemaakte applicatie aanmeldgegevens in deze setup pagina';
-$lang['Fill out any required fields such as the application name and description'] = 'Vul alle verplichte velden in zoals applicatie-naam en omschrijving';
+$lang['Fill out any required fields such as the application name and description'] = 'Vul alle verplichte velden in zoals applicatienaam en omschrijving';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Ga naar <a href="%s" target="_blank">%s</a> en maak een nieuwe applicatie';
-$lang['Set <b>%s</b> to <em>%s</em>'] = 'Vul als <b>%s</b> in <em>%s</em>';
 $lang['Based on OpenID'] = 'Gebaseerd op OpenID';
 $lang['No registration required'] = 'Geen registratie vereist';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = 'Ga naar <b>Settings->Advanced</b> en activeer <em>Client OAuth Login</em>';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = 'Op de <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>';
-?>
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Ga naar <b>Settings -> Basic</b> en vul het contact-emailadres in';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Nadat de applicatie is aangemaakt, klik op <b>See application details</b>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Ga naar <b>API Parameters</b> en stel <em>%s</em> in als <b>Redirect URL</b>';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Geef uw website-domein in, in het <b>%1s</b> veld. Dit moet overeenkomen met de huidige hostnaam: <em>%2s</em>';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Ga naar <b>Settings -> Advanced</b> en stel <b>Valid OAuth redirect URIs</b> in op <em>%s</em>';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Klik op <b>Add Platform</b>, kies <b>Website</b> en stel <b>Site URL</b> in op <em>%s</em>';
+$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Op de <b>APIS & AUTH -> Credentials</b> tab, en klik <b>Create new client ID</b>';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Ga naar <b>Status & Review</b> en maak de app publiek door op de grote knop rechtsboven te klikken';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Stel deze APIs in als volgt: <b>Contacts</b> als <em>Read</em> en <b>Social Directory</b> als <em>Read Public</em>';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Stel <b>%1s</b> in op <em>%2s</em>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Ga naar de <b>Settings</b> tab nadat de app is aangemaakt';
+$lang['Once the process is finished, click on the newly created project'] = 'Nadat het proces is voltooid, klikt u op het nieuw gecreëerde project';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Geef <em>%1s</em> voor <b>%2s</b>';
