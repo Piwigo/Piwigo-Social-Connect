@@ -31,3 +31,4 @@ $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Iru al <b>
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Iru al <b>Stato kaj Recenzo</b> kaj ŝaltu la aplikaĵo al publika per klako al la granda butono ĉe la dekstra supro';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Entajpu <em>%1s</em> por <b>%2s</b>';
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Iru al <b>API-parametroj</b> kaj agordu <em>%s</em> por <b>alidirekti retadreson</b>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Iru al la langeto <b>Agordoj</b> post kreado de la programo';
