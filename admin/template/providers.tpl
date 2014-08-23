@@ -124,7 +124,7 @@ jQuery(".open-help").click(function() {
         
       {elseif $p=='Vkontakte'}
         <li>{'Set <b>%1s</b> to <em>%2s</em>'|translate:'Category':'Website'}</li>
-        <li>{'Set <b>%1s</b> to <em>%2s</em>'|translate:'Site address':$WEBSITE}</li>
+        <li>{'Enter <em>%1s</em> for <b>%2s</b>'|translate:$WEBSITE:'Site address'}</li>
         <li>{'Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'|translate:'<b>Base domain</b>':$SERVERNAME}</li>
         <li>{'Go to the <b>Settings</b> tab after creating the app'|translate}</li>
       
