@@ -32,3 +32,9 @@ $lang['Go to <b>Status & Review</b> and set the app public by clicking the big b
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Entajpu <em>%1s</em> por <b>%2s</b>';
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Iru al <b>API-parametroj</b> kaj agordu <em>%s</em> por <b>alidirekti retadreson</b>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Iru al la langeto <b>Agordoj</b> post kreado de la programo';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Metu vian domajnan nomon en la kampon <b>%1s</b>. Ĝi devas kongrui kun la aktuala gastiga nomo: <em>%2s</em>';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Selektu tiujn API-ojn: <b>Kontaktoj</b> = <em>Read</em> kaj <b>Socia dosierujo</b> = <em>Read Public</em>';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Alklaku al <b>Aldonu platformon</b>, elektu <b>retejon</b> kaj agordu la <b>retejan adreson</b> al <em>%s</em>';
+$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Sur la langeto <b>APIS & AUTH -> Ensalutiloj</b>, kaj alklaku <b>Kreu novan klientan identigilon</b>';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Post kiam la aplikaĵo kreiĝas, alklaku <b>Vidu aplikaĵajn detalojn</b>';
+$lang['Once the process is finished, click on the newly created project'] = 'Post kiam la procezo finiĝas, alklaku la novkreitan projekton';
