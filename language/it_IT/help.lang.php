@@ -21,16 +21,21 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 <em>%s</em>';
-$lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Una volta registrato, copiare e incollare le credenziali delle applicazioni create in questa pagina di configurazione';
+$lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Una volta che ti sei registrato, copia e incolla le credenziali di applicazioni create in questa pagina di configurazione';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Vai a <a href="%s" target="_blank">%s</a> e crea una nuova applicazione';
-$lang['Fill out any required fields such as the application name and description'] = 'Compila tutti i campi obbligatori, quali il nome dell\'applicazione e la descrizione';
-$lang['No registration required'] = 'Nessuna registrazione richiesta';
+$lang['Fill out any required fields such as the application name and description'] = 'Compila tutti i campi obbligatori, quali il nome e la descrizione dell\'applicazione';
+$lang['No registration required'] = 'Registrazione non richiesta';
 $lang['Based on OpenID'] = 'Basato su OpenID';
-$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Vai a <b>Impostazioni -> Base</b> ed inserisci il contatto email';
-$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Vai a <b>Impostazioni -> Avanzate</b> e imposta <b>Valido OAuth redirect URI</b> per <em>%s</em>';
-$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Vai a <b>parametri API</b> e imposta <em>%s</em> per <b>URL Redirect</b>';
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Vai a <b>Impostazioni -> Base</b> e inserisci l\'email di contatto';
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Vai a <b>Impostazioni -> Avanzate</b> e imposta <b>Valido OAuth redirect URIs</b> a <em>%s</em>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Vai <b>Parameteri delle API</b> e imposta <em>%s</em> per <b>Redirect URL</b>';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Inserisci <em>%1s</em> per <b>%2s</b>';
-$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Clicca su <b>Aggiungi piattaforma</b>, scegli <b>Sito web</b> e imposta l\'<b>URL del sito</b> per <em>%s</em>';
-$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Vai a <b>Status & Review</b> e imposta app pubblica cliccando sul grande pulsante in alto a destra';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Clicca su <b>Aggiungi piattaforma</b>, scegli il <b>sito Web</b> e imposta l\'<b>URL del sito</b> su <em>%s</em>';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Vai a <b>Recensione & Stato</b> e imposta l\'app pubblica cliccando sul grande pulsante in alto a destra';
 $lang['Once the process is finished, click on the newly created project'] = 'Una volta che il processo è terminato, clicca sul progetto appena creato';
-$lang['Once the application is created, click <b>See application details</b>'] = 'Una volta creata l\'applicazione, clica su <b>Vedi dettagli dell\'applicazione</b>';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Una volta creata l\'applicazione, clicca su <b>Vedi dettagli applicazione</b>';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Seleziona queste API: <b>Contatti</b> come <oem>Read</em> e <b>Social Directory</b> come <em>Read Public</em>';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Imposta <b>%1s</b> a <em>%2s</em>';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Inserisci il dominio del sito Web nel campo <b>%1s</b>. Deve corrispondere con il nome host corrente: <em>%2s</em>';
+$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Sulla scheda <b>AUTH & API-> credenziali</b> e clicca su <b>Crea nuovo client ID</b>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Vai alla scheda <b>Impostazioni</b> dopo aver creato l\'app';
