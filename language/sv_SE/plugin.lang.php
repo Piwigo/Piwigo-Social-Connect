@@ -50,3 +50,6 @@ $lang['Logged with'] = 'Loggad med';
 $lang['Or sign in with'] = 'Eller logga in med';
 $lang['Please enter your OpenID URL'] = 'Vänligen skriv in din OpenID URL';
 $lang['Please enter your user ID'] = 'Vänligen skriv in ditt användarnamn';
+$lang['Close'] = 'Stäng';
+$lang['Unable to perform login'] = 'Kunde inte logga in';
+$lang['User not found'] = 'Hittade inte användare';
