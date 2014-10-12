@@ -32,3 +32,9 @@ $lang['Fill out any required fields such as the application name and description
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Enter <em>%1s</em> for <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Klikk på <b>Add Platform</b>, velg <b>Webside</b> og skriv inn <b>Sidens URL</b> til <em>%s</em>';
 $lang['Based on OpenID'] = 'Basert på åpenID';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Velg disse APIene: <b>Kontakter</b> som <em>Les</em> og <b> Social Directory</b>som<em> Les Offentlig</em>';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Sett <b>%1s</b> til <em>%2s</em>';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Sett ditt nettsted domene i <b>%1s</b>feltet. Det må samsvare med gjeldende vertsnavn:<em>%2s</em>';
+$lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Når du har registrert deg, kopiere og lim inn den opprettede søknads legitimasjon i denne setup siden';
+$lang['Once the process is finished, click on the newly created project'] = 'Når prosessen er ferdig, klikker du på det nyopprettede prosjekt';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Når søknaden er opprettet, klikker du <b>Se programdetaljer</b>';
