@@ -10,9 +10,19 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-define('OAUTH_ID',     basename(dirname(__FILE__)));
-define('OAUTH_PATH' ,  PHPWG_PLUGINS_PATH . OAUTH_ID . '/');
-define('OAUTH_ADMIN',  get_root_url() . 'admin.php?page=plugin-' . OAUTH_ID);
+if (basename(dirname(__FILE__)) != 'oAuth')
+{
+  add_event_handler('init', 'ouath_error');
+  function ouath_error()
+  {
+    global $page;
+    $page['errors'][] = 'Social Connect folder name is incorrect, uninstall the plugin and rename it to "oAuth"';
+  }
+  return;
+}
+
+define('OAUTH_PATH' ,  PHPWG_PLUGINS_PATH . 'oAuth/');
+define('OAUTH_ADMIN',  get_root_url() . 'admin.php?page=plugin-oAuth');
 define('OAUTH_CONFIG', PWG_LOCAL_DIR . 'config/hybridauth.inc.php');
 define('OAUTH_PUBLIC', get_absolute_root_url() . ltrim(OAUTH_PATH,'./') . 'include/hybridauth/');
 
