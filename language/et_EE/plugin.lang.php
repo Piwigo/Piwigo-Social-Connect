@@ -49,4 +49,7 @@ $lang['Please enter your user ID'] = 'Palun sisesta oma kasutaja-ID';
 $lang['Cancel'] = 'Katkesta';
 $lang['Associate with an existing account'] = 'Ühenda olemasloleva kontoga';
 $lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Luba kasutajatel liita olemasolev konto uue <i>Social Connect</i> identiteediga  ';
-?>
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Turvakaalutlustel ei ole võimalik pea- ja kaugkasutajat ühendada, kuid selleks võib kasutada mõnda teist haldurikontot.';
+$lang['Close'] = 'Sulge';
+$lang['Unable to perform login'] = 'Sisselogimine ebaõnnestus';
+$lang['User not found'] = 'Kasutajat ei leitud';
