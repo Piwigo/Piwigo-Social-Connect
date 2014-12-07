@@ -21,7 +21,7 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Fill out any required fields such as the application name and description'] = '填写例如“应用名称”、“描述”等必填字段';
-$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = '前往 <a href="%s" target="_blank">%s</a> 创建一个新应用';
+$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = '前往 <a href="%s" target="_blank">%s</a> 并创建一个新应用';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = '完成注册后，复制并粘贴已创建应用的证书到此设置页面';
 $lang['Based on OpenID'] = '基于OpenID';
 $lang['No registration required'] = '无需注册';
@@ -37,3 +37,4 @@ $lang['Once the process is finished, click on the newly created project'] = '进
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = '将您网站的域名填入 <b>%1s</b> 区域。它必须与当前主机名（hostname）匹配：<em>%2s</em>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = '选择这些 APIs：<b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = '将 <b>%1s</b> 设置为 <em>%2s</em>';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = '在创建应用后前往 <b>Settings</b> 标签页';
