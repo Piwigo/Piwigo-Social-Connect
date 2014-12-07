@@ -163,8 +163,8 @@ UPDATE ' . USER_INFOS_TABLE . '
           // update oauth field
           single_update(
             USER_INFOS_TABLE,
-            array('oauth_id', $oauth_id),
-            array('user_id', $user['id'])
+            array('oauth_id' => $oauth_id),
+            array('user_id' => $user['id'])
             );
 
           pwg_unset_session_var('oauth_new_user');
