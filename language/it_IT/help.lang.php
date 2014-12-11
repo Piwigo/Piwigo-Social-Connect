@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-<em>%s</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Una volta registrato, copia e incolla le credenziali della applicazione creata in questa pagina di configurazione';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Vai a <a href="%s" target="_blank">%s</a> e crea una nuova applicazione';
 $lang['Fill out any required fields such as the application name and description'] = 'Compila tutti i campi richiesti, come il nome e la descrizione dell\'applicazione';
