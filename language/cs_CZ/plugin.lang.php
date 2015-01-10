@@ -33,4 +33,7 @@ $lang['Or sign in with'] = 'Nebo se přihlaste pomocí';
 $lang['Please enter your OpenID URL'] = 'Zadejte prosím vaše OpenID URL';
 $lang['Please enter your username'] = 'Zadejte prosím vaše uživatelské jméno';
 $lang['Profile URL'] = 'URL profilu';
-?>
+$lang['Your registration is almost done, please complete the registration form.'] = 'Vaše registrace je téměř hotova, vyplňte prosím formulář.';
+$lang['Cancel'] = 'Zrušit';
+$lang['User not found'] = 'Uživatel nenalezen';
+$lang['Close'] = 'Zavřít';
