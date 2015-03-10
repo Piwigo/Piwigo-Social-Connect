@@ -20,15 +20,12 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Put your website domain in the %s fields. It should match with the current hostname: <em>%s</em>'] = 'Web site adresinizi %s yazınız. Geçerli alan adı ile eşleşmesi gerekir. <em>%s</em>';
-$lang['Set <b>%s</b> to <em>%s</em>'] = '<b>%s</b> olarak <em>%s</em> seçiniz';
 $lang['Fill out any required fields such as the application name and description'] = 'Uygulama adı ve açıklaması için tüm gerekli alanları doldurun';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Yeni uygulama oluşturmak için <a href="%s" target="_blank">%s</a> tıklayın';
-$lang['Provide this URL as the Callback/Redirect URL for your application: <em>%s</em>'] = 'Bu URL adresini uygulamanıza Geri çağırma/Yönlendirme URL adresi olarak tanıtın: <em>%s</em>';
-$lang['Once the application is registered update the permissions : set <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Bir kez Uygulama izinlerini güncelleştirmelisiniz : Ayar <b>Kişiler</b> ,<em>Oku</em> ,<b>Sosyal Dizin</b> ve <em>Herkese açık oku</em>';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Bir kere kayıt olduktan sonra bu kayır sayfasında oluştuurlan kimlik bilgilerini kopyalayıp yapıştırın.';
 $lang['Based on OpenID'] = 'OpenID baz alınmıştır';
 $lang['No registration required'] = 'Kayıt gerekmez';
-$lang['Go to <b>Settings->Advanced</b> and activate <em>Client OAuth Login</em>'] = '<b>Ayarlar->Gelişmiş</b> sekmesine gidin ve <em>İstemci OAuth Girişi</em>ni etkinleştirin';
-$lang['On the <b>APIs & auth -> Credentials</b> tab, <b>Create new client ID</b>'] = '<b>APIs & auth -> Credentials</b> sekmesinde, <b>Yeni bir istemci kimliği yaratın</b>';
-?>
+$lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = '<b>Kurulum -> Gelişmiş ayarlar</b> \'a git ve <b>Valid OAuth redirect URIs</b> seç <em>%s</em>';
+$lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = '<b>API Parametreleri</b>\'ne git ve <b>URL yönlendirme</b> için <em>%s</em> \'yi seç';
+$lang['Enter <em>%1s</em> for <b>%2s</b>'] = '<em>%2s</em> için <b>%1s</b> gir';
+$lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = '<b>Platform ekle</b>ye tıkla, <b>Website</b> \'ı seç ve <b>Site URL</b> \'yi seçerek <em>%s</em>';
