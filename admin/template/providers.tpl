@@ -76,7 +76,10 @@ jQuery(".open-help").click(function() {
         {/if}
           <label for="{$p}_secret">Application Secret</label>
           <input type="text" id="{$p}_secret" name="providers[{$p}][keys][secret]" value="{$CONFIG[$p].keys.secret}">
-          <br>
+        {if $p=='Google'}
+          <label for="Google_hd">Domain name (optional)</label>
+          <input type="text" id="Google_hd" name="providers[Google][hd]" value="{$CONFIG.Google.hd}">
+        {/if}
       </td>
       {/if}
     </tr></table>

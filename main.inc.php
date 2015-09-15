@@ -78,7 +78,7 @@ function oauth_init()
   // check config
   if (defined('IN_ADMIN'))
   {
-    if (empty($hybridauth_conf) and strpos(@$_GET['page'],'plugin-'.OAUTH_ID)===false)
+    if (empty($hybridauth_conf) and strpos(@$_GET['page'],'plugin-oAuth')===false)
     {
       $page['warnings'][] = '<a href="'.OAUTH_ADMIN.'">'.l10n('Social Connect: You need to configure the credentials').'</a>';
     }
