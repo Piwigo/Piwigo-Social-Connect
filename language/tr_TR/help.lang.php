@@ -29,3 +29,8 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = '<b>API Parametreleri</b>\'ne git ve <b>URL yönlendirme</b> için <em>%s</em> \'yi seç';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = '<em>%2s</em> için <b>%1s</b> gir';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = '<b>Platform ekle</b>ye tıkla, <b>Website</b> \'ı seç ve <b>Site URL</b> \'yi seçerek <em>%s</em>';
+$lang['Set <b>%1s</b> to <em>%2s</em>'] = '<b>%1s</b> seçeneğini <em>%2s</em> olarak ayarlayın';
+$lang['Once the process is finished, click on the newly created project'] = 'Süreç tamamlandıktan sonra, yeni yaratılan proje üzerine tıklayın';
+$lang['Once the application is created, click <b>See application details</b>'] = 'Uygulama bir kez yaratıldıktan sonra <b>Uygulama detaylarına bakın</b> bağlantısına tıklayın';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Uygulamayı yarattıktan sonra <b>Ayarlar</b> sekmesine gidin';
+$lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = '<b>Ayarlar -> Temel</b> kısmına gidin ve iletişim formunu doldurun';
