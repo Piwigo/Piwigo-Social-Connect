@@ -64,7 +64,7 @@ try {
     // check is already registered
     $query = '
 SELECT user_id FROM ' . USER_INFOS_TABLE . '
-  WHERE oauth_id = "' . implode('---', $oauth_id) . '"
+  WHERE oauth_id = \'' . pwg_db_real_escape_string(implode('---', $oauth_id)) . '\'
 ;';
     $result = pwg_query($query);
 

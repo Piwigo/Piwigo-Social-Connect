@@ -105,7 +105,7 @@ function oauth_begin_register()
           ));
       }
       
-      $oauth_id = $provider.'---'.$user_identifier;
+      $oauth_id = pwg_db_real_escape_string($provider.'---'.$user_identifier);
       
       $page['infos'][] = l10n('Your registration is almost done, please complete the registration form.');
       
@@ -126,12 +126,11 @@ function oauth_begin_register()
           pwg_unset_session_var('oauth_new_user');
           
           // update oauth field
-          $query = '
-UPDATE ' . USER_INFOS_TABLE . '
-  SET oauth_id = "' . $oauth_id . '"
-  WHERE user_id = ' . $user_id . '
-;';
-          pwg_query($query);
+          single_update(
+            USER_INFOS_TABLE,
+            array('oauth_id' => $oauth_id),
+            array('user_id' => $user_id)
+            );
           
           // log_user and redirect
           log_user($user_id, false);
