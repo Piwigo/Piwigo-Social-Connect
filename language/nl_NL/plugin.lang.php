@@ -20,18 +20,18 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'Er is een fout opgetreden, meldt het de galerie eigenaar. <i>Fout-melding : %s</i>';
+$lang['An error occured, please contact the gallery owner. <i>Error code : %s</i>'] = 'Er is een fout opgetreden, meld het de galerie-eigenaar. <i>Fout-melding : %s</i>';
 $lang['%s: invalid keys'] = '%s: ongeldige toetsen';
-$lang['Contacting <b>%s</b>. Please wait.'] = '<b>%s</b> u wordt verbonden. Even geduld aub.';
+$lang['Contacting <b>%s</b>. Please wait.'] = '<b>%s</b> je wordt verbonden. Even geduld a.u.b.';
 $lang['Display sign in buttons on the register page'] = 'Toon aanmeldknoppen op de registratiepagina';
 $lang['Social Connect: PHP Curl extension is needed'] = 'Social Connect: PHP Curl extensie is nodig';
 $lang['Social Connect: You need to configure the credentials'] = 'Social Connect: U dient de aanmeldgegevens in te stellen';
-$lang['Please enter your OpenID URL'] = 'Vul uw OpenID url in';
+$lang['Please enter your OpenID URL'] = 'Vul je OpenID url in';
 $lang['Authentication canceled'] = 'Aanmelden geannuleerd';
 $lang['Display sign in buttons in the menubar'] = 'Toon aanmeldknoppen op de menubalk';
-$lang['Icon size on the identification page'] = 'Icoonformaat op de identificatie pagina';
+$lang['Icon size on the identification page'] = 'Icoonformaat op de identificatie-pagina';
 $lang['Logged with'] = 'Aangemeld met';
-$lang['Or sign in with'] = 'Of meldt u aan met';
+$lang['Or sign in with'] = 'Of meld je aan met';
 $lang['Please enter your username'] = 'Vul uw gebruikersnaam in';
 $lang['Providers'] = 'Aanbieders';
 $lang['You registered with a %s account, please sign in with the same account.'] = 'U bent geregistreerd met een %s account, meldt u aub aan met hetzelfde account';
@@ -44,12 +44,12 @@ $lang['Disabled'] = 'Uitgeschakeld';
 $lang['Enabled'] = 'Ingeschakeld';
 $lang['Error...'] = 'Fout...';
 $lang['Icon size in the menubar'] = 'Icoonformaat in de menubalk';
-$lang['Loading...'] = 'Laden..';
+$lang['Loading...'] = 'Aan het laden..';
 $lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Sta gebruikers toe om het bestaande account samen te voegen met de nieuwe <i>Social Connect</i> identiteit';
 $lang['Associate with an existing account'] = 'Koppelen aan een bestaand account';
 $lang['Cancel'] = 'Annuleer';
 $lang['Please enter your user ID'] = 'Geef uw gebruikers-ID';
-$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Uit veiligheidsredenen kan het hoofd webmaster account niet worden samengevoegd met een extern account, maar u kunt een ander webmaster account gebruiken.';
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Uit veiligheidsredenen kan het hoofd-webmaster account niet worden samengevoegd met een extern account, maar je kunt een ander webmaster-account gebruiken.';
 $lang['Close'] = 'Sluit';
 $lang['Unable to perform login'] = 'Aanmelden niet mogelijk';
 $lang['User not found'] = 'Gebruiker niet gevonden';
