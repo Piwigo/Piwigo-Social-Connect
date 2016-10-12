@@ -99,11 +99,11 @@ jQuery(".open-help").click(function() {
         <li>{'Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'|translate}</li>
         
       {elseif $p=='Google'}
-        <li>{'Once the process is finished, click on the newly created project'|translate}</li>
-        <li>{'On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'|translate}</li>
+        <li>{'On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'|translate}</li>
+        <li>{'Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'|translate}</li>
         <li>{'Set <b>%1s</b> to <em>%2s</em>'|translate:'Application Type':'Web Application'}</li>
         <li>{'Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'|translate:'<b>Authorized Javascript origins</b>':$SERVERNAME}</li>
-        <li>{'Enter <em>%1s</em> for <b>%2s</b>'|translate:$callback_url:'Authorized redirect URI'}</li>
+        <li>{'Enter <em>%1s</em> for <b>%2s</b>'|translate:$callback_url:'Authorized redirect URIs'}</li>
       
       {elseif $p=='Instagram'}
         <li>{'Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'|translate:'<b>Website</b>':$WEBSITE}</li>

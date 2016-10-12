@@ -10,7 +10,8 @@ $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Choisissez <em>%2s</em> pour <b>%1s</
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Sélectionnez ces APIs : <b>Contacts</b> = <em>Read</em> et <b>Social Directory</b> = <em>Read Public</em>';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Entrez votre nom de domaine dans le champs <b>%1s</b>. Il doit correspondre à <em>%2s</em>';
 $lang['Once the process is finished, click on the newly created project'] = 'Quand le processus est terminé, cliquez sur le projet nouvellement créé';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Dans l\'onglet <b>APIS & AUTH -> Credentials</b>, cliquez sur <b>Create new client ID</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'Dans l\'onglet <b>Credentials</b>, cliquez sur <b>Create credentials -> OAuth client ID</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Cliquez sur <b>Configure consent screen</b>, renseignez <b>Product name</b> et sauvegardez';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Allez dans <b>Settings</b> après avoir créé l\'application';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Allez dans <b>Status & Review</b> et rendez l\'application publique en cliquant sur le bouton en haut à droite';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Allez dans <b>Settings -> Basic</b> et renseigner l\'email de contact';

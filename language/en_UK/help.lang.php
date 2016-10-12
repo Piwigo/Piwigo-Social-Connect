@@ -13,7 +13,8 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Go to <b>Settings -> Basic</b> and fill the contact email';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right';
 $lang['Once the process is finished, click on the newly created project'] = 'Once the process is finished, click on the newly created project';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Set <b>%1s</b> to <em>%2s</em>';
