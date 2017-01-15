@@ -34,3 +34,5 @@ $lang['Once the process is finished, click on the newly created project'] = 'Sü
 $lang['Once the application is created, click <b>See application details</b>'] = 'Uygulama bir kez yaratıldıktan sonra <b>Uygulama detaylarına bakın</b> bağlantısına tıklayın';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Uygulamayı yarattıktan sonra <b>Ayarlar</b> sekmesine gidin';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = '<b>Ayarlar -> Temel</b> kısmına gidin ve iletişim formunu doldurun';
+$lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Web sitenize ait domain adını <b>%1s</b> alanına ekleyin. Şu anki hostname olan <em>%2s</em> ile eşleşmelidir.';
+$lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = '<b>Durum ve Gözden geçirme<b> ye gidip sağ üstteki büyük butona basarak uygulamayı açın';

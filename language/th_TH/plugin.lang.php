@@ -41,9 +41,15 @@ $lang['Loading...'] = 'กำลังโหลด ...';
 $lang['Logged with'] = 'เข้าสู่ระบบด้วย';
 $lang['Social Connect: PHP Curl extension is needed'] = 'ปลัีกอิน Social Connect: ต้องการส่วนขยาย PHP Curl';
 $lang['Social Connect: You need to configure the credentials'] = 'ปลัีกอิน Social Connect: คุณต้องกำหนดค่าข้อมูลก่อน';
-$lang['OpenID must be enabled in order to use %s authentication'] = 'OpenID ต้องเปิดใช้งานเพื่อที่จะใช้การตรวจสอบ %s';
 $lang['Or sign in with'] = 'หรือลงชื่อเข้าใช้ด้วย';
 $lang['Please enter your OpenID URL'] = 'โปรดใส่ URL OpenID ของคุณ';
 $lang['Please enter your username'] = 'กรุณาป้อนชื่อผู้ใช้';
 $lang['Profile URL'] = 'URL โปรไฟล์';
-?>
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'อนุญาตให้ผู้ใช้ที่จะรวมบัญชีที่มีอยู่ใหม่ <i>เชื่อมต่อสังคมออนไลน์</i> เพื่อระบุตัวตน';
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'เพื่อความปลอดภัย, บัญชีผู้ดูแลเว็บ ไม่สามารถรวมกับบัญชีอื่น แต่คุณสามารถใช้บัญชีผู้ดูแลเว็บอื่นๆ ได้';
+$lang['Associate with an existing account'] = 'เชื่อมโยงกับบัญชีที่มีอยู่';
+$lang['Unable to perform login'] = 'ไม่สามารถดำเนินการเข้าสู่ระบบได้';
+$lang['Please enter your user ID'] = 'กรุณากรอก ID ของผู้ใช้งาน';
+$lang['Cancel'] = 'ยกเลิก';
+$lang['Close'] = 'ปิด';
+$lang['User not found'] = 'ไม่พบผู้ใช้งาน';
