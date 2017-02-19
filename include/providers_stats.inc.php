@@ -10,7 +10,7 @@ return array(
   'Google' => array(
     'name'              => 'Google',
     'require_client_id' => true,
-    'new_app_link'      => 'https://console.developers.google.com/apis/credentials',
+    'new_app_link'      => 'https://console.developers.google.com/iam-admin/projects',
     'scope'             => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
   ),
   'Instagram' => array(

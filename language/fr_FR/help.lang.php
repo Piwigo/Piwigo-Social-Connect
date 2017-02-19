@@ -19,3 +19,4 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Allez dans <b>API Parameters</b> et entrez <em>%s</em> pour <b>Valid OAuth redirect URIs</b>';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Entrez <em>%1s</em> pour <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Cliquez sur <b>Add Platform</b>, choisissez <b>Website</b> et entrez <em>%s</em> pour <b>Site URL</b>';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Allez dans l\'onglet <b>Library</b>, ouvrez <b>Social APIs -> Google+ API</b> et cliquez sur <b>ENABLE</b>';

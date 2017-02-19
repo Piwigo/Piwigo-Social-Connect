@@ -146,6 +146,10 @@ jQuery(".open-help").click(function() {
       {/if}
       
         <li>{'Once you have registered, copy and past the created application credentials into this setup page'|translate}</li>
+        
+      {if $p=='Google'}
+        <li>{'Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'|translate}</li>
+      {/if}
       </ol>
     {else}
       <p style="text-align:left;">

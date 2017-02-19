@@ -19,3 +19,4 @@ $lang['Put your website domain in the <b>%1s</b> field. It must match with the c
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Set <b>%1s</b> to <em>%2s</em>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Go to the <b>Settings</b> tab after creating the app';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>';
