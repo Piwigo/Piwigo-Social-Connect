@@ -19,43 +19,19 @@ try {
     throw new Exception('Invalid provider!', 1002);
   }
   
-  if ($provider == 'Persona')
+  if ($provider == 'OpenID' and empty($_GET['openid_identifier']))
   {
-    if (!verify_ephemeral_key(@$_POST['key']) || empty($_POST['assertion']))
-    {
-      header('HTTP/1.1 403 Forbidden');
-      exit;
-    }
-    
-    $response = persona_verify($_POST['assertion']);
-    
-    if ($response === false || $response['status'] != 'okay')
-    {
-      header('HTTP/1.1 503 Service Unavailable');
-      echo json_encode($response);
-      exit;
-    }
-    else
-    {
-      $oauth_id = array($provider, $response['email']);
-    }
+    throw new Exception('Invalid OpenID!', 1003);
   }
-  else
+  
+  $hybridauth = new Hybrid_Auth($hybridauth_conf);
+  
+  if ($hybridauth->isConnectedWith($provider))
   {
-    if ($provider == 'OpenID' and empty($_GET['openid_identifier']))
-    {
-      throw new Exception('Invalid OpenID!', 1003);
-    }
+    $adapter = $hybridauth->getAdapter($provider);
+    $remote_user = $adapter->getUserProfile();
     
-    $hybridauth = new Hybrid_Auth($hybridauth_conf);
-    
-    if ($hybridauth->isConnectedWith($provider))
-    {
-      $adapter = $hybridauth->getAdapter($provider);
-      $remote_user = $adapter->getUserProfile();
-      
-      $oauth_id = array($provider, $remote_user->identifier);
-    }
+    $oauth_id = array($provider, $remote_user->identifier);
   }
   
   // connected
@@ -92,16 +68,7 @@ SELECT user_id FROM ' . USER_INFOS_TABLE . '
       }
     }
     
-    if ($provider == 'Persona')
-    {
-      echo json_encode(compact('redirect_to'));
-      header('HTTP/1.1 200 OK');
-      exit;
-    }
-    else
-    {
-      $template->assign('REDIRECT_TO', $redirect_to);
-    }
+    $template->assign('REDIRECT_TO', $redirect_to);
   }
   // init connect
   else if (isset($_GET['init_auth']))
@@ -138,7 +105,6 @@ SELECT user_id FROM ' . USER_INFOS_TABLE . '
    404 : User not found
  other errors :
    403 : Invalid ephemeral key
-   503 : Persona error
   1002 : Invalid provider
   1003 : Missing openid_identifier
 */

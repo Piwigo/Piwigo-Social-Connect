@@ -93,21 +93,13 @@ function oauth_init()
   {
     pwg_unset_session_var('oauth_new_user');
     
-    if ($oauth_id[0] == 'Persona')
-    {
-      oauth_assign_template_vars(get_gallery_home_url());
-      $template->block_footer_script(null, 'navigator.id.logout();');
+    require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
+    
+    try {
+      $hybridauth = new Hybrid_Auth($hybridauth_conf);
+      $adapter = $hybridauth->getAdapter($oauth_id[0]);
+      $adapter->logout();
     }
-    else
-    {
-      require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-      
-      try {
-        $hybridauth = new Hybrid_Auth($hybridauth_conf);
-        $adapter = $hybridauth->getAdapter($oauth_id[0]);
-        $adapter->logout();
-      }
-      catch (Exception $e) {}
-    }
+    catch (Exception $e) {}
   }
 }

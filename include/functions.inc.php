@@ -33,17 +33,12 @@ function oauth_assign_template_vars($u_redirect=null)
     if (!empty($user['oauth_id']))
     {
       list($provider, $identifier) = explode('---', $user['oauth_id'], 2);
-      if ($provider == 'Persona')
-      {
-        $persona_email = $identifier;
-      }
     }
     
     $template->assign('OAUTH', array(
       'conf' => $conf['oauth'],
       'u_login' => get_root_url() . OAUTH_PATH . 'auth.php?provider=',
       'providers' => $hybridauth_conf['providers'],
-      'persona_email' => @$persona_email,
       'key' => get_ephemeral_key(0),
       ));
     $template->assign(array(
@@ -94,42 +89,4 @@ function get_servername($with_port=false)
   }
     
   return $servername;
-}
-
-// http://www.sitepoint.com/authenticate-users-with-mozilla-persona/
-function persona_verify()
-{
-  $url = 'https://verifier.login.persona.org/verify';
-
-  $assert = filter_input(
-    INPUT_POST,
-    'assertion',
-    FILTER_UNSAFE_RAW,
-    FILTER_FLAG_STRIP_LOW|FILTER_FLAG_STRIP_HIGH
-    );
-
-  $params = 'assertion=' . urlencode($assert) . '&audience=' . urlencode(get_servername(true));
-
-  $options = array(
-    CURLOPT_URL => $url,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => $params,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
-    );
-
-  $ch = curl_init();
-  curl_setopt_array($ch, $options);
-  $result = curl_exec($ch);
-  curl_close($ch);
-  
-  if ($result === false)
-  {
-    return false;
-  }
-  else
-  {
-    return json_decode($result, true);
-  }
 }

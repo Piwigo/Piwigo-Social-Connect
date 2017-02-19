@@ -68,42 +68,25 @@ function oauth_begin_register()
     list($provider, $user_identifier) = pwg_get_session_var('oauth_new_user');
     
     try {
-      if ($provider == 'Persona')
-      {
-        $template->assign('OAUTH_USER', array(
-          'provider' => 'Persona',
-          'username' => $user_identifier,
-          'u_profile' => null,
-          'avatar' => null,
-          ));
-        
-        oauth_assign_template_vars();
-        $template->append('OAUTH', array('persona_email'=>$user_identifier), true);
+      require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
       
-        $conf['oauth']['include_common_template'] = true;
-      }
-      else
-      {
-        require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-        
-        $hybridauth = new Hybrid_Auth($hybridauth_conf);
-        $adapter = $hybridauth->authenticate($provider);
-        $remote_user = $adapter->getUserProfile();
-        
-        // security, check remote identifier
-        if ($remote_user->identifier != $user_identifier)
-        {
-          pwg_unset_session_var('oauth_new_user');
-          throw new Exception('Hacking attempt!', 403);
-        }
+      $hybridauth = new Hybrid_Auth($hybridauth_conf);
+      $adapter = $hybridauth->authenticate($provider);
+      $remote_user = $adapter->getUserProfile();
       
-        $template->assign('OAUTH_USER', array(
-          'provider' => $hybridauth_conf['providers'][$provider]['name'],
-          'username' => $remote_user->displayName,
-          'u_profile' => $remote_user->profileURL,
-          'avatar' => $remote_user->photoURL,
-          ));
+      // security, check remote identifier
+      if ($remote_user->identifier != $user_identifier)
+      {
+        pwg_unset_session_var('oauth_new_user');
+        throw new Exception('Hacking attempt!', 403);
       }
+    
+      $template->assign('OAUTH_USER', array(
+        'provider' => $hybridauth_conf['providers'][$provider]['name'],
+        'username' => $remote_user->displayName,
+        'u_profile' => $remote_user->profileURL,
+        'avatar' => $remote_user->photoURL,
+        ));
       
       $oauth_id = pwg_db_real_escape_string($provider.'---'.$user_identifier);
       
@@ -177,16 +160,8 @@ function oauth_begin_register()
       }
 
       // overwrite fields with remote datas
-      if ($provider == 'Persona')
-      {
-        $_POST['login'] = '';
-        $_POST['mail_address'] = $user_identifier;
-      }
-      else
-      {
-        $_POST['login'] = $remote_user->displayName;
-        $_POST['mail_address'] = $remote_user->email;
-      }
+      $_POST['login'] = $remote_user->displayName;
+      $_POST['mail_address'] = $remote_user->email;
       
       // template
       $template->assign('OAUTH_PATH', OAUTH_PATH);
@@ -231,30 +206,18 @@ function oauth_begin_profile()
   list($provider, $user_identifier) = explode('---', $user['oauth_id'], 2);
   
   try {
-    if ($provider == 'Persona')
-    {
-      $template->assign('OAUTH_USER', array(
-        'provider' => 'Persona',
-        'username' => $user_identifier,
-        'u_profile' => null,
-        'avatar' => null,
-        ));
-    }
-    else
-    {
-      require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-      
-      $hybridauth = new Hybrid_Auth($hybridauth_conf);
-      $adapter = $hybridauth->getAdapter($provider);
-      $remote_user = $adapter->getUserProfile();
-      
-      $template->assign('OAUTH_USER', array(
-        'provider' => $hybridauth_conf['providers'][$provider]['name'],
-        'username' => $remote_user->displayName,
-        'u_profile' => $remote_user->profileURL,
-        'avatar' => $remote_user->photoURL,
-        ));
-    }
+    require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
+    
+    $hybridauth = new Hybrid_Auth($hybridauth_conf);
+    $adapter = $hybridauth->getAdapter($provider);
+    $remote_user = $adapter->getUserProfile();
+    
+    $template->assign('OAUTH_USER', array(
+      'provider' => $hybridauth_conf['providers'][$provider]['name'],
+      'username' => $remote_user->displayName,
+      'u_profile' => $remote_user->profileURL,
+      'avatar' => $remote_user->photoURL,
+      ));
     
     $template->assign('OAUTH_PATH', OAUTH_PATH);
     $template->set_prefilter('profile_content', 'oauth_add_profile_prefilter');
@@ -283,19 +246,15 @@ function oauth_logout($user_id)
 
   list($provider, $identifier) = explode('---', $oauth_id, 2);
   
+  require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
   
-  if ($provider != 'Persona')
-  {
-    require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-    
-    try {
-      $hybridauth = new Hybrid_Auth($hybridauth_conf);
-      $adapter = $hybridauth->getAdapter($provider);
-      $adapter->logout();
-    }
-    catch (Exception $e) {
-      $_SESSION['page_errors'][] = l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>', $e->getCode());
-    }
+  try {
+    $hybridauth = new Hybrid_Auth($hybridauth_conf);
+    $adapter = $hybridauth->getAdapter($provider);
+    $adapter->logout();
+  }
+  catch (Exception $e) {
+    $_SESSION['page_errors'][] = l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>', $e->getCode());
   }
 }
 

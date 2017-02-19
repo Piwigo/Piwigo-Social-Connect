@@ -44,6 +44,11 @@ class oAuth_maintain extends PluginMaintain
     {
       pwg_query('ALTER TABLE `' . USER_INFOS_TABLE . '` ADD `oauth_id` VARCHAR(255) DEFAULT NULL;');
     }
+    else
+    {
+      // delete Persona auth
+      pwg_query('UPDATE `' . USER_INFOS_TABLE . '` SET `oauth_id` = NULL WHERE oauth_id LIKE \'Persona---%\';');
+    }
     
     // move field from users table to user_infos
     $result = pwg_query('SHOW COLUMNS FROM `' . USERS_TABLE . '` LIKE "oauth_id";');

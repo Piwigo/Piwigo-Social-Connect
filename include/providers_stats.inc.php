@@ -68,9 +68,4 @@ return array(
     'new_app_link'      => null,
     'about_link'        => 'http://openid.net/get-an-openid/what-is-openid/',
   ),
-  'Persona' => array(
-    'name'              => 'Persona',
-    'new_app_link'      => null,
-    'about_link'        => 'https://login.persona.org/about',
-    ),
 );
