@@ -31,10 +31,12 @@ $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>']
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Geef uw website-domein in, in het <b>%1s</b> veld. Dit moet overeenkomen met de huidige hostnaam: <em>%2s</em>';
 $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Ga naar <b>Settings -> Advanced</b> en stel <b>Valid OAuth redirect URIs</b> in op <em>%s</em>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Klik op <b>Add Platform</b>, kies <b>Website</b> en stel <b>Site URL</b> in op <em>%s</em>';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Op de <b>APIS & AUTH -> Credentials</b> tab, en klik <b>Create new client ID</b>';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Ga naar <b>Status & Review</b> en maak de app publiek door op de grote knop rechtsboven te klikken';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Stel deze APIs in als volgt: <b>Contacts</b> als <em>Read</em> en <b>Social Directory</b> als <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Stel <b>%1s</b> in op <em>%2s</em>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Ga naar de <b>Settings</b> tab nadat de app is aangemaakt';
 $lang['Once the process is finished, click on the newly created project'] = 'Nadat het proces is voltooid, klikt u op het nieuw gecreëerde project';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Geef <em>%1s</em> voor <b>%2s</b>';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Ga naar de <b>Bibliotheek (Library)</b> tab, open <b>Social APIs -> Google+ API</b> en klik <b>Inschakelen (Enable)</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'Op de <b>Aanmeldgegevens (Credentials)</b> tab, klik <b>Creëer Aanmeldgegevens (Create credentials) -> OAuth client ID</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Klik op <b>Configureer het toestemming-scherm</b>, vul de <b>Naam van het product</b> in en sla op';
