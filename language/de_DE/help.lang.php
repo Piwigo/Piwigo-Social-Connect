@@ -31,10 +31,12 @@ $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>']
 $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Gehe zu <b>Settings -> Advanced</b> und setze <b>Valid OAuth redirect URIs</b> auf <em>%s</em>';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Gehe zu <b>Settings -> Basic</b> und gib eine Kontaktemailadresse an';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Gehe zu <b>Status & Review</b> und setze App Public über einen Klick auf die große Schaltfläche oben rechts';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Auf dem <b>APIS & AUTH -> Credentials</b> Reiter, klicke <b>Create new client ID</b>';
 $lang['Once the application is created, click <b>See application details</b>'] = 'Sobald die Applikation erstellt ist, klicek <b>See application details</b>';
 $lang['Once the process is finished, click on the newly created project'] = 'Sobald der Prozess beendet ist, klicke auf das neu erstellte Objekt';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Gib deine Webseitendomäne in das Feld <b>%1s</b> ein. Diese muss mit dem derzeitigen Hostname: <em>%2s</em> übereinstimmen.';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Wähle diese APIs: <b>Contacts</b> als <em>Read</em> und <b>Social Directory</b> als <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Setze <b>%1s</b> auf <em>%2s</em>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Besuche die <b>Einstellungen</b> nach der Apperstellung';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Klicke auf <b>Zustimmmungsanzeige konfigurieren</b>, füll den <b>Produktnamen</b> ein und speichere';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Wechsel in den <b>Bibliothek</b> Tab, öffne <b>Social APIs -> Google+ API</b> und klick <b>AKTIVIEREN</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'Klick <b>Zugangsdaten erstellen -> OAuth client ID</b> auf dem <b>Zugangsdaten</b> Tab';
