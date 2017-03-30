@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'PÅ <b>APIS & AUTH -> legitimasjon</b> fanen, og klikk <b>Opprett ny klient ID</b>';
 $lang['No registration required'] = 'Ingen registreing nødvendig';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Gå til <b>Innstillinger</b> fanen etter å laget appen';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Gå til <b>Status & Gjennomgang</b> og sett apppen til offentlig ved å klikke på den store knappen oppe til høyre';
@@ -38,3 +37,6 @@ $lang['Put your website domain in the <b>%1s</b> field. It must match with the c
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Når du har registrert deg, kopiere og lim inn den opprettede søknads legitimasjon i denne setup siden';
 $lang['Once the process is finished, click on the newly created project'] = 'Når prosessen er ferdig, klikker du på det nyopprettede prosjekt';
 $lang['Once the application is created, click <b>See application details</b>'] = 'Når søknaden er opprettet, klikker du <b>Se programdetaljer</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Klikk på <b>Konfigurer samtykke skjerm</b>, skriv inn <b>Produkt navn</b> og lagre';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Gå til <b>Bibliotek</b> fanen, åpne <b>Social APIs -> Google+ API</b> og klikk <b>AKTIVER</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'På <b>Legitimasjons</b> fanen, klikk <b>Opprett legitimasjon -> OAuth client ID</b>';
