@@ -37,11 +37,6 @@ $lang['Go to <b>Status & Review</b> and set the app public by clicking the big b
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Укажите домен Вашего веб-сайта в поле <b>%1s</b>. Он должен совпадать с текущим узлом: <em>%2s</em>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Кликните <b>Добавить платформу</b>, выберите <b>Вебсайт</b> и установить <b>URL сайта</b> для <em>%s</em>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Перейдите на вкладку <b>Установки</b> после создания приложения';
-$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = '
-На вкладке <b>Учетные данные</b> кликните <b>Создание учетной записи -> OAuth client ID</b>
-
-';
-$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Кликните по <b>Настройка экрана выбора</b>, заполните <b>Имя продукта</b> и сохраните
-
-';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'На вкладке <b>Учетные данные</b> кликните <b>Создание учетной записи -> OAuth client ID</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Кликните по <b>Настройка экрана выбора</b>, заполните <b>Имя продукта</b> и сохраните';
 $lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Перейдите на вкладку <b>Библиотека</b>, откройте <b>Social APIs -> Google+ API</b> и кликните <b>ВКЛ</b>';
