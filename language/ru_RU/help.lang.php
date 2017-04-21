@@ -32,9 +32,11 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Перейдите в <b>Параметры API</b> и установите <em>%s</em> для <b> URL перенаправления</b>';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Перейдите в <b>Параметры -> Основные</b> и заполните контактный адрес электронной почты';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Ввод <em>%1s</em> для <b>%2s</b>';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'На вкладке <b>API и идентификация -> Учетные данные</b> нажмите кнопку <b>Создать новый ID клиента</b>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Выберите эти параметры API: <b>Контакты</b> в режиме <em>Читать</em> и <b>Социальный каталог</b> в качестве <em>Читать всем</em>';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Перейдите <b>Status & Review</b> и установите общее приложение, нажав на большую кнопку в правом верхнем углу';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Укажите домен Вашего веб-сайта в поле <b>%1s</b>. Он должен совпадать с текущим узлом: <em>%2s</em>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Кликните <b>Добавить платформу</b>, выберите <b>Вебсайт</b> и установить <b>URL сайта</b> для <em>%s</em>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Перейдите на вкладку <b>Установки</b> после создания приложения';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'На вкладке <b>Учетные данные</b> кликните <b>Создание учетной записи -> OAuth client ID</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Кликните по <b>Настройка экрана выбора</b>, заполните <b>Имя продукта</b> и сохраните';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Перейдите на вкладку <b>Библиотека</b>, откройте <b>Social APIs -> Google+ API</b> и кликните <b>ВКЛ</b>';
