@@ -31,10 +31,12 @@ $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>']
 $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = '前往 <b>Settings -> Advanced</b> 并将 <b>Valid OAuth redirect URIs</b> 设为 <em>%s</em>';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = '前往 <b>Settings -> Basic</b> 并填写联络 email';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = '前往 <b>Status & Review</b> 并点击右上方的大按钮设定app public';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = '在 <b>APIS & AUTH -> Credentials</b> 标签页，点击 <b>Create new client ID</b>';
 $lang['Once the application is created, click <b>See application details</b>'] = '应用创建后，点击  <b>See application details</b>';
 $lang['Once the process is finished, click on the newly created project'] = '进程完成后，点击新创建的项目';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = '将您网站的域名填入 <b>%1s</b> 区域。它必须与当前主机名（hostname）匹配：<em>%2s</em>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = '选择这些 APIs：<b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = '将 <b>%1s</b> 设置为 <em>%2s</em>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = '在创建应用后前往 <b>Settings</b> 标签页';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = '前往<b>Library</b>标签页，打开<b>Social APIs -> Google+ API</b>并点击<b>ENABLE</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = '在<b>Credentials</b>标签页上点击<b>Create credentials -> OAuth client ID</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = '点击<b>Configure consent screen</b>，填写<b>Product name</b>并保存';
