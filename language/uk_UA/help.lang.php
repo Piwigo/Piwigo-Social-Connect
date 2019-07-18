@@ -29,7 +29,6 @@ $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directo
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Перейдіть в <b>Налаштування API</b> і встановіть <em>%s</em> для <b>URL перенаправлення</b>';
 $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'] = 'Перейдіть в <b>Налаштування -> Додатково</b> і встановіть <b>дійсний OAuth перенаправлювач URIs</b> для <em>%s</em>';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Перейдіть <b>Status & Review</b> і встановіть загальне застосування, натиснувши на велику кнопку в правому верхньому кутку';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'У вкладці <b>API і ідентифікація -> Облікові дані</b> натисніть кнопку <b>Створити новий ID клієнта</b>';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Вкажіть домен Вашого веб-сайту в полі <b>%1s</b>. Він повинен співпадати з поточним вузлом: <em>%2s</em>';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Перейти до <b>Налаштування -> Основні</b> та заповніть контактну адресу електронної пошти';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Перейдіть на вкладку <b>Налаштування</b> після створення програми';
@@ -38,3 +37,6 @@ $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site U
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Введіть <em>%1s</em> для <b>%2s</b>';
 $lang['Once the process is finished, click on the newly created project'] = 'Після того, як процес буде завершений, натисніть на щойно створений проект';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Встановлення <b>%1s</b> в <em>%2s</em>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'На вкладці <b> Повноваження </b> натисніть <b> Створити облікові дані -> ідентифікатор клієнта OAuth </b>';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Перейдіть на вкладку <b> Бібліотека </b>, відкрийте <b> Соціальні API -> API Google+ </b> і натисніть <b> ВВІМКНУТИ </b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Натисніть на <b> Налаштуйте екран згоди </b>, заповніть <b> Назву продукту </b> і збережіть';
