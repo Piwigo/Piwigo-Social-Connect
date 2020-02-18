@@ -26,7 +26,6 @@ $lang['Fill out any required fields such as the application name and description
 $lang['Based on OpenID'] = 'Basado en OpenID';
 $lang['No registration required'] = 'Identificación no es necesaria';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Ir a <b> Status & Review </b> y configure el app público haciendo clic en el botón grande en la parte superior derecha';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'En el <b> APIS y AUTH -> Credentials </b> haga clic en Crear nueva <b> ID de cliente </b>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Selecciona esta APIs: <b>Contacts</b> como <em>Read</em>, and <b>Social Directory</b> como <em>Read Public</em>';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Ir a <b>Settings -> Basic</b> y rellenar el e-mail de contacto';
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Ir a <b>API Parameters</b> y ponga <em>%s</em> para <b>Redirect URL</b>';
@@ -38,3 +37,6 @@ $lang['Once the process is finished, click on the newly created project'] = 'Una
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Ponga <em>%1s</em> para <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'hacer clic en <b>Add Platform</b>, eligir <b>Website</b> y ponga el <b>Site URL</b> en <em>%s</em>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Ir a <b> Configuración </b> después de la creación de la aplicación';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Haga clic en <b>Configurar pantalla de consentimiento</b>, complete el <b>Nombre del producto</b> y guarde';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Vaya a la pestaña <b>Biblioteca</b>, abra <b>API sociales -> API de Google+</b> y haga clic en <b>HABILITAR</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'En la pestaña <b>Credenciales</b>, haga clic en <b>Crear credenciales -> ID de cliente OAuth</b>';
