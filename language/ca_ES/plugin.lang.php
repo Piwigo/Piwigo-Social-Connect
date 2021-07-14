@@ -31,7 +31,7 @@ $lang['An error occured, please contact the gallery owner. <i>Error code : %s</i
 $lang['Associate with an existing account'] = 'Associa amb un compte existent';
 $lang['Authentication canceled'] = 'S\'ha cancel·lat l\'autenticació';
 $lang['Cancel'] = 'Cancel·la';
-$lang['Contacting <b>%s</b>. Please wait.'] = 'Contactar amb <b>%s</b>. Espereu.';
+$lang['Contacting <b>%s</b>. Please wait.'] = 'Contactant amb <b>%s</b>. Espereu.';
 $lang['Display sign in buttons in the menubar'] = 'Mostra els botons d\'inici de sessió a la barra de menús';
 $lang['Display sign in buttons on the register page'] = 'Mostra els botons d\'inici de sessió a la pàgina de registre';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Per motius de seguretat, el compte principal dels administradors web no es pot combinar amb un compte remot, però podeu utilitzar un altre compte pels administradors web.';
@@ -45,7 +45,7 @@ $lang['Please enter your username'] = 'Introduïu el vostre nom d\'usuari';
 $lang['Profile URL'] = 'URL del perfil';
 $lang['Providers'] = 'Proveïdors';
 $lang['Sign in with %s'] = 'Inicia la sessió amb %s';
-$lang['Social Connect: PHP Curl extension is needed'] = 'Connexió social: és necessari l\'extensió PHP Curl';
+$lang['Social Connect: PHP Curl extension is needed'] = 'Connexió social: és necessària l\'extensió PHP Curl';
 $lang['Social Connect: You need to configure the credentials'] = 'Connexió social: Heu de configurar les credencials';
 $lang['Sorry, new registrations are blocked on this gallery.'] = 'Els registres nous estan bloquejats en aquesta galeria.';
 $lang['Unable to perform login'] = 'No s\'ha pogut iniciar la sessió';
