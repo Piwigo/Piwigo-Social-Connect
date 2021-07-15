@@ -1,0 +1,1 @@
+Proporciona diverses maneres d'iniciar sessió a la vostra galeria (Twitter, Facebook, Google, etc.)
