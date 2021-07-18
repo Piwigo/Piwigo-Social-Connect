@@ -21,16 +21,15 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = 'Akonáhle ste registrovaný, prekopírujte vytvorenú aplikáciu poverení na stránku inštalácie';
-$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Choďte na <a href="%s" target="_blank">%s</a> a vytvorte novú aplikáciu';
-$lang['Fill out any required fields such as the application name and description'] = 'Rozšíriť požadované údaje ako názov aplikácie a popis';
+$lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = 'Prejdite na <a href="%s" target="_blank">%s</a> a vytvorte novú aplikáciu';
+$lang['Fill out any required fields such as the application name and description'] = 'Vyplňte požadované údaje ako napr. názov aplikácie a jej popis';
 $lang['No registration required'] = 'Nie je potrebná registrácia';
-$lang['Based on OpenID'] = 'Na základe Open ID';
+$lang['Based on OpenID'] = 'Založené na Open ID';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Nastavte <b>%1s</b> na <em>%2s</em>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Zvoľte v týchto rozhraniaach API: <b> Kontakty </b> ako <em> Čítanie </em> a <b> sociálne adresáre </ b> ako <em> Čítanie verejné </em>';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Dajte si doménu webových stránok do oblasti <b>%1s</b>. Tá sa musí zhodovať s aktuálnym názvom hostiteľa: <em>%2s</em>';
-$lang['Once the process is finished, click on the newly created project'] = 'Akonáhle je proces dokončený, kliknite na novo vytvorený projekt';
+$lang['Once the process is finished, click on the newly created project'] = 'Akonáhle je proces dokončený, kliknite na novovytvorený projekt';
 $lang['Once the application is created, click <b>See application details</b>'] = 'Po vytvorení aplikácie kliknite na tlačidlo <b> Zobraziť detaily aplikácie </b>';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Na <b> APIS a AUTH -> karte prihlasovacích údajov </b> kliknite na tlačidlo <b> Vytvoriť ID nového klienta</ b>';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Prejdite na kartu Nastavenie <b> </b> po vytvorení aplikácie';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Prejdite na <b> Status & Review </b> a nastavte verejnú aplikáciu  kliknutím na veľké tlačidlo v pravom hornom rohu';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Prejdite na <b>Nastavenie -> Základné</b> a vyplňte kontaktný email';
