@@ -20,6 +20,10 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
+
+$lang['Go to <b>Settings -> Administration -> Security -> OAuth 2.0 clients</b> and add a new entry'] = '在<b>设置</b>页上点击<b>管理->安全->OAuth 2.0 客户端</b>并添加新的客户端';
+
+
 $lang['Fill out any required fields such as the application name and description'] = '填写例如“应用名称”、“描述”等必填字段';
 $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] = '前往 <a href="%s" target="_blank">%s</a> 并创建一个新应用';
 $lang['Once you have registered, copy and past the created application credentials into this setup page'] = '完成注册后，复制并粘贴已创建应用的证书到此设置页面';
