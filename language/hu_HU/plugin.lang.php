@@ -48,4 +48,8 @@ $lang['Sign in with %s'] = 'Jelentkezzen be %s';
 $lang['Associate with an existing account'] = 'Meglévő fiók társítása';
 $lang['Cancel'] = 'Mégse';
 $lang['Please enter your user ID'] = 'Kérem írja be a felhasználó ID-t';
-?>
+$lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = 'Felhasználók összevonhatják meglévő fiókjaikat új <i>Social Connect</i> azonosító alá';
+$lang['Close'] = 'Bezárás';
+$lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = 'Biztonsági okokból a webmaster fiók nem vonható össze távoli fiókkal, de más webmaster account használható erre a célra.';
+$lang['Unable to perform login'] = 'Nem sikerült belépni';
+$lang['User not found'] = 'Nincs ilyen felhasználó';
