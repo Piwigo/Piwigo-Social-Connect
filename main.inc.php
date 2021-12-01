@@ -5,7 +5,8 @@ Version: auto
 Description: Provides various ways to sign in your gallery (Twitter, Facebook, Google, etc.)
 Plugin URI: auto
 Author: Mistic
-Author URI: http://www.strangeplanet.fr
+Author URI: http://www.strangeplanet.
+Has Settings: true
 */
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
