@@ -36,3 +36,7 @@ $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Uygulamayı yar
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = '<b>Ayarlar -> Temel</b> kısmına gidin ve iletişim formunu doldurun';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = 'Web sitenize ait domain adını <b>%1s</b> alanına ekleyin. Şu anki hostname olan <em>%2s</em> ile eşleşmelidir.';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = '<b>Durum ve Gözden geçirme<b> ye gidip sağ üstteki büyük butona basarak uygulamayı açın';
+$lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = 'Şu API\'leri seçin: <b>Kişiler</b>, <em>Okuma</em> olarak ve <b>Sosyal Dizin</b>, <em>Genel Okunma</em> olarak';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = '<b>Kimlik Bilgileri</b> sekmesinde, <b>Kimlik bilgileri oluştur -> OAuth istemci kimliği</b>\'ni tıklayın.';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = '<b>Kütüphane</b> sekmesine gidin, <b>Sosyal API\'ler -> Google+ API\'sini</b> açın ve <b>ETKİNLEŞTİR</b>\'i tıklayın';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = '<b>İzin ekranını yapılandır</b>\'ı tıklayın, <b>Ürün adını</b> doldurun ve kaydedin';
