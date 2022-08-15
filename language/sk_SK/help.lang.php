@@ -37,3 +37,6 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>API Parameters</b> and set <em>%s</em> for <b>Redirect URL</b>'] = 'Prejdite na <b>API parametre</b> a nastavte <em>%s</em> na <b>presmerovanie URL</b>';
 $lang['Enter <em>%1s</em> for <b>%2s</b>'] = 'Zadajte <em>%1s</em> pre <b>%2s</b>';
 $lang['Click on <b>Add Platform</b>, choose <b>Website</b> and set the <b>Site URL</b> to <em>%s</em>'] = 'Kliknite na <b>Pridať platformu</b>, vyberte <b> webovú stránku </b> a nastavte <b> URL stránky </b> na <em>%s</ em>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'Na karte <b>Poverenia</b> kliknite na položku <b>Vytvoriť poverenia -> ID klienta OAuth</b>';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Prejdite na kartu <b>Knižnica</b>, otvorte <b>Sociálne rozhrania API -> Google+ API</b> a kliknite na položku <b>ZAPNÚŤ</b>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Kliknite na <b>Obrazovka konfigurácie súhlasu</b>, vyplňte <b>Názov produktu</b> a uložte';
