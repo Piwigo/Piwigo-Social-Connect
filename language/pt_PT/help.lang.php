@@ -35,6 +35,8 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Ir para <b>Definições -> Basicas</b> e indique o mail de contacto';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = 'Ir para <b>Estado & Revisão</b> e definir o o aplicativo público clicando o botão grande no topo à direita ';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = 'Ir para a aba <b>Definições</b> depois de criar o aplicativo';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = 'Na aba <b>APIS & AUTH-> Credenciais</b> clicar <b>Criar novo ID  de cliente</b>';
 $lang['Once the application is created, click <b>See application details</b>'] = 'Uma vez que a aplicação seja criada, clicar <b>Ver detalhes da aplicação</b>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = 'Definir <b>%1s</b> para <em>%2s</em>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = 'Clique <b>Tela de configurar consentimento</b>, preencha  <b>Nome do produto</b> e salve';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = 'Ir para separador <b>Livraria</b>, abrir <b>Social APIs -> Google+ API</b> e clicar <b>ATIVAR</b>';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = 'No separador <b>Credenciais</b>, clicar <b>Criar credenciais-> ID do cliente OAuth </b>';
