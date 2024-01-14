@@ -32,9 +32,11 @@ $lang['Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = '前往 <b>Settings -> Basic</b> 並填寫聯絡 email';
 $lang['Go to <b>Status & Review</b> and set the app public by clicking the big button on top-right'] = '前往 <b>Status & Review</b> 並點擊右上方的大按鈕設定app public';
 $lang['Go to the <b>Settings</b> tab after creating the app'] = '在創建應用後前往 <b>Settings</b> 標籤頁';
-$lang['On the <b>APIS & AUTH -> Credentials</b> tab, and click <b>Create new client ID</b>'] = '在 <b>APIS & AUTH -> Credentials</b> 標籤頁，點擊 <b>Create new client ID</b>';
 $lang['Once the application is created, click <b>See application details</b>'] = '應用創建後，點擊  <b>See application details</b>';
 $lang['Once the process is finished, click on the newly created project'] = '進程完成後，點擊新創建的項目';
 $lang['Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'] = '將您網站的域名填入 <b>%1s</b> 區域。它必須與當前主機名（hostname）匹配：<em>%2s</em>';
 $lang['Select these APIs: <b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>'] = '選擇這些 APIs：<b>Contacts</b> as <em>Read</em> and <b>Social Directory</b> as <em>Read Public</em>';
 $lang['Set <b>%1s</b> to <em>%2s</em>'] = '將 <b>%1s</b> 設置為 <em>%2s</em>';
+$lang['Click on <b>Configure consent screen</b>, fill the <b>Product name</b> and save'] = '請點選 <b>Configure consent screen</b>，填入 <b>Product name</b>，然後儲存';
+$lang['On the <b>Credentials</b> tab, click <b>Create credentials -> OAuth client ID</b>'] = '在 <b>Credentials</b> 籤頁，點擊 <b>Create credentials->OAuth client ID</b>';
+$lang['Go to the <b>Library</b> tab, open <b>Social APIs -> Google+ API</b> and click <b>ENABLE</b>'] = '前往 <b>Library</b> 籤頁，打開 <b>Social APIs->Google+ API</b>，然後點擊 <b>ENABLE</b>';
