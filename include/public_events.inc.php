@@ -1,4 +1,6 @@
 <?php
+use Hybridauth\Hybridauth;
+use Hybridauth\HttpClient\Util;
 defined('OAUTH_PATH') or die('Hacking attempt!');
 
 /**
@@ -7,7 +9,7 @@ defined('OAUTH_PATH') or die('Hacking attempt!');
 function oauth_begin_identification()
 {
   global $template, $conf, $hybridauth_conf;
-  
+
   if ($hybridauth_conf['enabled'] == 0)
   {
     return;
@@ -25,7 +27,7 @@ function oauth_begin_identification()
 function oauth_try_log_user($success, $username)
 {
   global $conf, $redirect_to;
-  
+
   $query = '
 SELECT oauth_id
   FROM ' . USER_INFOS_TABLE . ' AS i
@@ -35,17 +37,17 @@ SELECT oauth_id
   AND oauth_id != ""
 ;';
   $result = pwg_query($query);
-  
+
   if (pwg_db_num_rows($result))
   {
     list($oauth_id) = pwg_db_fetch_row($result);
     list($provider) = explode('---', $oauth_id, 2);
     $_SESSION['page_errors'][] = l10n('You registered with a %s account, please sign in with the same account.', $provider);
-    
+
     $redirect_to = get_root_url().'identification.php'; // variable used by identification.php
     return true;
   }
-  
+
   return false;
 }
 
@@ -56,42 +58,45 @@ SELECT oauth_id
 function oauth_begin_register()
 {
   global $conf, $template, $hybridauth_conf, $page, $user;
-  
+
   if ($hybridauth_conf['enabled'] == 0)
   {
     return;
   }
-  
+
   // coming from identification page
   if (pwg_get_session_var('oauth_new_user') != null)
   {
     list($provider, $user_identifier) = pwg_get_session_var('oauth_new_user');
-    
+
     try {
-      require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-      
-      $hybridauth = new Hybrid_Auth($hybridauth_conf);
+      require_once(OAUTH_PATH . 'include/hybridauth/autoload.php');
+      require_once(OAUTH_PATH . 'include/hybridauth/Hybridauth.php');
+      require_once(OAUTH_PATH . 'include/hybridauth/HttpClient/Util.php');
+
+      $hybridauth_conf['providers']['Google']['callback'] = Util::getCurrentUrl()."?provider=".$provider;
+      $hybridauth = new Hybridauth($hybridauth_conf);
       $adapter = $hybridauth->authenticate($provider);
       $remote_user = $adapter->getUserProfile();
-      
+
       // security, check remote identifier
-      if ($remote_user->identifier != $user_identifier)
+      if ($remote_user->email != $user_identifier)
       {
         pwg_unset_session_var('oauth_new_user');
         throw new Exception('Hacking attempt!', 403);
       }
-    
+
       $template->assign('OAUTH_USER', array(
         'provider' => $hybridauth_conf['providers'][$provider]['name'],
         'username' => $remote_user->displayName,
         'u_profile' => $remote_user->profileURL,
         'avatar' => $remote_user->photoURL,
         ));
-      
+
       $oauth_id = pwg_db_real_escape_string($provider.'---'.$user_identifier);
-      
+
       $page['infos'][] = l10n('Your registration is almost done, please complete the registration form.');
-      
+
       // register form submited
       if (isset($_POST['submit']))
       {
@@ -107,19 +112,19 @@ function oauth_begin_register()
         if ($user_id !== false)
         {
           pwg_unset_session_var('oauth_new_user');
-          
+
           // update oauth field
           single_update(
             USER_INFOS_TABLE,
             array('oauth_id' => $oauth_id),
             array('user_id' => $user_id)
             );
-          
+
           // log_user and redirect
           log_user($user_id, false);
           redirect('profile.php');
         }
-      
+
         unset($_POST['submit']);
       }
       // login form submited
@@ -129,9 +134,9 @@ function oauth_begin_register()
         {
           $_POST['username'] = search_case_username($_POST['username']);
         }
-        
+
         $user_id = get_userid($_POST['username']);
-        
+
         if ($user_id === false)
         {
           $page['errors'][] = l10n('Invalid username or email');
@@ -162,7 +167,7 @@ function oauth_begin_register()
       // overwrite fields with remote datas
       $_POST['login'] = $remote_user->displayName;
       $_POST['mail_address'] = $remote_user->email;
-      
+
       // template
       $template->assign('OAUTH_PATH', OAUTH_PATH);
       if ($conf['oauth']['allow_merge_accounts'])
@@ -185,7 +190,7 @@ function oauth_begin_register()
   else if ($conf['oauth']['display_register'])
   {
     oauth_assign_template_vars(get_gallery_home_url());
-    
+
     $template->set_prefilter('register', 'oauth_add_buttons_prefilter');
   }
 }
@@ -197,28 +202,28 @@ function oauth_begin_register()
 function oauth_begin_profile()
 {
   global $template, $user, $hybridauth_conf, $page, $user;
-  
+
   if (empty($user['oauth_id']))
   {
     return;
   }
-  
+
   list($provider, $user_identifier) = explode('---', $user['oauth_id'], 2);
-  
+
   try {
     require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-    
-    $hybridauth = new Hybrid_Auth($hybridauth_conf);
+
+    $hybridauth = new Hybridauth($hybridauth_conf);
     $adapter = $hybridauth->getAdapter($provider);
     $remote_user = $adapter->getUserProfile();
-    
+
     $template->assign('OAUTH_USER', array(
       'provider' => $hybridauth_conf['providers'][$provider]['name'],
       'username' => $remote_user->displayName,
       'u_profile' => $remote_user->profileURL,
       'avatar' => $remote_user->photoURL,
       ));
-    
+
     $template->assign('OAUTH_PATH', OAUTH_PATH);
     $template->set_prefilter('profile_content', 'oauth_add_profile_prefilter');
     $template->set_prefilter('profile_content', 'oauth_remove_password_fields_prefilter');
@@ -236,22 +241,22 @@ function oauth_begin_profile()
 function oauth_logout($user_id)
 {
   global $hybridauth_conf;
-  
+
   $oauth_id = get_oauth_id($user_id);
-  
+
   if (!isset($oauth_id))
   {
     return;
   }
 
   list($provider, $identifier) = explode('---', $oauth_id, 2);
-  
-  require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-  
+  require_once(OAUTH_PATH . 'include/hybridauth/autoload.php');
+  require_once(OAUTH_PATH . 'include/hybridauth/Hybridauth.php');
+
   try {
-    $hybridauth = new Hybrid_Auth($hybridauth_conf);
+    $hybridauth = new Hybridauth($hybridauth_conf);
     $adapter = $hybridauth->getAdapter($provider);
-    $adapter->logout();
+    $adapter->disconnect();
   }
   catch (Exception $e) {
     $_SESSION['page_errors'][] = l10n('An error occured, please contact the gallery owner. <i>Error code : %s</i>', $e->getCode());
@@ -265,9 +270,9 @@ function oauth_logout($user_id)
 function oauth_blockmanager($menu_ref_arr)
 {
   global $template, $conf, $hybridauth_conf;
-  
-  $menu = &$menu_ref_arr[0];  
-  
+
+  $menu = &$menu_ref_arr[0];
+
   if ($hybridauth_conf['enabled'] == 0 or
       !$conf['oauth']['display_menubar'] or
       $menu->get_block('mbIdentification') == null
@@ -275,10 +280,10 @@ function oauth_blockmanager($menu_ref_arr)
   {
     return;
   }
-  
+
   $u_redirect = !empty($_GET['redirect']) ? urldecode($_GET['redirect']) : get_gallery_home_url();
   oauth_assign_template_vars($u_redirect);
-  
+
   $template->set_prefilter('menubar', 'oauth_add_menubar_buttons_prefilter');
 }
 
@@ -339,9 +344,9 @@ function oauth_add_login_in_register($content)
 {
   $search[0] = '<form method="post" action="{$F_ACTION}"';
   $replace[0] = file_get_contents(OAUTH_PATH . 'template/register.tpl') . $search[0];
-  
+
   $search[1] = '{\'Enter your personnal informations\'|@translate}';
   $replace[1] = '{\'Create a new account\'|@translate}';
-  
+
   return str_replace($search, $replace, $content);
 }
