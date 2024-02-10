@@ -25,6 +25,6 @@
 {/if}
 
   {'Logged with'|translate} : <b>{$OAUTH_USER.provider}</b><br>
-  <b>{'Username'|translate}</b> : {$OAUTH_USER.username}<br>
+  {'Username'|translate} : <b>{$OAUTH_USER.username}</b><br>
   {if $OAUTH_USER.u_profile}<b>{'Profile URL'|translate}</b> : <a href="{$OAUTH_USER.u_profile}">{$OAUTH_USER.u_profile|truncate:40:' ... ':true:true}</a>{/if}
 </div>
