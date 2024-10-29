@@ -1,7 +1,7 @@
 <?php
 defined('OAUTH_PATH') or die('Hacking attempt!');
 
-function load_hybridauth_conf()
+function load_oauth_hybridauth_conf()
 {
   global $hybridauth_conf, $conf;
   
@@ -74,7 +74,7 @@ SELECT oauth_id FROM ' . USER_INFOS_TABLE . '
   }
 }
 
-function get_servername($with_port=false)
+function get_oauth_servername($with_port=false)
 {
   $scheme = 'http';
   if ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443 )

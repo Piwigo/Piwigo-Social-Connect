@@ -32,7 +32,7 @@ include_once(OAUTH_PATH . 'include/functions.inc.php');
 
 // try to load hybridauth config
 global $hybridauth_conf;
-load_hybridauth_conf();
+load_oauth_hybridauth_conf();
 
 
 add_event_handler('init', 'oauth_init');

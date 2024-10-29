@@ -8,13 +8,13 @@ jQuery("select.enable").change(function() {
   
   if ($(this).val()=='true') {
     $top.find("td.keys").show();
-    $top.removeClass('disabled');
-    $top.addClass('enabled');
+    $top.removeClass('oAuthDisabled');
+    $top.addClass('oAuthEnabled');
   }
   else {
     $top.find("td.keys").hide();
-    $top.removeClass('enabled');
-    $top.addClass('disabled');
+    $top.removeClass('oAuthEnabled');
+    $top.addClass('oAuthDisabled');
   }
 });
 
@@ -47,9 +47,10 @@ jQuery(".open-help").click(function() {
 
 <form method="post" action="" class="properties">
 <fieldset id="commentsConf">
+{debug}
 
 {foreach from=$PROVIDERS item=provider key=p}
-  <div data-p="{$p}" class="provider {$p} {if $CONFIG[$p].enabled}enabled{else}disabled{/if}">
+  <div data-p="{$p}" class="provider {$p} {if isset($CONFIG[$p].enabled) and $CONFIG[$p].enabled}oAuthEnabled{else}oAuthDisabled{/if}">
     <h4>{$provider.name}</h4>
     
     <table><tr>
@@ -59,26 +60,26 @@ jQuery(".open-help").click(function() {
       
       <td>
         <select name="providers[{$p}][enabled]" class="enable">
-          <option value="true" {if $CONFIG[$p].enabled}selected="selected"{/if}>{'Enabled'|translate}</option>
-          <option value="false" {if not $CONFIG[$p].enabled}selected="selected"{/if}>{'Disabled'|translate}</option>
+          <option value="true" {if isset($CONFIG[$p].enabled) and $CONFIG[$p].enabled}selected="selected"{/if}>{'Enabled'|translate}</option>
+          <option value="false" {if isset($CONFIG[$p].enabled) and !$CONFIG[$p].enabled}selected="selected"{/if}>{'Disabled'|translate}</option>
         </select>
         <br><a href="#" class="open-help">{'Help'|translate}</a>
       </td>
       
       {if $provider.new_app_link}
-      <td class="keys" {if not $CONFIG[$p].enabled}style="display:none;"{/if}>
-        {if $provider.require_client_id}
+      <td class="keys" {if !isset($CONFIG[$p].enabled)}style="display:none;"{/if}>
+        {if isset($provider.require_client_id)}
           <label for="{$p}_app_id">Application/Client ID</label>
-          <input type="text" id="{$p}_app_id" name="providers[{$p}][keys][id]" value="{$CONFIG[$p].keys.id}">
+        <input type="text" id="{$p}_app_id" name="providers[{$p}][keys][id]" {if isset($CONFIG[$p].keys.id)}value="{$CONFIG[$p].keys.id}"{/if}>
         {else}
           <label for="{$p}_key">Application Key</label>
-          <input type="text" id="{$p}_key" name="providers[{$p}][keys][key]" value="{$CONFIG[$p].keys.key}">
+        <input type="text" id="{$p}_key" name="providers[{$p}][keys][key]" {if isset($CONFIG[$p].keys.key)}value="{$CONFIG[$p].keys.key}"{/if}>
         {/if}
           <label for="{$p}_secret">Application Secret</label>
-          <input type="text" id="{$p}_secret" name="providers[{$p}][keys][secret]" value="{$CONFIG[$p].keys.secret}">
+      <input type="text" id="{$p}_secret" name="providers[{$p}][keys][secret]" {if isset($CONFIG[$p].keys.secret)}value="{$CONFIG[$p].keys.secret}"{/if}>
         {if $p=='Google'}
           <label for="Google_hd">Domain name (optional)</label>
-          <input type="text" id="Google_hd" name="providers[Google][hd]" value="{$CONFIG.Google.hd}">
+        <input type="text" id="Google_hd" name="providers[Google][hd]" {if isset($CONFIG.Google.hd)}value="{$CONFIG.Google.hd}"{/if}>
         {/if}
       </td>
       {/if}
