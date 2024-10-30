@@ -26,3 +26,4 @@ $lang['Go to <a href="%s" target="_blank">%s</a> and create a new application'] 
 $lang['Based on OpenID'] = 'Põhineb OpenID\'l';
 $lang['No registration required'] = 'Registreerimine ei ole kohustuslik';
 $lang['Go to <b>Settings -> Basic</b> and fill the contact email'] = 'Avage <b>Seaded -> Põhiline</b> ja täitke kontakti e-posti aadress';
+$lang['Go to the <b>Settings</b> tab after creating the app'] = 'Pärast rakenduse loomist minge vahekaardile <b>Seaded</b>';
