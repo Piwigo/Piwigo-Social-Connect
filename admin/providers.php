@@ -32,7 +32,12 @@ if (isset($_POST['save_config']))
     {
       $data['keys'] = array_map('trim', $data['keys']);
     }
-    
+
+    // Pretty URL check option for Nextcloud provider
+    if ($PROVIDERS_CONFIG[$id]['name']=='Nextcloud') {
+        $data['hd_opt'] = isset($data['hd_opt']) ? 1 : 0;
+    }
+
     $data['name'] = $PROVIDERS_CONFIG[$id]['name'];
     $providers[$id] = $data;
   }

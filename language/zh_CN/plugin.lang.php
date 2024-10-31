@@ -20,6 +20,11 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
+
+$lang['Already have an existing account? Connect your %s account to your existing account instead'] = '已有帐户？点击将您的%s账户关联到您现有的账户';
+$lang['Is your domain a Pretty URL?'] = '网站URL地址是否美化？（也就是，没有"/index.php"）';
+
+
 $lang['Display sign in buttons in the menubar'] = '在菜单栏显示登录按钮';
 $lang['Display sign in buttons on the register page'] = '在注册页面显示登录按钮';
 $lang['Enabled'] = '已启用';
@@ -46,7 +51,7 @@ $lang['Authentication canceled'] = '已取消认证';
 $lang['Contacting <b>%s</b>. Please wait.'] = '正在连接<b>%s</b>，请稍候。';
 $lang['Disabled'] = '已禁用';
 $lang['Allow users to merge existing account with new <i>Social Connect</i> identity'] = '允许用户将现有帐号与新的 <i>Social Connect</i> id合并';
-$lang['Associate with an existing account'] = '关联一个现有帐号';
+$lang['Associate with an existing account'] = '关联一个现有帐户';
 $lang['Cancel'] = '取消';
 $lang['Please enter your user ID'] = '请输入你的用户ID';
 $lang['For security reason, the main webmaster account can\'t be merged with a remote account, but you can use another webmaster account.'] = '基于安全原因，主网站管理员帐号不能与远程帐号合并，但你可以使用其他网站管理员帐号。';
