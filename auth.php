@@ -1,15 +1,22 @@
 <?php
+use Hybridauth\Hybridauth;
+use Hybridauth\HttpClient\Util;
+
+
+
 define('PHPWG_ROOT_PATH', '../../');
 include_once(PHPWG_ROOT_PATH.'include/common.inc.php');
+require_once(OAUTH_PATH . 'include/hybridauth/Hybridauth.php');
+require_once(OAUTH_PATH . 'include/hybridauth/autoload.php');
+require_once(OAUTH_PATH . 'include/hybridauth/HttpClient/Util.php');
 
 global $hybridauth_conf;
+$provider = @$_GET['provider'];
 
 // OpenID is always enabled
 $hybridauth_conf['providers']['OpenID']['enabled'] = true;
-
-require_once(OAUTH_PATH . 'include/hybridauth/Hybrid/Auth.php');
-
-$provider = @$_GET['provider'];
+$hybridauth_conf['providers']['Google']['callback'] = Util::getCurrentUrl()."?provider=".$provider;
+//$hybridauth_conf['callback'] = Util::getCurrentUrl();
 
 try {
   if (!array_key_exists($provider, $hybridauth_conf['providers'])
@@ -18,22 +25,26 @@ try {
   {
     throw new Exception('Invalid provider!', 1002);
   }
-  
+
   if ($provider == 'OpenID' and empty($_GET['openid_identifier']))
   {
     throw new Exception('Invalid OpenID!', 1003);
   }
-  
-  $hybridauth = new Hybrid_Auth($hybridauth_conf);
-  
+
+  $hybridauth = new Hybridauth($hybridauth_conf);
+  if(!$hybridauth->isConnectedWith($provider)){
+    $adapter = $hybridauth->authenticate($provider);
+  }
+
+
   if ($hybridauth->isConnectedWith($provider))
   {
     $adapter = $hybridauth->getAdapter($provider);
     $remote_user = $adapter->getUserProfile();
-    
-    $oauth_id = array($provider, $remote_user->identifier);
+
+    $oauth_id = array($provider,$remote_user->email);
   }
-  
+
   // connected
   if (!empty($oauth_id))
   {
@@ -49,7 +60,7 @@ SELECT user_id FROM ' . USER_INFOS_TABLE . '
     {
       list($user_id) = pwg_db_fetch_row($result);
       log_user($user_id, false);
-      
+
       $redirect_to = 'default';
     }
     // not registered : redirect to register page
@@ -63,11 +74,11 @@ SELECT user_id FROM ' . USER_INFOS_TABLE . '
       else
       {
         $_SESSION['page_errors'][] = l10n('Sorry, new registrations are blocked on this gallery.');
-        if (isset($adapter)) $adapter->logout();
+        if (isset($adapter)) $adapter->disconnect();
         $redirect_to = 'identification';
       }
     }
-    
+
     $template->assign('REDIRECT_TO', $redirect_to);
   }
   // init connect
@@ -78,7 +89,7 @@ SELECT user_id FROM ' . USER_INFOS_TABLE . '
     {
       $params['openid_identifier'] = $_GET['openid_identifier'];
     }
-      
+
     // try to authenticate
     $adapter = $hybridauth->authenticate($provider, $params);
   }
@@ -89,7 +100,7 @@ SELECT user_id FROM ' . USER_INFOS_TABLE . '
     {
       throw new Exception('Forbidden', 403);
     }
-    
+
     $template->assign('LOADING', '&openid_identifier='.@$_GET['openid_identifier'].'&init_auth=1');
   }
 }
@@ -126,7 +137,7 @@ $template->assign(array(
   'GALLERY_TITLE' => $conf['gallery_title'],
   'CONTENT_ENCODING' => get_pwg_charset(),
   'U_HOME' => get_gallery_home_url(),
-  
+
   'OAUTH_PATH' => OAUTH_PATH,
   'PROVIDER' => $hybridauth_conf['providers'][$provider]['name'],
   'SELF_URL' => OAUTH_PATH . 'auth.php?provider='.$provider,
