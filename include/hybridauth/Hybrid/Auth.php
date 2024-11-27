@@ -3,7 +3,7 @@
 /**
  * HybridAuth
  * http://hybridauth.sourceforge.net | http://github.com/hybridauth/hybridauth
- * (c) 2009-2015, HybridAuth authors | http://hybridauth.sourceforge.net/licenses.html
+ * (c) 2009-2017, HybridAuth authors | http://hybridauth.sourceforge.net/licenses.html
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 class Hybrid_Auth {
 
-	public static $version = "2.5.1";
+	public static $version = "2.10.0";
 
 	/**
 	 * Configuration array
@@ -352,6 +352,9 @@ class Hybrid_Auth {
 	 * @param string $mode PHP|JS
 	 */
 	public static function redirect($url, $mode = "PHP") {
+		if(!$mode){
+			$mode = 'PHP';
+		}
 		Hybrid_Logger::info("Enter Hybrid_Auth::redirect( $url, $mode )");
 
 		// Ensure session is saved before sending response, see https://github.com/symfony/symfony/pull/12341
