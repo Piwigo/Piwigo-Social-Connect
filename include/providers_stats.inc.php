@@ -48,6 +48,11 @@ return array(
     'name'              => '500px',
     'new_app_link'      => 'http://500px.com/settings/applications',
   ),
+  'Nextcloud' => array(
+    'name'              => 'Nextcloud',
+    'require_client_id' => true,
+    'new_app_link'      => 'https://nextcloud.com/install/#instructions-server',
+  ),
   'OpenID' => array(
     'name'              => 'OpenID',
     'new_app_link'      => null,

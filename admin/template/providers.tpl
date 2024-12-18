@@ -81,6 +81,12 @@ jQuery(".open-help").click(function() {
           <label for="Google_hd">Domain name (optional)</label>
         <input type="text" id="Google_hd" name="providers[Google][hd]" {if isset($CONFIG.Google.hd)}value="{$CONFIG.Google.hd}"{/if}>
         {/if}
+        {if $p=='Nextcloud'}
+          <label for="Nextcloud_hd">Domain</label> {* Nextcloud's auth URL is dependent on domain *}
+          <input type="text" id="Nextcloud_hd" name="providers[Nextcloud][hd]" value="{$CONFIG.Nextcloud.hd}" placeholder="https://www.nextcloud.example.com">
+          <label for="Nextcloud_hd_opt">{'Is your domain a Pretty URL?'|@translate}</label>
+          <input style="width:auto" type="checkbox" id="Nextcloud_hd_opt" name="providers[Nextcloud][hd_opt]" {if $CONFIG.Nextcloud.hd_opt}checked{/if}>
+        {/if}
       </td>
       {/if}
     </tr></table>
@@ -90,9 +96,11 @@ jQuery(".open-help").click(function() {
       {assign var=callback_url value=$OAUTH_CALLBACK|cat:$p}
       
       <ol>
+      {if $p != 'Nextcloud'} {* setting up Nextcloud oAuth is slightly simpler *}
         <li>{'Go to <a href="%s" target="_blank">%s</a> and create a new application'|translate:$provider.new_app_link:$provider.new_app_link}</li>
         <li>{'Fill out any required fields such as the application name and description'|translate}</li>
-        
+      {/if}
+
       {if $p=='Facebook'}
         <li>{'Go to <b>Settings -> Advanced</b> and set <b>Valid OAuth redirect URIs</b> to <em>%s</em>'|translate:$callback_url}</li>
         <li>{'Go to <b>Settings -> Basic</b> and fill the contact email'|translate}</li>
@@ -143,6 +151,10 @@ jQuery(".open-help").click(function() {
         <li>{'Put your website domain in the <b>%1s</b> field. It must match with the current hostname: <em>%2s</em>'|translate:'<b>Application URL</b>':$WEBSITE}</li>
         <li>{'Enter <em>%1s</em> for <b>%2s</b>'|translate:$callback_url:'Callback URL'}</li>
         <li>{'Once the application is created, click <b>See application details</b>'|translate}</li>
+
+      {elseif $p=='Nextcloud'}
+        <li>{'Go to <b>Settings -> Administration -> Security -> OAuth 2.0 clients</b> and add a new entry'|translate}</li>
+        <li>{'Enter <em>%1s</em> for <b>%2s</b>'|translate:$callback_url:'OAuth redirect_uri'}</li>
       
       {/if}
       
@@ -172,6 +184,6 @@ jQuery(".open-help").click(function() {
 </form>
 
 <div style="text-align:right;">
-  Icons from : <a href="http://www.wpzoom.com" target="_blank">WPZOOM</a> |
+  Icons from : <a href="http://www.dreamstale.com" target="_blank">Dreamstale</a> |
   Library : <a href="http://hybridauth.sourceforge.net" target="_blank">HybridAuth</a>
 </div>

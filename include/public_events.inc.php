@@ -42,7 +42,7 @@ SELECT oauth_id
     list($provider) = explode('---', $oauth_id, 2);
     $_SESSION['page_errors'][] = l10n('You registered with a %s account, please sign in with the same account.', $provider);
     
-    $redirect_to = get_root_url().'identification.php'; // variable used by identification.php
+    $redirect_to = get_gallery_home_url().'identification.php'; // url of identification page
     return true;
   }
   
